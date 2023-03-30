@@ -1,10 +1,19 @@
 {
+  "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs --port 8080"
   },
   "dependencies": {
-    "vue-disqus": "^5.1.0"
+    "@giscus/vue": "^2.2.8",
+    "vite": "^4.2.1",
+    "vitepress": "^1.0.0-alpha.64",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "flexsearch": "^0.7.31",
+    "markdown-it": "^13.0.1",
+    "vitepress-plugin-search": "^1.0.4-alpha.19"
   }
 }
