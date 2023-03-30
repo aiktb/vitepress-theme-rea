@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs --port 8080"
+  },
+  "devDependencies": {
+    "vue": "^3.2.47"
+  }
+}
