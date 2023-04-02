@@ -129,16 +129,11 @@ a:hover {
     border: 2pt var(--my-blue);
 }
 
-.VPFooter[data-v-80147a0d] {
-    background-color: var(--vp-nav-bg-color);
-    border-top-width: 2pt;
-    border-top-color: var(--my-blue);
-
+.VPFooter {
+    background-color: var(--vp-nav-bg-color)!important;
+    border-top:2px solid var(--my-blue)!important;
 }
 
-.message[data-v-80147a0d], .copyright[data-v-80147a0d] {
-    color: var(--vp-c-text-1);
-}
 
 .vp-doc :not(pre) > code {
     border: solid 1pt var(--my-blue-light);
