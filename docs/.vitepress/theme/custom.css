@@ -64,7 +64,7 @@ a.outline-link{
 }
 @media only screen and (min-width: 767px) {
     .VPNavBarSearch {
-        border: solid 1pt var(--my-white);
+        border: solid 2pt var(--my-white);
         border-radius: 10px;
     }
 }

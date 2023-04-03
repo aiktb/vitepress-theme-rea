@@ -29,10 +29,10 @@ export default defineConfig({
 
         ,
         footer: {
-            message: '<a href="https://github.com/aiktb/rea" target = "_blank">Rea</a> released under the ' +
-                '<a href="https://github.com/aiktb/rea/blob/master/LICENSE" target = "_blank">MIT License</a>, ' +
-                'and the blog posts are all licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target = "_blank" >CC BY 4.0</a>.',
-            copyright: 'Copyright © 2023 <a href="/">aiktb</a>. Powered by <a href="https://vitepress.dev/" target = "_blank" >VitePress</a>.',
+            message: 'The blog posts are all licensed under ' +
+                '<a href="https://creativecommons.org/licenses/by/4.0/" target = "_blank" >CC BY 4.0</a>.',
+            copyright: 'Copyright © 2023 <a href="/">aiktb</a>. Released under the ' +
+                '<a href="https://github.com/aiktb/rea/blob/master/LICENSE" target = "_blank">MIT License</a>.'
         },
     },
 })

@@ -6,7 +6,7 @@ import Giscus from '@giscus/vue'
 const {Layout} = DefaultTheme
 const members = [
   {
-    avatar: '/favicon.svg',
+    avatar: '/avatar.svg',
     name: 'aiktb',
     title: 'Blogger',
     links: [
@@ -51,6 +51,7 @@ const members = [
               input-position="bottom"
               lang="en"
               theme="transparent_dark"
+              loading="eager"
           />
         </div>
       </clientonly>

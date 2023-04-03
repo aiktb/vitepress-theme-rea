@@ -1,6 +1,10 @@
+---
+title: Links
+---
+
 # Friendship link
 
-![image-20230331213952261](https://image.aiktb.com/images/2023/04/02/202303312139291.png)
+![image-20230402223006205](https://image.aiktb.com/images/2023/04/02/202304022230253.png)
 
 ## Exchange friendship link
 

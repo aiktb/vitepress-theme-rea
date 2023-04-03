@@ -1,6 +1,9 @@
+---
+title: About
+---
 # About me and the blog
 
-![image-20230330190559161](https://image.aiktb.com/images/2023/03/30/202303301905325.png)
+![image-20230402225657575](https://image.aiktb.com/images/2023/04/02/202304022256625.png)
 
 ## About me
 
