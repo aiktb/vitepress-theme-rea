@@ -92,9 +92,9 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--my-blue); /* color of the scroll thumb */
+    background-color: var(--my-black-lightest); /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
-    border: 2px solid var(--my-green); /* creates padding around scroll thumb */
+    border: 2px solid var(--my-blue); /* creates padding around scroll thumb */
 }
 
 .profile {
