@@ -2,6 +2,7 @@
 import DefaultTheme from 'vitepress/theme'
 import {VPTeamMembers} from 'vitepress/theme'
 import Giscus from '@giscus/vue'
+import Home from './Home.vue'
 
 const {Layout} = DefaultTheme
 const members = [
@@ -32,12 +33,11 @@ const members = [
 
 <template>
   <Layout>
-    <progress/>
     <template #aside-outline-before>
       <VPTeamMembers size="small" :members="members"/>
     </template>
     <template #doc-after>
-      <clientonly>
+      <clientOnly>
         <div class="comments">
           <Giscus
               repo="aiktb/rea"
@@ -54,7 +54,10 @@ const members = [
               loading="eager"
           />
         </div>
-      </clientonly>
+      </clientOnly>
+    </template>
+    <template #page-top>
+      <Home/>
     </template>
   </Layout>
 </template>

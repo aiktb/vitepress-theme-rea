@@ -25,9 +25,7 @@ export default defineConfig({
         ],
         socialLinks: [
             {icon: 'github', link: 'https://github.com/aiktb/rea'},
-        ]
-
-        ,
+        ],
         footer: {
             message: 'The blog posts are all licensed under ' +
                 '<a href="https://creativecommons.org/licenses/by/4.0/" target = "_blank" >CC BY 4.0</a>.',
