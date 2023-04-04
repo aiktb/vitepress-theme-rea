@@ -88,13 +88,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #13212e; /* color of the tracking area */
+    background: #0f1b23; /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--my-black-lightest); /* color of the scroll thumb */
+    background-color: var(--my-gray); /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
-    border: 2px solid var(--my-blue); /* creates padding around scroll thumb */
+    border: 2px solid var(--my-black); /* creates padding around scroll thumb */
 }
 
 .profile {

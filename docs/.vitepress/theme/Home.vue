@@ -63,7 +63,7 @@ export default {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  line-height: 500px;
+  line-height: 200px;
   animation: typing 3s steps(100) infinite;
 }
 
