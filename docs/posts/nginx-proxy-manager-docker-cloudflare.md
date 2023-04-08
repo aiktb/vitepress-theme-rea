@@ -60,7 +60,7 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 ### 登录
 
-如果你和主机位于同一个局域网可以使用http://127.0.0.1:81访问Web面板，否则只能使用http://${host_ip}:81(host_ip由你的VPS供应商提供)去访问Web面板。
+如果你和主机位于同一个局域网可以使用http://127.0.0.1:81访问Web面板，否则只能使用http://host_ip:81 (host_ip由你的VPS供应商提供)去访问Web面板。
 
 根据Nginx Proxy Manager的文档，使用默认邮箱`admin@example.com`和默认密码`changeme`登录：
 

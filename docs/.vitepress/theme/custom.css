@@ -10,15 +10,8 @@
     --my-blue-light: #1174b1;
     --my-blue-lightest: #85dada;
     --my-purple: #c0caf5;
-    --my-purple-deep: #c52e88;
 }
 
-#disqus_thread .textarea-outer-wrapper .textarea-wrapper{
-    color: #ffffff;
-}
-ul{
-    color: var(--my-white) !important;
-}
 :root {
     --vp-c-bg: #0f191f;
     --vp-c-text-1: #a9d5c4;
@@ -27,16 +20,33 @@ ul{
     --vp-c-bg-soft: #13212e;
     --vp-c-brand: #5fb950;
     --vp-c-mute: var(--my-black);
-    --vp-c-text-code: var(--my-purple)
+    --vp-c-text-code: var(--my-purple);
+    --vp-code-block-bg: var(--my-black);
 }
 
+
+ul {
+    color: var(--my-white) !important;
+}
 
 .vp-doc [class*='language-'] {
     border: solid 1pt var(--my-blue-light);
 }
-a .outline-link{
+
+.vp-doc blockquote > p {
+    color: var(--my-purple) !important;
+}
+
+blockquote {
+    border-left: 4px solid var(--my-blue-light) !important;
+    padding-left: 10px;
+    color: var(--my-purple) !important;
+}
+
+a .outline-link {
     text-decoration: none;
 }
+
 .vp-doc :not(pre) > code {
     border-width: 5px;
     border-color: var(--my-green);
@@ -54,15 +64,19 @@ a:not(.link) {
     text-decoration: underline;
     text-decoration-color: #1174b1;
 }
-a.outline-link{
-    text-decoration:none;
+
+a.outline-link {
+    text-decoration: none;
 }
-.DocSearch-Button{
+
+.DocSearch-Button {
     height: 30px;
 }
+
 .outline-link {
     text-decoration: none;
 }
+
 @media only screen and (min-width: 767px) {
     .VPNavBarSearch {
         border: solid 2pt var(--my-white);
@@ -70,10 +84,12 @@ a.outline-link{
     }
 }
 
-.DocSearch-Form{
+.DocSearch-Form {
     background-color: var(--my-black-lightest);
 }
-.modal{
+
+
+.VPPluginSearch-modal{
     background-color: var(--my-black-lightest);
 
 }
@@ -83,15 +99,15 @@ a.outline-link{
     background-color: #13212e;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px; /* width of the entire scrollbar */
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #0f1b23; /* color of the tracking area */
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--my-gray); /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
     border: 2px solid var(--my-black); /* creates padding around scroll thumb */
@@ -131,11 +147,16 @@ a:hover {
 }
 
 .VPFooter {
-    background-color: var(--vp-nav-bg-color)!important;
-    border-top:2px solid var(--my-blue)!important;
+    background-color: var(--vp-nav-bg-color) !important;
+    border-top: 2px solid var(--my-blue) !important;
 }
 
 
 .vp-doc :not(pre) > code {
     border: solid 1pt var(--my-blue-light);
+}
+
+.VPPluginSearch-search-item {
+    background-color: var(--my-black-lightest);
+    border-color: var(--my-blue)
 }
