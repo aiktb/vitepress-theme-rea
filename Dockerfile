@@ -5,4 +5,6 @@ WORKDIR /app
 COPY . .
 RUN apk add git && git pull
 RUN npm install && npm run docs:build
-CMD npm run docs:preview
+HEALTHCHECK --interval=24h --timeout=12s --start-period=30s \
+    CMD ./health-check.sh
+CMD ./start.sh

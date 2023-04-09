@@ -1,0 +1,11 @@
+version: '3'
+services:
+  rea:
+    image: aiktb/rea:latest
+    restart: always
+    ports:
+      - '8083:8083'
+    networks:
+      - rea-net
+networks:
+  rea-net:
