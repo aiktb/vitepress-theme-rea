@@ -1,8 +1,9 @@
 #!/bin/sh
 
 cd /app || exit
-local_commit=$(git rev-parse HEAD)
-remote_commit=$(git rev-parse origin/HEAD)
+# Depends on the name of the remote branch.
+local_commit=$(git rev-parse master)
+remote_commit=$(git rev-parse origin/master)
 if [ "$local_commit" != "$remote_commit" ]; then
     git pull
     npm run docs:build
