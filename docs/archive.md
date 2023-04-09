@@ -9,6 +9,6 @@ title: Archive
 ## Year
 ### 2023
 
-[Nginx Proxy Manager实现HTTPS反向代理](/posts/nginx-proxy-manager-docker-cloudflare)
+[Nginx Proxy Manager实现HTTPS反向代理](/posts/nginx-proxy-manager)
 
 ## Collection
