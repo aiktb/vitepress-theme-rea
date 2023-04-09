@@ -134,7 +134,7 @@ SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 3. HSTS Enabled：参考Cloudflare的[这篇文章](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/http-strict-transport-security/)。
 4. HSTS Subdomains：为子域名开启HSTS。
 
-点击Save，这样就完成Nginx Proxy Manager反向代理的全部配置，在浏览器使用https://domain就能访问到对应的服务了。
+点击Save，这样就完成Nginx Proxy Manager反向代理的全部配置，在浏览器使用 https://domain 就能访问到对应的服务了。
 
 >
 >
