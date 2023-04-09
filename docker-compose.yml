@@ -6,6 +6,6 @@ services:
     ports:
       - '8083:8083'
     networks:
-      - rea-net
+      - rea
 networks:
-  rea-net:
+  rea:
