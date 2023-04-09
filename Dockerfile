@@ -3,8 +3,9 @@
 FROM node:18-alpine
 WORKDIR /app
 COPY . .
-RUN apk add git && git pull
-RUN npm install && npm run docs:build
-HEALTHCHECK --interval=24h --timeout=12s --start-period=30s \
-    CMD ./health-check.sh
-CMD ./start.sh
+RUN apk add git
+RUN git pull
+RUN npm install
+RUN npm run docs:build
+HEALTHCHECK --interval=24h --timeout=12s --start-period=30s CMD /app/health-check.sh
+CMD ["/bin/sh", "/app/start.sh"]
