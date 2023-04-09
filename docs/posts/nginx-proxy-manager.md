@@ -4,6 +4,8 @@
 
 ## Nginx Proxy Manager介绍以及安装
 
+![image-20230409183632968](https://image.aiktb.com/images/2023/04/09/202304091836077.png)
+
 ### 介绍
 
 [Nginx Proxy Manager](https://nginxproxymanager.com/)是由[jc21](https://github.com/jc21)开发的一款使用Web管理Nginx反向代理的工具，其开发理念是`It had to be so easy that a monkey could do it`，相比较传统的Nginx反向代理配置，真的不要简单太多，普通的反向代理我们只要动动鼠标就ok了，SSL证书的申请也很简单，还会自动为证书申请续期，比用[Certbot](https://certbot.eff.org/)脚本申请还简单！
