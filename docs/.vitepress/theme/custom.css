@@ -24,6 +24,9 @@
     --vp-code-block-bg: var(--my-black);
 }
 
+.VPLink{
+    text-align: center;
+}
 
 ul {
     color: var(--my-white) !important;
