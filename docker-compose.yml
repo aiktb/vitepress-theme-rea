@@ -6,6 +6,11 @@ services:
     ports:
       - '8083:8083'
     networks:
-      - rea
+      - default
+    volumes:
+      - ./data/about.md:rea/docs/about.md
+      - ./data/archive.md:rea/docs/archive.md
+      - ./data/links.md:rea/docs/links.md
+      - ./data/posts:rea/docs/posts
 networks:
-  rea:
+  default:

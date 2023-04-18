@@ -2,9 +2,9 @@
 title: Links
 ---
 
-# Friendship link
+# Friendship links
 
-![image-20230402223006205](https://image.aiktb.com/images/2023/04/02/202304022230253.png)
+<img src="links.svg" style="background:#13212e"/>
 
 ## Exchange friendship link
 

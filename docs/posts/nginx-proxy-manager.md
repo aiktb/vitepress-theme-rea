@@ -1,23 +1,25 @@
 # Nginx Proxy Manager实现HTTPS反向代理
 
->本篇文章使用Ubuntu22.04 Server操作系统
+![image-20230409183632968](https://image.aiktb.com/images/2023/04/09/202304091836077.png)
 
 ## Nginx Proxy Manager介绍以及安装
 
-![image-20230409183632968](https://image.aiktb.com/images/2023/04/09/202304091836077.png)
+> 本文使用Ubuntu22.04 Server操作系统。
 
 ### 介绍
 
-[Nginx Proxy Manager](https://nginxproxymanager.com/)是由[jc21](https://github.com/jc21)开发的一款使用Web管理Nginx反向代理的工具，其开发理念是`It had to be so easy that a monkey could do it`，相比较传统的Nginx反向代理配置，真的不要简单太多，普通的反向代理我们只要动动鼠标就ok了，SSL证书的申请也很简单，还会自动为证书申请续期，比用[Certbot](https://certbot.eff.org/)脚本申请还简单！
+[Nginx Proxy Manager](https://nginxproxymanager.com/)是由[jc21](https://github.com/jc21)开发的一款使用Web管理Nginx反向代理的工具，其开发理念是It had to be so easy that a monkey could do it，相比较传统的Nginx反向代理配置，真的不要简单太多，普通的反向代理我们只要动动鼠标就ok了，SSL证书的申请也很简单，还会自动为证书申请续期，比用[Certbot](https://certbot.eff.org/)脚本申请还简单！
 
 ### 安装
 
 如果你还没有安装docker，我推荐参照[Docker Documentation](https://docs.docker.com/engine/install/ubuntu/)的文档使用apt包管理器下载。
 
 ```bash
-mkdir -p ~/Docker/npm # -p 创建多级目录
+# -p 创建多级目录
+mkdir -p ~/Docker/npm 
 cd ~/Docker/npm
-nano docker-compose.yml # 打开nano编辑器，如果没有安装使用sudo apt install nano
+# 打开nano编辑器，如果没有安装使用sudo apt install nano
+nano docker-compose.yml 
 ```
 
 按照文档将以下代码使用`Ctrl+Shift+V`粘贴到打开的nano编辑器中，键盘敲击`Ctrl+X`，nano编辑器底部显示`Save modified buffer?  `时敲击`Y`键+`Enter`回车键保存文件。
@@ -40,19 +42,21 @@ services:
 然后使用命令`docker compose -d up`让Nginx Proxy Manager服务在后台运行。
 
 ```bash
-docker compose -d up # 当前运行目录应该在~/Docker/npm
-docker container ls | grep nginx-proxy-manager # 查看Docker Container运行情况，有输出即为正常
-ss -ltn | grep 81 # 检查Nginx Proxy Manager是否正常运行监听81端口，输出含有0.0.0.0:81即为正常
+# 当前运行目录应该在~/Docker/npm
+docker compose -d up
+# 查看Docker Container运行情况，有输出即为正常
+docker container ls | grep nginx-proxy-manager 
+# 检查Nginx Proxy Manager是否正常运行监听81端口，输出含有0.0.0.0:81即为正常
+ss -ltn | grep 81
 ```
-
-
 
 ### 检查防火墙UFW
 
 默认的Ubuntu22.04系统是没有开启UFW防火墙的，如果你开启了UFW防火墙，那么应该开放Docker使用的所有端口，如上述Nginx Proxy Manager使用的80、81、443端口，否则你的服务将不能从外网正常访问。
 
 ```bash
-sudo ufw status numbered # 输出Status: active即为开启了UFW，以下命令开放本机端口到外网，Status: inactive为没有开启UFW，无需以下操作
+sudo ufw status numbered
+# 输出Status: active即为开启了UFW，以下命令开放本机端口到外网
 sudo ufw allow 80 comment 'HTTP Server'
 sudo ufw allow 443 comment 'HTTPS Server'
 sudo ufw allow 81 comment 'Nginx Proxy Manager'
@@ -101,23 +105,17 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 ### 实际配置
 
-点击主页右上角的`Add Proxy Host`：
-
-![image-20230406074457891](https://image.aiktb.com/images/2023/04/05/202304060744130.png)
-
-填写对应的主机静态IP和端口：
+点击主页右上角的`Add Proxy Host`，填写对应的主机静态IP和端口：
 
 ![image-20230406074704503](https://image.aiktb.com/images/2023/04/05/202304060747544.png)
 
->
->
->注意Scheme是根据你代理的服务是否实际开启了HTTPS来设置的：
->
->1. 使用HTTP的服务选择`HTTPS Schema`会导致`502 Bad Gateway`，这是Nginx Proxy Manager的一个最常见错误设置；
->2. 一般将客户端到服务器的路径进行TLS加密就足够了，没有必要再为单独的服务开启TLS加密；
->3. 使用Docker的服务需要在容器中单独申请证书或者用文件挂载将证书映射到容器内，操作繁琐。
->
->另外，不可以填写127.0.0.1作为除Nginx Proxy Manager以外其他服务的`Forward Hostname/IP`，Docker处于一个独立的网络环境，默认配置是无法通过127.0.0.1访问到运行在其他Docker网络环境的服务的，
+注意Schema是根据你代理的服务是否实际开启了HTTPS来设置的：
+
+1. 使用HTTP的服务选择`HTTPS Schema`会导致`502 Bad Gateway`，这是Nginx Proxy Manager的一个最常见错误设置；
+2. 一般将客户端到服务器的路径进行TLS加密就足够了，没有必要再为单独的服务开启TLS加密；
+3. 使用Docker的服务开启TLS加密需要在容器中单独申请证书或者用文件挂载将证书映射到容器内，操作繁琐，不建议使用。
+
+另外，不可以填写127.0.0.1作为除Nginx Proxy Manager以外其他服务的`Forward Hostname/IP`，Docker处于一个独立的网络环境，默认配置的桥接网络是无法通过127.0.0.1访问到运行在其他Docker网络环境的服务的。
 
 解释一下3个选项的作用，不关心的话全部启用就好。
 
@@ -138,8 +136,6 @@ SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 
 点击Save，这样就完成Nginx Proxy Manager反向代理的全部配置，在浏览器使用 https://domain 就能访问到对应的服务了。
 
->
->
 >当前已开启HTTPS连接，可以在安全的环境更换一个16位以上大小写字母+符号的强力随机密码了，建议使用[1password](https://1password.com/password-generator/)。
 
 ## 常见错误排除

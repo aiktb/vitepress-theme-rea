@@ -3,7 +3,7 @@ title: About
 ---
 # About me and the blog
 
-![image-20230402225657575](https://image.aiktb.com/images/2023/04/02/202304022256625.png)
+<img src="about.svg" style="background:#13212e"/>
 
 ## About me
 
@@ -23,10 +23,6 @@ You can reach me on the following platforms:
 - Telegram: https://t.me/aiktb
 - Email: aiktb@outlook.com
 - GitHub: https://github.com/aiktb
-
-The following platforms are less frequently used:
-
-- Reddit: https://www.reddit.com/user/aiktb
 
 ## About the blog item
 

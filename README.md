@@ -12,30 +12,10 @@ CSS is basically gibberish, don't read it, maybe refactor this part of the code 
 
 ## Deploy
 
-Note: The automatic blog update uses `HEALTHCHECK` in the Dockerfile to execute health-check.sh regularly, and health-check.sh uses git fetch to determine whether the remote branch origin/master has been updated. If so, kill the process corresponding to `npm run docs:preview` , so as to stop the container, and then automatically restart the container for update through the `restart: unless-stopped` set in docker-compose.yml. (The script used by CMD contains `git pull`)
-
 ```bash
 mkdir -p ~/Docker/rea
 cd ~/Docker/rea
-nano docker-compose.yml
-```
-
-```yaml
-# docker-compose.yml
-version: '3'
-services:
-  rea:
-    image: aiktb/rea:latest
-    restart: unless-stopped
-    ports:
-      - '8083:8083'
-    networks:
-      - rea
-networks:
-  rea:
-```
-
-```bash
+wget https://github.com/aiktb/rea/blob/master/docker-compose.yml
 docker compose up -d
 ```
 
