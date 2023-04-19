@@ -3,7 +3,6 @@
     --my-green-light: #61ff00;
     --my-white: #a9d5c4;
     --my-black: #0c1222;
-    --my-black-light: #0f191f;
     --my-black-lightest: #13212e;
     --my-blue: #1174b1;
     --my-gray: #9fa3a5;
@@ -110,11 +109,7 @@ a:hover {
     text-decoration-color: var(--my-blue);
 }
 
-.vp-doc a:hover {
-    text-decoration-color: var(--my-blue);
-    color: var(--my-green-light);
-    text-decoration-thickness: 0.2em;
-}
+
 
 .VPNav {
     background-color: var(--vp-nav-bg-color);

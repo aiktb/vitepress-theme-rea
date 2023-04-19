@@ -42,7 +42,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--my-black-light);
+  background-color: var(--my-black);
 }
 
 .quote-icon-container {
@@ -110,5 +110,4 @@ export default {
     transform: rotate(360deg);
   }
 }
-
 </style>
