@@ -8,7 +8,11 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 
 Giscus found that there is a bug that cannot be displayed. It is known that the display effect of gitalk is good, and it is considering replacing it.
 
-CSS is basically gibberish, don't read it, maybe refactor this part of the code later.
+The design of the theme refers to the following websites:
+
+- miyauchi.dev
+- neovim.io
+- dart.dev
 
 ## Deploy
 
