@@ -4,7 +4,7 @@ title: Archive
 
 # Blog post archive
 
-<img src="archive.svg" style="background:#13212e"/>
+<img src="./public/archive.svg" style="background:#13212e" alt="archive cover"/>
 
 ## Year
 ### 2023

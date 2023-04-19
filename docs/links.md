@@ -4,7 +4,7 @@ title: Links
 
 # Friendship links
 
-<img src="links.svg" style="background:#13212e"/>
+<img src="./public/links.svg" style="background:#13212e" alt="links cover"/>
 
 ## Exchange friendship link
 
