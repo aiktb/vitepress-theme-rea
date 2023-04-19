@@ -12,6 +12,17 @@ CSS is basically gibberish, don't read it, maybe refactor this part of the code 
 
 ## Deploy
 
+Default port: 8083
+
+### NPM
+
+```bash
+npm run docs:build
+npm run docs:preview
+```
+
+### Docker
+
 ```bash
 mkdir -p ~/Docker/rea
 cd ~/Docker/rea
@@ -25,14 +36,10 @@ The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) licens
 
 ## Preview
 
-### Home
-
-![image-20230409192250862](https://image.aiktb.com/images/2023/04/09/202304091922114.png)
-
 ### About
 
-![image-20230409192305335](https://image.aiktb.com/images/2023/04/09/202304091923450.png)
+![image-20230419234900162](https://s2.loli.net/2023/04/19/9eRV5Gx3NLgY4dJ.png)
 
 ### Links
 
-![image-20230409192320398](https://image.aiktb.com/images/2023/04/09/202304091923508.png)
+![image-20230419234919745](https://s2.loli.net/2023/04/19/8jlYhH19TWrqxf6.png)
