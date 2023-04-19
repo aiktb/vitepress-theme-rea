@@ -21,7 +21,9 @@
     --vp-c-text-code: var(--my-white);
     --vp-code-block-bg: var(--my-black-lightest);
 }
-
+code {
+    white-space: nowrap;
+}
 .VPLink {
     text-align: center;
 }
