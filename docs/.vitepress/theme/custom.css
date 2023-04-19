@@ -5,6 +5,8 @@
     --my-black: #0c1222;
     --my-black-lightest: #13212e;
     --my-blue: #1174b1;
+    --my-blue-light: #3fc1c9;
+    --my-blue-lightest: #4df5ff;
     --my-gray: #9fa3a5;
 }
 
@@ -14,7 +16,7 @@
     --vp-c-text-2: var(--my-gray);
     --vp-nav-bg-color: var(--my-black);
     --vp-c-bg-soft: var(--my-black-lightest);
-    --vp-c-brand: var(--my-green);
+    --vp-c-brand: var(--my-blue-lightest);
     --vp-c-mute: var(--my-black);
     --vp-c-text-code: var(--my-white);
     --vp-code-block-bg: var(--my-black-lightest);
@@ -37,19 +39,16 @@ ul {
     padding-left: 10px;
 }
 
-a .outline-link {
-    text-decoration: none;
+a {
+    color: var(--my-blue-lightest);
+}
+a:not(.link):not(.outline-link) {
+    text-decoration: underline 0.1em var(--my-blue)!important;
+}
+a:hover:not(.link):not(.outline-link){
+    text-decoration: underline 0.2em var(--my-blue)!important;
 }
 
-a:not(.link) {
-    color: var(--my-green);
-    text-decoration: underline;
-    text-decoration-color: var(--my-blue-light);;
-}
-
-a.outline-link {
-    text-decoration: none;
-}
 
 .DocSearch-Button {
     height: 30px;
@@ -97,18 +96,6 @@ a.outline-link {
     border: solid 2pt var(--my-blue);
     border-radius: 15px;
 }
-
-a:hover {
-    text-decoration-color: var(--my-blue);
-    color: var(--my-green-light);
-    text-decoration-thickness: 0.2em;
-}
-
-.vp-doc a {
-    text-decoration: underline;
-    text-decoration-color: var(--my-blue);
-}
-
 
 
 .VPNav {
