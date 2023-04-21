@@ -1,6 +1,6 @@
 # Nginx Proxy Manager实现HTTPS反向代理
 
-![img](https://s2.loli.net/2023/04/19/vxaPnRdoFj38sYS.png)
+![- Nginx Proxy Manager -](https://s2.loli.net/2023/04/21/nWVJFzhyLNtQ5vC.webp)
 
 ## Nginx Proxy Manager介绍以及安装
 
@@ -70,7 +70,7 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 根据Nginx Proxy Manager的文档，使用默认邮箱`admin@example.com`和默认密码`changeme`登录：
 
-![](https://s2.loli.net/2023/04/19/jhsTeKYoVRWdrxS.png)
+![image-20230421115821193](https://s2.loli.net/2023/04/21/sQGzlq4JhtRY8fH.webp)
 
 ### 添加SSL证书
 
@@ -83,9 +83,9 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 
 
-![image-20230404151446286](https://s2.loli.net/2023/04/19/Xp6zDb9J5nKtRF3.png)
+![image-20230421115854256](https://s2.loli.net/2023/04/21/XmRvQ4qsag3Kb5f.webp)
 
-![image-20230404174012411](https://s2.loli.net/2023/04/19/ZCuwcTvlNj91i4H.png)
+![image-20230421115937506](https://s2.loli.net/2023/04/21/uDJ2ZLIKsqb4RwN.webp)
 
 到这一步就完成SSL证书的申请了，接下来反向代理第一个应用：Nginx Proxy Manager。
 
@@ -107,7 +107,7 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 点击主页右上角的`Add Proxy Host`，填写对应的主机静态IP和端口：
 
-![image-20230419180132028](https://s2.loli.net/2023/04/19/DQVAztsIKC1e4OZ.png)
+![image-20230421120002263](https://s2.loli.net/2023/04/21/4O3A9Whz5alrNFV.webp)
 
 注意Schema是根据你代理的服务是否实际开启了HTTPS来设置的：
 
@@ -125,7 +125,7 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 选中右上角的SSL，一目了然，添加刚刚自动申请的证书：
 
-![image-20230419180148023](https://s2.loli.net/2023/04/19/NxS9k7CpUfDGW23.png)
+![image-20230421120037388](https://s2.loli.net/2023/04/21/KpUh6q1Oy8BwXtW.webp)
 
 SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 
@@ -136,15 +136,16 @@ SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 
 点击Save，这样就完成Nginx Proxy Manager反向代理的全部配置，在浏览器使用`https://domain`就能访问到对应的服务了。
 
->当前已开启HTTPS连接，可以在安全的环境更换一个16位以上大小写字母+符号的强力随机密码了，建议使用[1password](https://1password.com/password-generator/)。
+>当前已开启HTTPS连接，建议使用[1password](https://1password.com/password-generator/)更换一个16位以上大小写字母+符号的强力随机密码。
 >
+
 >可以关闭防火墙81端口阻断Nginx Proxy Manager的Web UI，系统管理的应用不适合长时间暴露在公网。
 
 ## 常见错误排除
 
 1. 检查防火墙配置，端口一定要开放；
 2. 远程进不了Web面板别忘了开启代理，有可能是GFW的干扰；
-3. 是HTTP的服务不要选中HTTPS Schema，会导致`502 Bad Gateway`；
+3. HTTP的服务选中HTTPS Schema，会导致`502 Bad Gateway`；
 4. 页面异常有可能是浏览器缓存导致，清理浏览器的缓存再尝试；
 5. 纯IPv6未测试过，有可能导致问题。
 
