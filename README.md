@@ -6,14 +6,6 @@ My blog URL: https://aiktb.com
 
 Personal blog based on [VitePress](https://vitepress.dev/) default theme extension, the comment system uses [giscus](https://github.com/giscus/giscus).
 
-Giscus found that there is a bug that cannot be displayed. It is known that the display effect of gitalk is good, and it is considering replacing it.
-
-The design of the theme refers to the following websites:
-
-- [miyauchi.dev](https://miyauchi.dev)
-- [neovim.io](https://neovim.io)
-- [dart.dev](https://dart.dev/)
-
 ## Deploy
 
 Default port: 8083
