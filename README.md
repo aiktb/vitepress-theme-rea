@@ -18,18 +18,16 @@ The design of the theme refers to the following websites:
 
 Default port: 8083
 
-### NPM
+### CLI
 
 ```bash
-npm run docs:build
-npm run docs:preview
+git clone https://github.com/aiktb/rea.git
+tmux new-session -d 'npm run docs:deploy'
 ```
 
 ### Docker
 
 ```bash
-mkdir -p ~/Docker/rea
-cd ~/Docker/rea
 wget https://github.com/aiktb/rea/blob/master/docker-compose.yml
 docker compose up -d
 ```
@@ -42,8 +40,8 @@ The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) licens
 
 ### About
 
-![image-20230419234900162](https://s2.loli.net/2023/04/19/9eRV5Gx3NLgY4dJ.png)
+![image-20230421212932528](https://s2.loli.net/2023/04/21/IoWm4seBkG9a6wJ.webp)
 
 ### Links
 
-![image-20230419234919745](https://s2.loli.net/2023/04/19/8jlYhH19TWrqxf6.png)
+![image-20230421213013188](https://s2.loli.net/2023/04/21/1Rd6lKcDgIQnJAC.webp)
