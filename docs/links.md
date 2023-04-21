@@ -8,7 +8,7 @@ title: Links
 
 ## Exchange friendship link
 
-If you like my blog, and you also have a blog, you are welcome to leave your information in the Disqus comment area at the bottom of this article to exchange friendship links. 
+If you like my blog, and you also have a blog, you are welcome to send me an email with the following information, and I will add your friendship link.
 
 The following information is required:
 
