@@ -10,6 +10,14 @@ export default defineConfig({
     appearance: false,
     head: [
         [
+            'script',
+            {async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-MCQSMRVDJN'}],
+        [
+            'script',
+            {},
+            "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-MCQSMRVDJN');"
+        ],
+        [
             'link',
             {rel: 'icon', href: '/favicon.svg',}
         ]
@@ -17,7 +25,7 @@ export default defineConfig({
     themeConfig: {
         logo: "/logo.svg",
         siteTitle: false,
-        outline: [2,3],
+        outline: [2, 3],
         nav: [
             {text: 'Home', link: '/'},
             {text: 'About', link: '/about'},
