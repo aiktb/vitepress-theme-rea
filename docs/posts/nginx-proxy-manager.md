@@ -1,3 +1,7 @@
+---
+title: Nginx Proxy Manager
+---
+
 # Nginx Proxy Manager实现HTTPS反向代理
 
 ![- Nginx Proxy Manager -](https://s2.loli.net/2023/04/21/b9ZztImo2WdrN8P.webp)
