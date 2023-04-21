@@ -1,6 +1,6 @@
 # Nginx Proxy Manager实现HTTPS反向代理
 
-![- Nginx Proxy Manager -](https://s2.loli.net/2023/04/21/nWVJFzhyLNtQ5vC.webp)
+![- Nginx Proxy Manager -](https://s2.loli.net/2023/04/21/b9ZztImo2WdrN8P.webp)
 
 ## Nginx Proxy Manager介绍以及安装
 

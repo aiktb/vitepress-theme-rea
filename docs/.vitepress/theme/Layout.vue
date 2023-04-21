@@ -7,7 +7,7 @@ import Home from './Home.vue'
 const {Layout} = DefaultTheme
 const members = [
   {
-    avatar: '/avatar.svg',
+    avatar: 'https://s.gravatar.com/avatar/646885b88df05b60e1eb4f3d5767c2e2?s=200',
     name: 'aiktb',
     title: 'Blogger',
     links: [
