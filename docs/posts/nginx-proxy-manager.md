@@ -145,6 +145,12 @@ SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 
 >可以关闭防火墙81端口阻断Nginx Proxy Manager的Web UI，系统管理的应用不适合长时间暴露在公网。
 
+## 域名重定向
+
+假如你想要将`www.aiktb.com`重定向到`aiktb.com`，那么你应该将`HTTP CODE`设置为`308 Permanent Redirect`，并设置SSL，否则网页将无法打开：
+
+![image-20230421211728979](https://s2.loli.net/2023/04/21/ZzfLP8Crx7so52y.webp)
+
 ## 常见错误排除
 
 1. 检查防火墙配置，端口一定要开放；

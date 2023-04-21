@@ -52,7 +52,7 @@ const members = [
               input-position="bottom"
               lang="en"
               theme="transparent_dark"
-              loading="eager"
+              loading="lazy"
           />
         </div>
       </clientOnly>
