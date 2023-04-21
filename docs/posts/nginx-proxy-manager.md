@@ -4,7 +4,7 @@
 
 ## Nginx Proxy Manager介绍以及安装
 
-> 本文使用Ubuntu22.04 Server操作系统。
+> 本文使用Ubuntu22.04LTS Server
 
 ### 介绍
 
