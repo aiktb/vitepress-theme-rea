@@ -1,8 +1,13 @@
 ---
-title: Nginx Proxy Manager
+title: 'Nginx Proxy Manager实现HTTPS反向代理排疑'
+date: '2023-04-07'
+tags:
+  - 'Nginx'
+  - 'Config'
+  - 'Reverse Proxy'
 ---
 
-# Nginx Proxy Manager实现HTTPS反向代理
+# Nginx Proxy Manager实现HTTPS反向代理排疑
 
 ![- Nginx Proxy Manager -](https://s2.loli.net/2023/04/21/EhFNCoYxqg5mHU7.webp)
 
@@ -158,4 +163,3 @@ SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 3. HTTP的服务选中HTTPS Schema，会导致`502 Bad Gateway`；
 4. 页面异常有可能是浏览器缓存导致，清理浏览器的缓存再尝试；
 5. 纯IPv6未测试过，有可能导致问题。
-
