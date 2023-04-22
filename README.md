@@ -14,6 +14,8 @@ Default port: 8083
 
 ```bash
 git clone https://github.com/aiktb/rea.git
+cd rea
+npm install
 tmux new-session -d 'npm run docs:deploy'
 ```
 
