@@ -20,10 +20,13 @@
     --vp-c-mute: var(--my-black);
     --vp-c-text-code: var(--my-white);
     --vp-code-block-bg: var(--my-black-lightest);
+    --vp-c-divider: var(--my-blue)
 }
+
 code {
     white-space: nowrap;
 }
+
 .VPLink {
     text-align: center;
 }
@@ -44,15 +47,16 @@ ul {
 a {
     color: var(--my-blue-lightest);
 }
+
 a:not(.link):not(.outline-link) {
     text-decoration: underline 0.1em var(--my-blue);
 }
 
-a:hover:not(.link):not(.outline-link){
+a:hover:not(.link):not(.outline-link) {
     text-decoration: underline 0.2em var(--my-blue);
 }
 
-.VPPluginSearch-search-list a{
+.VPPluginSearch-search-list a {
     text-decoration: none !important;
 }
 
