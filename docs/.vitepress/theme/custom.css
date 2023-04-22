@@ -23,7 +23,8 @@
     --vp-c-divider: var(--my-blue)
 }
 
-code {
+.vp-doc :not(pre) > code {
+    border: solid 1pt var(--my-blue);
     white-space: nowrap;
 }
 
@@ -122,11 +123,6 @@ a:hover:not(.link):not(.outline-link) {
 .VPFooter {
     background-color: var(--vp-nav-bg-color) !important;
     border-top: 2px solid var(--my-blue) !important;
-}
-
-
-.vp-doc :not(pre) > code {
-    border: solid 1pt var(--my-blue);
 }
 
 .VPPluginSearch-search-item {

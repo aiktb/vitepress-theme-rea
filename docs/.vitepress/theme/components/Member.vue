@@ -1,10 +1,6 @@
 <script setup>
-import DefaultTheme from 'vitepress/theme'
 import {VPTeamMembers} from 'vitepress/theme'
-import Giscus from '@giscus/vue'
-import Home from './Home.vue'
 
-const {Layout} = DefaultTheme
 const members = [
   {
     avatar: 'https://s.gravatar.com/avatar/646885b88df05b60e1eb4f3d5767c2e2?s=200',
@@ -33,32 +29,5 @@ const members = [
 </script>
 
 <template>
-  <Layout>
-    <template #aside-outline-before>
-      <VPTeamMembers size="small" :members="members"/>
-    </template>
-    <template #doc-after>
-      <clientOnly>
-        <div class="comments">
-          <Giscus
-              repo="aiktb/rea"
-              repo-id="R_kgDOJQkw9Q"
-              category="Announcements"
-              category-id="DIC_kwDOJQkw9c4CVeXb"
-              mapping="title"
-              strict="0"
-              reactions-enabled="1"
-              emit-metadata="0"
-              input-position="bottom"
-              lang="en"
-              theme="transparent_dark"
-              loading="lazy"
-          />
-        </div>
-      </clientOnly>
-    </template>
-    <template #page-top>
-      <Home/>
-    </template>
-  </Layout>
+  <VPTeamMembers size="small" :members="members"/>
 </template>
