@@ -26,6 +26,10 @@ export default defineConfig({
         logo: "/logo.svg",
         siteTitle: false,
         outline: [2, 3],
+        editLink: {
+            pattern: 'https://github.com/aiktb/rea/edit/master/docs/:path',
+            text: 'Edit this page on GitHub'
+        },
         nav: [
             {text: 'Home', link: '/'},
             {text: 'About', link: '/about'},
