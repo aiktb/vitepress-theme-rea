@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 64 64" id="article">
+    <path fill="none" stroke="#4df5ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M51,54H15a4,4,0,0,1-4-4V15a4,4,0,0,1,4-4H43a4,4,0,0,1,4,4V50a4,4,0,0,0,4,4h0a4,4,0,0,0,4-4V28a4,4,0,0,0-4-4H47"></path>
+    <rect width="22" height="7" x="18" y="20" fill="none" stroke="#4df5ff" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2"></rect>
+    <line x1="18" x2="39" y1="33" y2="33" fill="none" stroke="#4df5ff" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2"></line>
+    <line x1="18" x2="39" y1="38" y2="38" fill="none" stroke="#4df5ff" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2"></line>
+    <line x1="18" x2="31" y1="43" y2="43" fill="none" stroke="#4df5ff" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2"></line>
+</svg>

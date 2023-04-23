@@ -20,7 +20,8 @@
     --vp-c-mute: var(--my-black);
     --vp-c-text-code: var(--my-white);
     --vp-code-block-bg: var(--my-black-lightest);
-    --vp-c-divider: var(--my-blue)
+    --vp-c-divider: var(--my-blue);
+    --vp-c-brand-dark: var(--my-blue);
 }
 
 .vp-doc :not(pre) > code {

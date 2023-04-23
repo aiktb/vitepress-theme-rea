@@ -17,7 +17,7 @@ import Giscus from '@giscus/vue'
           input-position="bottom"
           lang="en"
           theme="transparent_dark"
-          loading="lazy"
+          loading="eager"
       />
     </div>
   </clientOnly>

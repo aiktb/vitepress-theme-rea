@@ -24,6 +24,5 @@ const {frontmatter} = useData()
   padding: 3px;
   margin-right: 10px;
   margin-bottom: 10px;
-  user-select: none;
 }
 </style>
