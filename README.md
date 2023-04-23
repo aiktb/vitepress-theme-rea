@@ -17,13 +17,10 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 
 ## Deploy
 
-Default port: 8083
-
-### CLI
-
 #### Start
 
 ```bash
+# Default port: 8083
 git clone https://github.com/aiktb/rea.git
 cd rea
 npm install
@@ -35,23 +32,6 @@ tmux new-session -d 'npm run docs:deploy'
 ```bash
 tmux kill-session -t 0
 ```
-
-### Docker
-
-#### Start
-
-```bash
-wget https://github.com/aiktb/rea/blob/master/docker-compose.yml
-docker compose up -d
-```
-
-#### stop
-
-```
-docker compose stop
-```
-
-
 
 ## License
 

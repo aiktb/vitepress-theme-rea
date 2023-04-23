@@ -11,7 +11,7 @@ import {data as posts} from '../posts.data.js'
         <p>{{ post.frontmatter.date }}</p>
         <svg role="img" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="article-icon">
           <title>article</title>
-          <use xlink:href="article.svg#article"/>
+          <use xlink:href="/article.svg#article"/>
         </svg>
       </a>
     </ul>
