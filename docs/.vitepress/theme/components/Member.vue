@@ -15,7 +15,7 @@ const members = [
         icon: {
           svg: `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <title>Telegram</title>
-                     <use xlink:href="telegram.svg#telegram"/>
+                     <use xlink:href="/telegram.svg#telegram"/>
                 </svg`
         },
         link: 'https://t.me/aiktb'
@@ -24,7 +24,7 @@ const members = [
         icon: {
           svg: `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <title>Email</title>
-                     <use xlink:href="email.svg#email"/>
+                     <use xlink:href="/email.svg#email"/>
                 </svg`
         },
         link: 'mailto:aiktb@outlook.com?subject=Email%20Subject&body=Email%20Body'
