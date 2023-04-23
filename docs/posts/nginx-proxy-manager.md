@@ -1,6 +1,6 @@
 ---
 title: 'Nginx Proxy Manager实现HTTPS反向代理排疑'
-date: '2023-04-07'
+date: '2023/4/7'
 tags:
   - 'Nginx'
   - 'Config'

@@ -1,16 +1,18 @@
 <template>
-  <div class="content">
-    <img src="https://s.gravatar.com/avatar/646885b88df05b60e1eb4f3d5767c2e2?s=200" class="avatar" alt="avatar"/>
-  </div>
-  <div class="share">
-    <h1 class="title">
-      <span>Hi, I'm aiktb. 👋</span>
-    </h1>
-    <p class="description">
-      Hope my blog can help you. 😎
-    </p>
-      <a href="/about#contact-me" class="contact">contact me ❤️</a>
-  </div>
+ <div class="home">
+   <div class="content">
+     <img src="https://s.gravatar.com/avatar/646885b88df05b60e1eb4f3d5767c2e2?s=200" class="avatar" alt="avatar"/>
+   </div>
+   <div class="share">
+     <h1 class="title">
+       <span>Hi, I'm aiktb. 👋</span>
+     </h1>
+     <p class="description">
+       Hope my blog can help you. 😎
+     </p>
+     <a href="/about#contact-me" class="contact">contact me ❤️</a>
+   </div>
+ </div>
 </template>
 
 <style scoped>

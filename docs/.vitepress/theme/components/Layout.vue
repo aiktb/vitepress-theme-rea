@@ -4,6 +4,7 @@ import Member from "./Member.vue";
 import Comments from "./Comments.vue";
 import Tags from "./Tags.vue";
 import Home from "./Home.vue";
+import Recent from "./Recent.vue";
 
 const {Layout} = DefaultTheme
 </script>
@@ -20,6 +21,9 @@ const {Layout} = DefaultTheme
     </template>
     <template #home-hero-before>
       <Home/>
+    </template>
+    <template #home-hero-after>
+      <Recent/>
     </template>
   </Layout>
 </template>
