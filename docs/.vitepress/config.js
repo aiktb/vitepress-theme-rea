@@ -8,6 +8,9 @@ export default defineConfig({
     lastUpdated: true,
     cleanUrls: true,
     appearance: false,
+    markdown: {
+        lineNumbers: true,
+    },
     head: [
         [
             'script',
