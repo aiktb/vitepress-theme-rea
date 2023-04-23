@@ -56,20 +56,24 @@
   align-items: center;
   font-size: 2.2em;
   font-weight: bold;
-  font-family: "UD Digi Kyokasho NK-B", emoji;
+  font-family: "UD Digi Kyokasho NK-B", serif;
 }
 
 .description {
   margin: 1em 0;
   font-size: 1.5em;
-  font-family: "UD Digi Kyokasho NK-B", emoji;
+  font-family: "UD Digi Kyokasho NK-B", serif;
 }
 .contact{
-  font-family: "UD Digi Kyokasho NK-B", emoji;
+  font-family: "UD Digi Kyokasho NK-B", serif;
   font-size: 1.5em;
   color: var(--my-white) ;
   border: solid 3px var(--my-blue-lightest);
   border-radius: 30px;
   padding: 10px;
+}
+.contact:hover {
+  color: var(--my-black);
+  background-color: var(--my-blue-lightest);
 }
 </style>

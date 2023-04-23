@@ -12,6 +12,7 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 - Dark mode only
 - Recent blogs
 - No sidebar
+- Google analytics support
 - [Comment](https://github.com/giscus/giscus)
 - [Local search](https://github.com/emersonbottero/vitepress-plugin-search)
 
