@@ -18,7 +18,7 @@ The id is taken from the song ***[aikotoba](https://www.youtube.com/watch?v=WptX
 
 In order to avoid unnecessary troubles, I will not provide any contact information within China. 
 
-You can reach me on the following platforms, email is preferred.:
+You can reach me on the following platforms, email is preferred:
 
 - Email: aiktb@outlook.com
 - Telegram: https://t.me/aiktb
