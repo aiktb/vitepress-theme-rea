@@ -8,7 +8,7 @@ title: About
 ## About me
 
 A student who only knows crud for the time being, 
-technically interested in **Web Development**, **Server O&M**, **Network Penetration Testing**. 
+technically interested in ***Web Development, Server O&M, and Network Penetration Testing***. 
 
 I am also very interested in ACG and have the wealth of animation viewing experience. 
 

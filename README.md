@@ -4,13 +4,24 @@
 
 My blog URL: https://aiktb.com
 
-Personal blog based on [VitePress](https://vitepress.dev/) default theme extension, the comment system uses [giscus](https://github.com/giscus/giscus).
+Personal blog based on [VitePress](https://vitepress.dev/) default theme extension.
+
+## Feature
+
+- Simple tones
+- Dark mode only
+- Recent blogs
+- No sidebar
+- [Comment](https://github.com/giscus/giscus)
+- [Local search](https://github.com/emersonbottero/vitepress-plugin-search)
 
 ## Deploy
 
 Default port: 8083
 
 ### CLI
+
+#### Start
 
 ```bash
 git clone https://github.com/aiktb/rea.git
@@ -19,12 +30,28 @@ npm install
 tmux new-session -d 'npm run docs:deploy'
 ```
 
+#### Stop
+
+```bash
+tmux kill-session -t 0
+```
+
 ### Docker
+
+#### Start
 
 ```bash
 wget https://github.com/aiktb/rea/blob/master/docker-compose.yml
 docker compose up -d
 ```
+
+#### stop
+
+```
+docker compose stop
+```
+
+
 
 ## License
 
@@ -32,10 +59,14 @@ The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) licens
 
 ## Preview
 
+### Home
+
+![image-20230423185114307](https://s2.loli.net/2023/04/23/d4NTRDUwWQih6cE.webp)
+
 ### About
 
-![image-20230421212932528](https://s2.loli.net/2023/04/21/IoWm4seBkG9a6wJ.webp)
+![image-20230423185126228](https://s2.loli.net/2023/04/23/Bdt8hrs6cIRCl3E.webp)
 
 ### Links
 
-![image-20230421213013188](https://s2.loli.net/2023/04/21/1Rd6lKcDgIQnJAC.webp)
+![](https://s2.loli.net/2023/04/23/kXO8fFJdPWUZIT7.webp)
