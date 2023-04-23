@@ -40,10 +40,9 @@ export default defineConfig({
             {icon: 'github', link: 'https://github.com/aiktb/rea'},
         ],
         footer: {
-            message: 'The blog posts are all licensed under ' +
-                '<a href="https://creativecommons.org/licenses/by/4.0/" target = "_blank" >CC BY 4.0</a>.',
-            copyright: 'Copyright © 2023 <a href="/">aiktb</a>. Released under the ' +
-                '<a href="https://github.com/aiktb/rea/blob/master/LICENSE" target = "_blank">MIT License</a>.'
+            message: '<a href="https://creativecommons.org/licenses/by/4.0/" target = "_blank" >CC BY 4.0</a> | ' +
+                '<a href="https://github.com/aiktb/rea/blob/master/LICENSE" target = "_blank">MIT License</a> | ' +
+                'Copyright © 2023 <a href="/">aiktb</a>.',
         },
     },
 })
