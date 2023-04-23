@@ -1,18 +1,18 @@
 <template>
- <div class="home">
-   <div class="content">
-     <img src="https://s.gravatar.com/avatar/646885b88df05b60e1eb4f3d5767c2e2?s=200" class="avatar" alt="avatar"/>
-   </div>
-   <div class="share">
-     <h1 class="title">
-       <span>Hi, I'm aiktb. 👋</span>
-     </h1>
-     <p class="description">
-       Hope my blog can help you. 😎
-     </p>
-     <a href="/about#contact-me" class="contact">contact me ❤️</a>
-   </div>
- </div>
+  <div class="home">
+    <div class="content">
+      <img src="https://s.gravatar.com/avatar/646885b88df05b60e1eb4f3d5767c2e2?s=200" class="avatar" alt="avatar"/>
+    </div>
+    <div class="share">
+      <h1 class="title">
+        <span>Hi, I'm aiktb. 👋</span>
+      </h1>
+      <p class="description">
+        Hope my blog can help you. 😎
+      </p>
+      <a href="/about#contact-me" class="contact">contact me ❤️</a>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -64,14 +64,16 @@
   font-size: 1.5em;
   font-family: "UD Digi Kyokasho NK-B", serif;
 }
-.contact{
+
+.contact {
   font-family: "UD Digi Kyokasho NK-B", serif;
   font-size: 1.5em;
-  color: var(--my-white) ;
+  color: var(--my-white);
   border: solid 3px var(--my-blue-lightest);
   border-radius: 30px;
   padding: 10px;
 }
+
 .contact:hover {
   color: var(--my-black);
   background-color: var(--my-blue-lightest);

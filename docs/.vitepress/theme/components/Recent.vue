@@ -40,7 +40,7 @@ import {data as posts} from '../posts.data.js'
   position: relative;
   width: 85%;
   display: block;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 0 20px;
   margin: 10px;
   max-width: 600px;
