@@ -49,13 +49,13 @@ a {
     color: var(--my-blue-lightest);
 }
 
-a:not(.link):not(.outline-link) {
-    text-decoration: underline 0.1em var(--my-blue);
-}
+/*a:not(.link):not(.outline-link) {*/
+/*    text-decoration: underline 0.1em var(--my-blue);*/
+/*}*/
 
-a:hover:not(.link):not(.outline-link) {
-    text-decoration: underline 0.2em var(--my-blue);
-}
+/*a:hover:not(.link):not(.outline-link) {*/
+/*    text-decoration: underline 0.2em var(--my-blue);*/
+/*}*/
 
 .VPPluginSearch-search-list a {
     text-decoration: none !important;
