@@ -10,8 +10,6 @@ const members = [
       {icon: 'github', link: 'https://github.com/aiktb'},
       {icon: 'twitter', link: 'https://twitter.com/aiktb39'},
       {
-        // Don't try to use paths to reference SVG icons, it's very cumbersome here,
-        // and doesn't accommodate light and dark theme switching!
         icon: {
           svg: `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <title>Telegram</title>

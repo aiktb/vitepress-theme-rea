@@ -28,7 +28,7 @@ import {data as posts} from '../posts.data.js'
 }
 
 .blog-list {
-  font-family: "Segoe UI Emoji",YouYuan, serif;
+  font-family: "Segoe UI Emoji", YouYuan, serif;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@ import {data as posts} from '../posts.data.js'
   border: 4px solid var(--my-blue-lightest);
 }
 
-.blog:hover h1{
+.blog:hover h1 {
   color: var(--my-blue-lightest);
 }
 
