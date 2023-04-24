@@ -44,8 +44,8 @@ import {data as posts} from '../posts.data.js'
   padding: 0 20px;
   margin: 10px;
   max-width: 600px;
-  box-shadow: 6px 6px var(--my-blue-lightest);
-  border: 4px solid var(--my-white);
+  box-shadow: 6px 6px var(--my-blue);
+  border: 4px solid var(--my-blue-lightest);
   cursor: pointer;
   color: var(--my-white);
 }
