@@ -16,6 +16,10 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 - [Comment](https://github.com/giscus/giscus)
 - [Local search](https://github.com/emersonbottero/vitepress-plugin-search)
 
+## Next step
+
+Let the archive page become like [this](https://keestalkstech.com/archive/).
+
 ## Deploy
 
 #### Start
