@@ -68,7 +68,7 @@ a:hover {
 
 @media only screen and (min-width: 767px) {
     .VPNavBarSearch {
-        border: solid 2pt var(--my-blue);
+        border: solid 2pt var(--my-white);
         border-radius: 10px;
     }
 }

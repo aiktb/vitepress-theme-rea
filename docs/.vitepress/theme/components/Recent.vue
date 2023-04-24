@@ -53,15 +53,20 @@ import {data as posts} from '../posts.data.js'
 .blog:hover {
   text-decoration: none;
   transform: translate(-2px, -2px);
-  box-shadow: 10px 10px var(--my-blue-light);
+  box-shadow: 10px 10px var(--my-blue);
   border: 4px solid var(--my-blue-light);
 }
 
 .blog:hover h1 {
   color: var(--my-blue-light);
 }
-.blog:hover .article-icon{
+
+.blog:hover .article-icon {
   stroke: var(--my-blue-light);
+}
+
+.blog:hover p {
+  color: var(--my-white)
 }
 
 .article-icon {
@@ -72,5 +77,4 @@ import {data as posts} from '../posts.data.js'
   right: 0;
   stroke: var(--my-white);
 }
-
 </style>

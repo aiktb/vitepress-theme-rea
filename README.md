@@ -42,12 +42,9 @@ The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) licens
 
 ### Home
 
-![Home](https://s2.loli.net/2023/04/23/d4NTRDUwWQih6cE.webp)
+![image-20230424180412898](https://s2.loli.net/2023/04/24/WDdNABbaeFrXUS7.webp)
 
 ### About
 
-![About](https://s2.loli.net/2023/04/23/Bdt8hrs6cIRCl3E.webp)
+![image-20230424180405354](https://s2.loli.net/2023/04/24/QMY2VXi1T4J6pxw.webp)
 
-### Links
-
-![Links](https://s2.loli.net/2023/04/23/kXO8fFJdPWUZIT7.webp)
