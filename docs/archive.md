@@ -4,7 +4,7 @@ title: Archive
 
 # Blog post archive
 
-<img src="./public/archive.svg" style="background:#13212e" alt="archive cover"/>
+![image-20230424150232120](https://s2.loli.net/2023/04/24/tUqMk5A6j9aLZuN.webp)
 
 ## Year
 ### 2023

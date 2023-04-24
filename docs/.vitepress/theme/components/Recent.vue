@@ -60,6 +60,9 @@ import {data as posts} from '../posts.data.js'
 .blog:hover h1 {
   color: var(--my-blue-lightest);
 }
+.blog:hover .article-icon{
+  stroke: var(--my-blue-lightest);
+}
 
 .article-icon {
   height: 48px;
@@ -67,5 +70,7 @@ import {data as posts} from '../posts.data.js'
   position: absolute;
   bottom: 0;
   right: 0;
+  stroke: var(--my-white);
 }
+
 </style>

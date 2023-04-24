@@ -3,7 +3,7 @@ title: About
 ---
 # About me and the blog
 
-<img src="./public/about.svg" style="background:#13212e" alt="about cover"/>
+![image-20230424150006157](https://s2.loli.net/2023/04/24/jQ1JiRcBmbZ6vnH.webp)
 
 ## About me
 

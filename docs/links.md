@@ -4,7 +4,7 @@ title: Links
 
 # Friendship links
 
-<img src="./public/links.svg" style="background:#13212e" alt="links cover"/>
+![image-20230424150332461](https://s2.loli.net/2023/04/24/UAcI91wZirsV2Td.webp)
 
 ## Exchange friendship link
 
