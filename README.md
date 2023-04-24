@@ -12,7 +12,7 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 - Dark mode only
 - Recent blogs
 - No sidebar
-- Google analytics support
+- Google Analytics support
 - [Comment](https://github.com/giscus/giscus)
 - [Local search](https://github.com/emersonbottero/vitepress-plugin-search)
 
@@ -42,12 +42,12 @@ The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) licens
 
 ### Home
 
-![image-20230423185114307](https://s2.loli.net/2023/04/23/d4NTRDUwWQih6cE.webp)
+![Home](https://s2.loli.net/2023/04/23/d4NTRDUwWQih6cE.webp)
 
 ### About
 
-![image-20230423185126228](https://s2.loli.net/2023/04/23/Bdt8hrs6cIRCl3E.webp)
+![About](https://s2.loli.net/2023/04/23/Bdt8hrs6cIRCl3E.webp)
 
 ### Links
 
-![](https://s2.loli.net/2023/04/23/kXO8fFJdPWUZIT7.webp)
+![Links](https://s2.loli.net/2023/04/23/kXO8fFJdPWUZIT7.webp)

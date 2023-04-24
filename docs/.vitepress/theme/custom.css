@@ -77,14 +77,20 @@ a {
     }
 }
 
+/*noinspection ALL*/
 .DocSearch-Form {
     background-color: var(--my-black-lightest);
 }
 
-
+/*noinspection ALL*/
 .VPPluginSearch-modal {
     background-color: var(--my-black-lightest);
+}
 
+/*noinspection ALL*/
+.VPPluginSearch-search-item {
+    background-color: var(--my-black-lightest);
+    border-color: var(--my-blue)
 }
 
 .VPDocAsideOutline {
@@ -124,9 +130,4 @@ a {
 .VPFooter {
     background-color: var(--vp-nav-bg-color) !important;
     border-top: 2px solid var(--my-blue) !important;
-}
-
-.VPPluginSearch-search-item {
-    background-color: var(--my-black-lightest);
-    border-color: var(--my-blue)
 }

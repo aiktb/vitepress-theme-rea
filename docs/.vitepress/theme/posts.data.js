@@ -1,5 +1,7 @@
 import {createContentLoader} from 'vitepress';
 
+export let data;
+
 export default createContentLoader('posts/*.md', {
     excerpt: true,
     transform(rawData) {
