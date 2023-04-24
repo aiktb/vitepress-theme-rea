@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1300"
+   width="1400"
    height="195"
-   viewBox="0 0 1300 195"
+   viewBox="0 0 1400 195"
    version="1.1"
    id="SVGRoot"
    sodipodi:docname="logo.svg"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="0.91490602"
-     inkscape:cx="923.04563"
-     inkscape:cy="410.42467"
+     inkscape:zoom="1.2938725"
+     inkscape:cx="753.55184"
+     inkscape:cy="237.65866"
      inkscape:window-width="2560"
      inkscape:window-height="1351"
      inkscape:window-x="1391"
@@ -81,13 +81,19 @@
          y="289.82764" /></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:192px;font-family:'UD Digi Kyokasho NP-B';-inkscape-font-specification:'UD Digi Kyokasho NP-B, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#3fc1c9;stroke-width:1.00157;paint-order:markers stroke fill"
-       x="194.98505"
-       y="156.60541"
+       x="235.17448"
+       y="155.83253"
        id="text571"><tspan
          sodipodi:role="line"
          id="tspan569"
-         x="194.98505"
-         y="156.60541">aiktb</tspan></text><g
+         x="235.17448"
+         y="155.83253">aiktb<tspan
+   style="fill:#a9d5c4;fill-opacity:1"
+   id="tspan420">'s blog</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="235.17448"
+         y="395.83252"
+         id="tspan418" /></text><g
        id="g8037"
        transform="matrix(7.999685,0,0,8.7265202,1.2136705,-7.2282676)"><path
          fill="#303c42"
@@ -112,22 +118,6 @@
          x="944.35931"
          y="-142.09109" /></text><text
        xml:space="preserve"
-       style="font-size:189.571px;font-family:'UD Digi Kyokasho NP-B';-inkscape-font-specification:'UD Digi Kyokasho NP-B, Normal';fill:#a9d5c4;stroke-width:0.569608;paint-order:markers stroke fill"
-       x="683.24078"
-       y="153.79691"
-       id="text8175"
-       transform="scale(0.99728599,1.0027214)"><tspan
-         sodipodi:role="line"
-         id="tspan8173"
-         x="683.24078"
-         y="153.79691"
-         style="stroke-width:0.569608">'s blog</tspan><tspan
-         sodipodi:role="line"
-         x="683.24078"
-         y="390.76068"
-         style="stroke-width:0.569608"
-         id="tspan8201" /></text><text
-       xml:space="preserve"
        style="font-size:333.333px;font-family:'UD Digi Kyokasho NP-B';-inkscape-font-specification:'UD Digi Kyokasho NP-B, Normal';fill:#a9d5c4;stroke-width:1.00157;paint-order:markers stroke fill"
        x="1107.2175"
        y="271.0661"
@@ -135,4 +125,13 @@
          sodipodi:role="line"
          id="tspan8253"
          x="1107.2175"
-         y="271.0661"></tspan></text></g></svg>
+         y="271.0661" /></text><text
+       xml:space="preserve"
+       style="font-size:106.667px;font-family:'UD Digi Kyokasho NP-B';-inkscape-font-specification:'UD Digi Kyokasho NP-B, Normal';fill:#3fc1c9;stroke-width:37.7953;paint-order:stroke fill markers"
+       x="698.43237"
+       y="100.55678"
+       id="text414"><tspan
+         sodipodi:role="line"
+         id="tspan412"
+         x="698.43237"
+         y="100.55678"></tspan></text></g></svg>
