@@ -3,10 +3,10 @@
     --my-green-light: #61ff00;
     --my-white: #a9d5c4;
     --my-black: #0c1222;
-    --my-black-lightest: #13212e;
+    --my-black-light: #13212e;
     --my-blue: #1174b1;
-    --my-blue-light: #3fc1c9;
-    --my-blue-lightest: #4df5ff;
+    --my-blue-dark: #2b7b86;
+    --my-blue-light: #4df5ff;
     --my-gray: #9fa3a5;
 }
 
@@ -15,13 +15,13 @@
     --vp-c-text-1: var(--my-white);
     --vp-c-text-2: var(--my-gray);
     --vp-nav-bg-color: var(--my-black);
-    --vp-c-bg-soft: var(--my-black-lightest);
-    --vp-c-brand: var(--my-blue-lightest);
+    --vp-c-bg-soft: var(--my-black-light);
+    --vp-c-brand: var(--my-blue-light);
     --vp-c-mute: var(--my-black);
     --vp-c-text-code: var(--my-white);
-    --vp-code-block-bg: var(--my-black-lightest);
+    --vp-code-block-bg: var(--my-black-light);
     --vp-c-divider: var(--my-blue);
-    --vp-c-brand-dark: var(--my-blue);
+    --vp-c-brand-dark: var(--my-blue-dark);
 }
 
 .vp-doc :not(pre) > code {
@@ -47,16 +47,12 @@ ul {
 }
 
 a {
-    color: var(--my-blue-lightest);
+    color: var(--my-blue-light);
 }
 
-/*a:not(.link):not(.outline-link) {*/
-/*    text-decoration: underline 0.1em var(--my-blue);*/
-/*}*/
-
-/*a:hover:not(.link):not(.outline-link) {*/
-/*    text-decoration: underline 0.2em var(--my-blue);*/
-/*}*/
+a:hover {
+    color: var(--my-blue-dark);
+}
 
 .VPPluginSearch-search-list a {
     text-decoration: none !important;
@@ -72,31 +68,31 @@ a {
 
 @media only screen and (min-width: 767px) {
     .VPNavBarSearch {
-        border: solid 2pt var(--my-white);
+        border: solid 2pt var(--my-blue);
         border-radius: 10px;
     }
 }
 
 /*noinspection ALL*/
 .DocSearch-Form {
-    background-color: var(--my-black-lightest);
+    background-color: var(--my-black-light);
 }
 
 /*noinspection ALL*/
 .VPPluginSearch-modal {
-    background-color: var(--my-black-lightest);
+    background-color: var(--my-black-light);
 }
 
 /*noinspection ALL*/
 .VPPluginSearch-search-item {
-    background-color: var(--my-black-lightest);
+    background-color: var(--my-black-light);
     border-color: var(--my-blue)
 }
 
 .VPDocAsideOutline {
     border: solid 2pt var(--my-blue);
     border-radius: 15px;
-    background-color: var(--my-black-lightest);
+    background-color: var(--my-black-light);
 }
 
 ::-webkit-scrollbar {

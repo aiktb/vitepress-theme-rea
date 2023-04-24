@@ -27,7 +27,7 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  box-shadow: 0 0 20px 20px var(--my-blue-lightest);
+  box-shadow: 0 0 20px 20px var(--my-blue-light);
 }
 
 @keyframes avatar-transform {
@@ -69,13 +69,13 @@
   font-family: "UD Digi Kyokasho NK-B", serif;
   font-size: 1.5em;
   color: var(--my-white);
-  border: solid 3px var(--my-blue-lightest);
+  border: solid 3px var(--my-blue-light);
   border-radius: 30px;
   padding: 10px;
 }
 
 .contact:hover {
   color: var(--my-black);
-  background-color: var(--my-blue-lightest);
+  background-color: var(--my-blue-light);
 }
 </style>

@@ -24,7 +24,7 @@ import {data as posts} from '../posts.data.js'
   margin: 1em 0;
   font-size: 1.5em;
   font-family: "UD Digi Kyokasho NK-B", serif;
-  color: var(--my-blue-lightest)
+  color: var(--my-blue-light)
 }
 
 .blog-list {
@@ -45,7 +45,7 @@ import {data as posts} from '../posts.data.js'
   margin: 10px;
   max-width: 600px;
   box-shadow: 6px 6px var(--my-blue);
-  border: 4px solid var(--my-blue-lightest);
+  border: 4px solid var(--my-blue-light);
   cursor: pointer;
   color: var(--my-white);
 }
@@ -53,15 +53,15 @@ import {data as posts} from '../posts.data.js'
 .blog:hover {
   text-decoration: none;
   transform: translate(-2px, -2px);
-  box-shadow: 10px 10px var(--my-blue-lightest);
-  border: 4px solid var(--my-blue-lightest);
+  box-shadow: 10px 10px var(--my-blue-light);
+  border: 4px solid var(--my-blue-light);
 }
 
 .blog:hover h1 {
-  color: var(--my-blue-lightest);
+  color: var(--my-blue-light);
 }
 .blog:hover .article-icon{
-  stroke: var(--my-blue-lightest);
+  stroke: var(--my-blue-light);
 }
 
 .article-icon {
