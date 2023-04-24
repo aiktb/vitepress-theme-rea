@@ -1,10 +1,13 @@
 <script setup>
 import Giscus from '@giscus/vue'
+import { useData } from 'vitepress'
+
+const {title} = useData()
 </script>
 
 <template>
   <clientOnly>
-    <div class="comments">
+    <div class="comments" :key="title">
       <Giscus
           repo="aiktb/rea"
           repo-id="R_kgDOJQkw9Q"
