@@ -9,6 +9,7 @@
   "dependencies": {
     "@giscus/vue": "^2.2.8",
     "flexsearch": "^0.7.31",
+    "gitalk": "^1.8.0",
     "vite": "^4.2.1",
     "vitepress": "^1.0.0-alpha.64",
     "vitepress-plugin-search": "^1.0.4-alpha.19"

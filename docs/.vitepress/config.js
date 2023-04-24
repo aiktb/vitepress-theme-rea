@@ -18,7 +18,10 @@ export default defineConfig({
         [
             'script',
             {},
-            "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-MCQSMRVDJN');"
+            `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MCQSMRVDJN');`
         ],
         [
             'link',
@@ -43,9 +46,9 @@ export default defineConfig({
             {icon: 'github', link: 'https://github.com/aiktb/rea'},
         ],
         footer: {
-            message: '<a href="https://creativecommons.org/licenses/by/4.0/" target = "_blank" >CC BY 4.0</a> | ' +
-                '<a href="https://github.com/aiktb/rea/blob/master/LICENSE" target = "_blank">MIT License</a> | ' +
-                'Copyright © 2023 <a href="/">aiktb</a>.',
+            message: `<a href="https://creativecommons.org/licenses/by/4.0/" target = "_blank" >CC BY 4.0</a> | 
+                      <a href="https://github.com/aiktb/rea/blob/master/LICENSE" target = "_blank">MIT License</a> | 
+                      Copyright © 2023 <a href="/">aiktb</a>.`,
         },
     },
 })
