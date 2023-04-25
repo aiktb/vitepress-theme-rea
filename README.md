@@ -18,7 +18,9 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 
 ## Next step
 
-Let the archive page become like [this](https://keestalkstech.com/archive/).
+- Let the archive page become like [this](https://keestalkstech.com/archive/).
+- RSS feed
+- Site map
 
 ## Deploy
 
