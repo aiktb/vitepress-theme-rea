@@ -8,9 +8,12 @@
   },
   "dependencies": {
     "@giscus/vue": "^2.2.8",
+    "@vueuse/core": "^10.1.0",
+    "element-plus": "^2.3.4",
     "flexsearch": "^0.7.31",
     "vite": "^4.2.1",
     "vitepress": "^1.0.0-alpha.64",
-    "vitepress-plugin-search": "^1.0.4-alpha.19"
+    "vitepress-plugin-search": "^1.0.4-alpha.19",
+    "vue": "^3.2.47"
   }
 }

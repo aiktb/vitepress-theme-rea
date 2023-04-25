@@ -1,25 +1,27 @@
 <script setup>
-import Giscus from '@giscus/vue';
-import { useData } from 'vitepress';
+import {useData} from 'vitepress';
 
 const {title} = useData()
 </script>
 
 <template>
-  <div class="comments" :key="title">
-    <Giscus
-        repo="aiktb/rea"
-        repo-id="R_kgDOJQkw9Q"
-        category="Announcements"
-        category-id="DIC_kwDOJQkw9c4CVeXb"
-        mapping="pathname"
-        strict="0"
-        reactions-enabled="1"
-        emit-metadata="0"
-        input-position="bottom"
-        lang="en"
-        theme="transparent_dark"
-        loading="eager"
+  <div class="comments">
+    <component
+        :is="'script'"
+        :key="title"
+        src="https://giscus.app/client.js"
+        data-repo="aiktb/rea"
+        data-repo-id="R_kgDOJQkw9Q"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOJQkw9c4CVeXb"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-lang="en"
+        data-theme="transparent_dark"
+        data-loading="eager"
     />
   </div>
 </template>
