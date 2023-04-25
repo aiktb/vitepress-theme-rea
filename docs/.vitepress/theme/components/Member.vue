@@ -1,5 +1,8 @@
+<!--suppress ALL -->
 <script setup>
 import {VPTeamMembers} from 'vitepress/theme'
+import email from '/email.svg?raw'
+import telegram from '/telegram.svg?raw'
 
 const members = [
   {
@@ -10,21 +13,11 @@ const members = [
       {icon: 'github', link: 'https://github.com/aiktb'},
       {icon: 'twitter', link: 'https://twitter.com/aiktb39'},
       {
-        icon: {
-          svg: `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                     <title>Telegram</title>
-                     <use xlink:href="/telegram.svg#telegram"/>
-                </svg>`
-        },
+        icon: {svg: telegram},
         link: 'https://t.me/aiktb'
       },
       {
-        icon: {
-          svg: `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                     <title>Email</title>
-                     <use xlink:href="/email.svg#email"/>
-                </svg>`
-        },
+        icon: {svg: email},
         link: 'mailto:aiktb@outlook.com?subject=Email%20Subject&body=Email%20Body'
       }
     ]
