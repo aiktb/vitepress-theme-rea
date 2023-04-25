@@ -22,10 +22,11 @@
     --vp-code-block-bg: var(--my-black-light);
     --vp-c-divider: var(--my-blue);
     --vp-c-brand-dark: var(--my-blue-dark);
+    --vp-c-bg-alt: var(--my-black-light);
 }
 
 .VPLocalNav {
-    border-bottom: 1px solid var(--my-blue)!important;
+    border-bottom: 1px solid var(--my-blue) !important;
 }
 
 .vp-doc :not(pre) > code {
@@ -58,39 +59,22 @@ a:hover {
     color: var(--my-blue-dark);
 }
 
-.VPPluginSearch-search-list a {
-    text-decoration: none !important;
-}
-
-.DocSearch-Button {
-    height: 30px;
-}
-
 .outline-link {
     text-decoration: none;
 }
 
 @media only screen and (min-width: 767px) {
     .VPNavBarSearch {
-        border: solid 2pt var(--my-white);
         border-radius: 10px;
     }
 }
 
-/*noinspection ALL*/
+.DocSearch-Button {
+    height: 30px;
+}
+
 .DocSearch-Form {
     background-color: var(--my-black-light);
-}
-
-/*noinspection ALL*/
-.VPPluginSearch-modal {
-    background-color: var(--my-black-light);
-}
-
-/*noinspection ALL*/
-.VPPluginSearch-search-item {
-    background-color: var(--my-black-light);
-    border-color: var(--my-blue)
 }
 
 .VPDocAsideOutline {
