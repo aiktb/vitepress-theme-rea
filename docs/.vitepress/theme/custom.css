@@ -24,6 +24,10 @@
     --vp-c-brand-dark: var(--my-blue-dark);
 }
 
+.VPLocalNav {
+    border-bottom: 1px solid var(--my-blue)!important;
+}
+
 .vp-doc :not(pre) > code {
     border: solid 1pt var(--my-blue);
     white-space: nowrap;

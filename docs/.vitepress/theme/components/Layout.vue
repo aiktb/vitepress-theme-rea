@@ -2,7 +2,6 @@
 import DefaultTheme from 'vitepress/theme';
 import Member from "./Member.vue";
 import Comments from "./Comments.vue";
-import Tags from "./Tags.vue";
 import Home from "./Home.vue";
 import Recent from "./Recent.vue";
 
@@ -10,9 +9,6 @@ const {Layout} = DefaultTheme
 </script>
 <template>
   <Layout>
-    <template #doc-before>
-      <Tags/>
-    </template>
     <template #doc-after>
       <Comments/>
     </template>
