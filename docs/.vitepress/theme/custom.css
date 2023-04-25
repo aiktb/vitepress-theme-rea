@@ -73,10 +73,6 @@ a:hover {
     height: 30px;
 }
 
-.DocSearch-Form {
-    background-color: var(--my-black-light);
-}
-
 .VPDocAsideOutline {
     border: solid 2pt var(--my-blue);
     border-radius: 15px;
