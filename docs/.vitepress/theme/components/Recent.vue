@@ -11,7 +11,7 @@ import {data as posts} from '../posts.data.js'
         <p>{{ post.frontmatter.date }}</p>
         <svg role="img" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="article-icon">
           <title>article</title>
-          <use xlink:href="/article.svg#article"/>
+          <use xlink:href="/image/article.svg#article"/>
         </svg>
       </a>
     </ul>
@@ -23,12 +23,10 @@ import {data as posts} from '../posts.data.js'
   text-align: center;
   margin: 1em 0;
   font-size: 1.5em;
-  font-family: "UD Digi Kyokasho NK-B", serif;
   color: var(--my-blue-light)
 }
 
 .blog-list {
-  font-family: "Segoe UI Emoji", YouYuan, serif;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;

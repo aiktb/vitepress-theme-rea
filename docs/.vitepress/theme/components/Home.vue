@@ -8,7 +8,7 @@
         <span>Hi, I'm aiktb. 👋</span>
       </h1>
       <p class="description">
-        Hope my blog can help you. 😎
+        Hope me can help you. 😎
       </p>
       <a href="/about#contact-me" class="contact">contact me ❤️</a>
     </div>
@@ -56,17 +56,14 @@
   align-items: center;
   font-size: 2.2em;
   font-weight: bold;
-  font-family: "UD Digi Kyokasho NK-B", serif;
 }
 
 .description {
   margin: 1em 0;
   font-size: 1.5em;
-  font-family: "UD Digi Kyokasho NK-B", serif;
 }
 
 .contact {
-  font-family: "UD Digi Kyokasho NK-B", serif;
   font-size: 1.5em;
   color: var(--my-white);
   border: solid 3px var(--my-blue-light);

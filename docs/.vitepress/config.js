@@ -26,12 +26,12 @@ export default defineConfig({
         ],
         [
             'link',
-            {rel: 'icon', href: '/favicon.svg',}
+            {rel: 'icon', href: '/image/favicon.svg',}
         ],
     ],
     themeConfig: {
-        logo: "/logo.svg",
-        siteTitle: false,
+        logo: "/image/logo.svg",
+        siteTitle: `aiktb's blog`,
         outline: [2, 3],
         search: {
             provider: 'local'
@@ -52,7 +52,7 @@ export default defineConfig({
                 icon: {
                     svg: `<svg role="img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <title>RSS</title>
-                            <use xlink:href="/rss.svg#rss"/>
+                            <use xlink:href="/image/rss.svg#rss"/>
                           </svg>`
                 },
                 link: '/rss.xml'

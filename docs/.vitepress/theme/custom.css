@@ -25,16 +25,36 @@
     --vp-c-bg-alt: var(--my-black-light);
     --vp-c-bg-elv: var(--my-black)
 }
-
+/* jetbrains-mono-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../public/fonts/JetbrainsMono/jetbrains-mono-v17-latin-600.eot'); /* IE9 Compat Modes */
+    src: url('../../public/fonts/JetbrainsMono/jetbrains-mono-v17-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../public/fonts/JetbrainsMono/jetbrains-mono-v17-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../public/fonts/JetbrainsMono/jetbrains-mono-v17-latin-600.woff') format('woff'), /* Modern Browsers */
+    url('../../public/fonts/JetbrainsMono/jetbrains-mono-v17-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../public/fonts/JetbrainsMono/jetbrains-mono-v17-latin-600.svg#JetBrainsMono') format('svg'); /* Legacy iOS */
+}
+:root{
+    --vp-font-family-base: 'JetBrains Mono', lnter;
+    --vp-font-family-mono: 'JetBrains Mono', lnter;
+}
 .VPLocalNav {
     border-bottom: 1px solid var(--my-blue) !important;
 }
-
+.VPDocOutlineDropdown{
+    border-bottom: 1px solid var(--my-blue) !important;
+}
 .vp-doc :not(pre) > code {
     border: solid 1pt var(--my-blue);
     white-space: nowrap;
 }
-
+.title{
+    color: var(--my-blue-light)!important;
+}
 .VPLink {
     text-align: center;
 }
