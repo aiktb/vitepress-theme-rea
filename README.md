@@ -13,13 +13,13 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 - Recent blogs
 - No sidebar
 - Google Analytics support
+- RSS feed
 - [Comment](https://github.com/giscus/giscus)
 - [Local search](https://github.com/emersonbottero/vitepress-plugin-search)
 
 ## Next step
 
 - Let the archive page become like [this](https://keestalkstech.com/archive/).
-- RSS feed
 - Site map
 
 ## Deploy
@@ -53,4 +53,3 @@ The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) licens
 ### About
 
 ![image-20230424180405354](https://s2.loli.net/2023/04/24/QMY2VXi1T4J6pxw.webp)
-
