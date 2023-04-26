@@ -1,5 +1,6 @@
 // .vitepress/config.js
-import {defineConfig} from 'vitepress'
+import {defineConfig} from 'vitepress';
+import {rss} from './rss.js'
 
 export default defineConfig({
     lang: "zh-CN",
@@ -26,7 +27,7 @@ export default defineConfig({
         [
             'link',
             {rel: 'icon', href: '/favicon.svg',}
-        ]
+        ],
     ],
     themeConfig: {
         logo: "/logo.svg",
@@ -47,11 +48,21 @@ export default defineConfig({
         ],
         socialLinks: [
             {icon: 'github', link: 'https://github.com/aiktb/rea'},
+            {
+                icon: {
+                    svg: `<svg role="img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <title>RSS</title>
+                            <use xlink:href="/rss.svg#rss"/>
+                          </svg>`
+                },
+                link: '/rss.xml'
+            },
         ],
         footer: {
-            message: `<a href="https://creativecommons.org/licenses/by/4.0/" target = "_blank" >CC BY 4.0</a> | 
-                      <a href="https://github.com/aiktb/rea/blob/master/LICENSE" target = "_blank">MIT License</a> | 
+            message: `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> | 
+                      <a href="https://github.com/aiktb/rea/blob/master/LICENSE" target="_blank">MIT License</a> | 
                       Copyright © 2023 <a href="/">aiktb</a>`,
         },
     },
+    buildEnd: rss
 })
