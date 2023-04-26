@@ -12,7 +12,7 @@ const {frontmatter} = useData()
   </div>
 </template>
 
-<style>
+<style scoped>
 .code-container{
   display: flex;
   flex-wrap: wrap;

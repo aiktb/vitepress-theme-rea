@@ -18,7 +18,7 @@ import {data as posts} from '../posts.data.js'
   </div>
 </template>
 
-<style>
+<style scoped>
 .recent-title {
   text-align: center;
   margin: 1em 0;
