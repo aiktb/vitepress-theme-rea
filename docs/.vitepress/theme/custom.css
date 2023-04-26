@@ -23,6 +23,7 @@
     --vp-c-divider: var(--my-blue);
     --vp-c-brand-dark: var(--my-blue-dark);
     --vp-c-bg-alt: var(--my-black-light);
+    --vp-c-bg-elv: var(--my-black)
 }
 
 .VPLocalNav {
