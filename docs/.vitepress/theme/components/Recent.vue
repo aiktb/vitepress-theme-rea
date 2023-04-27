@@ -27,7 +27,9 @@ const posts = data.slice(0, 9)
   text-align: center;
   margin: 1em 0;
   font-size: 1.5em;
-  color: var(--my-blue-light)
+  color: var(--my-blue-light);
+  font-style: italic;
+  font-weight: bold;
 }
 
 .blog-list {

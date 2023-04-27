@@ -43,8 +43,8 @@ The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) licens
 
 ### Home
 
-![image-20230424180412898](https://s2.loli.net/2023/04/24/WDdNABbaeFrXUS7.webp)
+![Home](https://s2.loli.net/2023/04/27/RMPtHd6AhVQkFLi.webp)
 
 ### About
 
-![image-20230424180405354](https://s2.loli.net/2023/04/24/QMY2VXi1T4J6pxw.webp)
+![About](https://s2.loli.net/2023/04/27/HnTXxS5lw9tqZIJ.webp)

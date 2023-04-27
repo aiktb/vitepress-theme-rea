@@ -70,7 +70,7 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 ### 登录
 
-如果你和主机位于同一个局域网可以使用`http://127.0.0.1:81`访问Web面板，否则只能使用`http://host_ip:81 `(host_ip由你的VPS供应商提供)去访问Web面板。
+如果你和主机位于同一个局域网可以使用`http://127.0.0.1:81`访问Web面板，否则只能使用`http://host_ip:81`(host_ip由你的VPS供应商提供)去访问Web面板。
 
 根据Nginx Proxy Manager的文档，使用默认邮箱`admin@example.com`和默认密码`changeme`登录：
 
@@ -90,8 +90,6 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 ![image-20230421115854256](https://s2.loli.net/2023/04/21/XmRvQ4qsag3Kb5f.webp)
 
 ![image-20230421115937506](https://s2.loli.net/2023/04/21/uDJ2ZLIKsqb4RwN.webp)
-
-到这一步就完成SSL证书的申请了，接下来反向代理第一个应用：Nginx Proxy Manager。
 
 ## 反向代理Nginx Proxy Manager
 
@@ -135,7 +133,7 @@ SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 
 1. Force SSL：强制开启SSL加密，HTTP重定向到HTTPS；
 2. HTTP/2 Support：使用更安全的HTTP2协议；
-3. HSTS Enabled：参考Cloudflare的[这篇文章](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/http-strict-transport-security/)。
+3. HSTS Enabled：参考Cloudflare的[这篇文章](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/http-strict-transport-security/);
 4. HSTS Subdomains：为子域名开启HSTS。
 
 点击Save，这样就完成Nginx Proxy Manager反向代理的全部配置，在浏览器使用`https://domain`就能访问到对应的服务了。
@@ -143,18 +141,18 @@ SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 >当前已开启HTTPS连接，建议使用[1password](https://1password.com/password-generator/)更换一个16位以上大小写字母+符号的强力随机密码。
 >
 
->可以关闭防火墙81端口阻断Nginx Proxy Manager的Web UI，系统管理的应用不适合长时间暴露在公网。
-
 ## 域名重定向
 
-假如你想要将`www.aiktb.com`重定向到`aiktb.com`，那么你应该将`HTTP CODE`设置为`308 Permanent Redirect`，并设置SSL，否则网页将无法打开：
+假如你想要将`www.aiktb.com`重定向到`aiktb.com`，那么你应该将`HTTP Code`设置为`308 Permanent Redirect`，并设置SSL，否则网页将无法打开：
 
 ![image-20230421211728979](https://s2.loli.net/2023/04/21/ZzfLP8Crx7so52y.webp)
 
 ## 常见错误排除
 
+> 可以关闭防火墙81端口阻断Nginx Proxy Manager的Web UI，系统管理的应用不适合长时间暴露在公网。
+
 1. 检查防火墙配置，端口一定要开放；
 2. 远程进不了Web面板别忘了开启代理，有可能是GFW的干扰；
 3. HTTP的服务选中HTTPS Schema，会导致`502 Bad Gateway`；
 4. 页面异常有可能是浏览器缓存导致，清理浏览器的缓存再尝试；
-5. 纯IPv6未测试过，有可能导致问题。
+5. ##### 纯IPv6未测试过，有可能导致问题。

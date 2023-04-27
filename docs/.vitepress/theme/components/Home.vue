@@ -5,17 +5,24 @@
     </div>
     <div class="share">
       <h1 class="title">
-        <span>Hi, I'm aiktb.👋</span>
+        <span class="txt">Hi, I'm aiktb.</span>🍉
       </h1>
       <p class="description">
-        Hope my blog can help you.😎
+        <span class="txt">Hope my blog can help you.</span>😎
       </p>
-      <a href="/about#contact-me" class="contact">contact me❤️</a>
+      <a href="/about#contact-me" class="contact">
+        <span class="txt">contact me</span>❤️
+      </a>
     </div>
   </div>
 </template>
 
 <style scoped>
+.txt {
+  font-style: italic;
+  font-weight: bold;
+}
+
 .content {
   display: flex;
   align-items: center;
@@ -49,6 +56,7 @@
   align-items: center;
   padding: 0 15px;
   text-align: center;
+
 }
 
 .title {

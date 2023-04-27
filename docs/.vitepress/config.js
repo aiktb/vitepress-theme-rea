@@ -5,7 +5,7 @@ import {rss} from './theme/rss.js'
 export default defineConfig({
     lang: "zh-CN",
     title: "aiktb",
-    description: "Aiktb's Blog",
+    description: `aiktb's blog`,
     lastUpdated: true,
     cleanUrls: true,
     appearance: false,
@@ -26,12 +26,24 @@ export default defineConfig({
         ],
         [
             'link',
-            {rel: 'icon', href: '/favicon.svg',}
+            {rel: 'icon', href: '/image/favicon.svg',}
+        ],
+        [
+            'link',
+            {rel: 'preconnect', href: 'https://fonts.googleapis.com'}
+        ],
+        [
+            'link',
+            {rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: ''},
+        ],
+        [
+            'link',
+            {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap'},
         ],
     ],
     themeConfig: {
         logo: "/logo.svg",
-        siteTitle: `Aiktb's Blog`,
+        siteTitle: `aiktb's blog`,
         outline: [2, 3],
         search: {
             provider: 'local'

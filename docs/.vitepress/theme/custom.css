@@ -1,3 +1,8 @@
+:root{
+    --vp-font-family-base: 'JetBrains Mono', lntel;
+    --vp-font-family-mono: 'JetBrains Mono', lntel;
+}
+
 :root {
     --my-green: #5fb950;
     --my-green-light: #61ff00;
@@ -30,10 +35,6 @@
     border-bottom: 1px solid var(--my-blue) !important;
 }
 
-.VPDocOutlineDropdown {
-    border-bottom: 1px solid var(--my-blue) !important;
-}
-
 .vp-doc :not(pre) > code {
     border: solid 1pt var(--my-blue);
     white-space: nowrap;
@@ -58,6 +59,7 @@ ul {
 .vp-doc blockquote {
     border-left: 4px solid var(--my-blue) !important;
     padding-left: 10px;
+    border-radius: 1px;
 }
 
 a {
@@ -74,6 +76,9 @@ a:hover {
 
 .VPNav{
     font-style: italic;
+}
+.VPLink {
+    font-weight: bold !important;
 }
 
 @media only screen and (min-width: 767px) {
