@@ -5,10 +5,10 @@
     </div>
     <div class="share">
       <h1 class="title">
-        <span>Hi, I'm aiktb👋</span>
+        <span>Hi, I'm aiktb.👋</span>
       </h1>
       <p class="description">
-        Hope my blog can help you😎
+        Hope my blog can help you.😎
       </p>
       <a href="/about#contact-me" class="contact">contact me❤️</a>
     </div>
