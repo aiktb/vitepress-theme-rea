@@ -67,17 +67,9 @@
     url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-700.svg#MPLUSRounded1c') format('svg'); /* Legacy iOS */
 }
 
-@font-face {
-    font-display: swap;
-    font-family: 'YouYuan';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../../public/fonts/YouYuan/YouYuan.ttf') format('truetype');
-}
-
 :root {
-    --vp-font-family-base: 'M PLUS Rounded 1c', lntel, 'YouYuan';
-    --vp-font-family-mono: 'JetBrains Mono', lntel, 'YouYuan';
+    --vp-font-family-base: 'M PLUS Rounded 1c';
+    --vp-font-family-mono: 'JetBrains Mono';
 }
 
 .VPLocalNav {
