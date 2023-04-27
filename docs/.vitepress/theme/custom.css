@@ -26,52 +26,6 @@
     --vp-c-bg-elv: var(--my-black)
 }
 
-/* jetbrains-mono-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'JetBrains Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../../public/fonts/JetBrainsMono/jetbrains-mono-v17-latin-regular.eot'); /* IE9 Compat Modes */
-    src: url('../../public/fonts/JetBrainsMono/jetbrains-mono-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../../public/fonts/JetBrainsMono/jetbrains-mono-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../../public/fonts/JetBrainsMono/jetbrains-mono-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
-    url('../../public/fonts/JetBrainsMono/jetbrains-mono-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../../public/fonts/JetBrainsMono/jetbrains-mono-v17-latin-regular.svg#JetBrainsMono') format('svg'); /* Legacy iOS */
-}
-
-/* m-plus-rounded-1c-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'M PLUS Rounded 1c';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-regular.eot'); /* IE9 Compat Modes */
-    src: url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
-    url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-regular.svg#MPLUSRounded1c') format('svg'); /* Legacy iOS */
-}
-/* m-plus-rounded-1c-700 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'M PLUS Rounded 1c';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-700.eot'); /* IE9 Compat Modes */
-    src: url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-700.woff') format('woff'), /* Modern Browsers */
-    url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../../public/fonts/MPlusRounded1c/m-plus-rounded-1c-v15-latin-700.svg#MPLUSRounded1c') format('svg'); /* Legacy iOS */
-}
-
-:root {
-    --vp-font-family-base: 'M PLUS Rounded 1c';
-    --vp-font-family-mono: 'JetBrains Mono';
-}
-
 .VPLocalNav {
     border-bottom: 1px solid var(--my-blue) !important;
 }
@@ -116,6 +70,10 @@ a:hover {
 
 .outline-link {
     text-decoration: none;
+}
+
+.VPNav{
+    font-style: italic;
 }
 
 @media only screen and (min-width: 767px) {

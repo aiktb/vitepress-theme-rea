@@ -1,9 +1,9 @@
 <script setup>
-import DefaultTheme from 'vitepress/theme';
-import Member from "./Member.vue";
-import Comments from "./Comments.vue";
-import Home from "./Home.vue";
-import Recent from "./Recent.vue";
+import DefaultTheme from 'vitepress/theme'
+import Member from "./Member.vue"
+import Comments from "./Comments.vue"
+import Home from "./Home.vue"
+import Recent from "./Recent.vue"
 
 const {Layout} = DefaultTheme
 </script>

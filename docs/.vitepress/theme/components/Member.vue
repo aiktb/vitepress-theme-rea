@@ -1,8 +1,8 @@
 <!--suppress ALL -->
 <script setup>
 import {VPTeamMembers} from 'vitepress/theme'
-import email from '/image/email.svg?raw'
-import telegram from '/image/telegram.svg?raw'
+import email from '/email.svg?raw'
+import telegram from '/telegram.svg?raw'
 
 const members = [
   {

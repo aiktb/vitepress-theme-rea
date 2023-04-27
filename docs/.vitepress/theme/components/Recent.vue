@@ -1,17 +1,21 @@
 <script setup>
-import {data as posts} from '../posts.data.js'
+import {data} from '../posts.data.js'
+
+const posts = data.slice(0, 9)
 </script>
 
 <template>
   <div class="recent">
-    <h1 class="recent-title"><i>Recent Blogs </i></h1>
+    <h1 class="recent-title">
+      <i>Recent Blogs</i>
+    </h1>
     <ul class="blog-list">
       <a v-for="post in posts" class="blog" :key="post.id" :href="post.url">
         <h1 class="blog-title">{{ post.frontmatter.title }}</h1>
         <p>{{ post.frontmatter.date }}</p>
         <svg role="img" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="article-icon">
           <title>article</title>
-          <use xlink:href="/image/article.svg#article"/>
+          <use xlink:href="/article.svg#article"/>
         </svg>
       </a>
     </ul>

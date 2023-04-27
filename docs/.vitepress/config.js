@@ -26,12 +26,12 @@ export default defineConfig({
         ],
         [
             'link',
-            {rel: 'icon', href: '/image/favicon.svg',}
+            {rel: 'icon', href: '/favicon.svg',}
         ],
     ],
     themeConfig: {
-        logo: "/image/logo.svg",
-        siteTitle: `aiktb's blog`,
+        logo: "/logo.svg",
+        siteTitle: `Aiktb's Blog`,
         outline: [2, 3],
         search: {
             provider: 'local'
@@ -41,10 +41,10 @@ export default defineConfig({
             text: 'Edit this page on GitHub'
         },
         nav: [
-            {text: 'Home', link: '/'},
-            {text: 'About', link: '/about'},
-            {text: 'Archive', link: '/archive'},
-            {text: 'Links', link: '/links'},
+            {text: '✨Home', link: '/'},
+            {text: '🪐About', link: '/about'},
+            {text: '🎉Archive', link: '/archive'},
+            {text: '🔎Links', link: '/links'},
         ],
         socialLinks: [
             {icon: 'github', link: 'https://github.com/aiktb/rea'},
@@ -52,7 +52,7 @@ export default defineConfig({
                 icon: {
                     svg: `<svg role="img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <title>RSS</title>
-                            <use xlink:href="/image/rss.svg#rss"/>
+                            <use xlink:href="/rss.svg#rss"/>
                           </svg>`
                 },
                 link: '/rss.xml'
