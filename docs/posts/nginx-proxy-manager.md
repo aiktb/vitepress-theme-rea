@@ -10,9 +10,9 @@ tags:
 
 ![- Nginx Proxy Manager -](https://s2.loli.net/2023/04/21/EhFNCoYxqg5mHU7.webp)
 
-## Nginx Proxy Manager介绍以及安装
+## 介绍以及安装
 
-> 本文使用Ubuntu22.04LTS Server
+> 本文使用Ubuntu22.04 Server
 
 ### 介绍
 
@@ -30,7 +30,7 @@ cd ~/Docker/npm
 nano docker-compose.yml 
 ```
 
-按照文档将以下代码使用`Ctrl+Shift+V`粘贴到打开的nano编辑器中，键盘敲击`Ctrl+X`，nano编辑器底部显示`Save modified buffer?  `时敲击`Y`键+`Enter`回车键保存文件。
+按照文档将以下代码使用`Ctrl+Shift+V`粘贴到打开的nano编辑器中，键盘敲击`Ctrl+X`，nano编辑器底部显示`Save modified buffer?`时敲击`Y`键+`Enter`回车键保存文件。
 
 ```yaml
 version: '3.8'
