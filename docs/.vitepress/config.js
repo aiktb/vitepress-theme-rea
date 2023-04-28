@@ -26,7 +26,7 @@ export default defineConfig({
         ],
         [
             'link',
-            {rel: 'icon', href: '/image/favicon.svg',}
+            {rel: 'icon', href: '/favicon.svg',}
         ],
         [
             'link',
@@ -42,7 +42,7 @@ export default defineConfig({
         ],
     ],
     themeConfig: {
-        logo: "/logo.svg",
+        logo: "/favicon.svg",
         siteTitle: `aiktb's blog`,
         outline: [2, 3],
         search: {
