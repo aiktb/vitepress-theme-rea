@@ -5,7 +5,7 @@
     </div>
     <div class="share">
       <h1 class="title">
-        <span class="txt">Hi, I'm aiktb.</span>🍉
+        <span class="txt">Hi, I'm aiktb.👋</span>
       </h1>
       <p class="description">
         <span class="txt">Hope my blog can help you.</span>😎
@@ -63,7 +63,7 @@
   display: flex;
   align-items: center;
   font-size: 2.2em;
-  font-weight: bold;
+  line-height: 1.5
 }
 
 .description {
