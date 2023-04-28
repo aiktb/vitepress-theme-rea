@@ -54,10 +54,13 @@
     text-align: center;
 }
 
-ul {
+.vp-doc ul {
     color: var(--my-white) !important;
 }
 
+.vp-doc th, .vp-doc td {
+    border: 1px solid var(--my-blue-dark);
+}
 .vp-doc blockquote > p {
     color: var(--my-white) !important;
     margin-left: 10px;
@@ -71,6 +74,8 @@ ul {
     display: flex;
     position: relative;
     padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .vp-doc blockquote::before {
@@ -93,7 +98,7 @@ ul {
 .vp-doc a:hover {
     color: var(--my-blue-dark);
     text-decoration: none;
-    border-bottom: solid 2px var(--my-blue-dark) !important;
+    border-bottom: solid 2px var(--my-blue-dark);
 }
 
 .VPFooter a {
@@ -103,6 +108,14 @@ ul {
 .VPFooter a:hover {
     color: var(--my-blue-dark);
     text-decoration: none;
+}
+
+.header-anchor {
+    border-bottom: none !important;
+}
+
+.vp-doc img {
+    border-radius: 5px;
 }
 
 .vp-doc ol {
