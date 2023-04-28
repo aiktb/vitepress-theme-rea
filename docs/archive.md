@@ -8,5 +8,6 @@ title: Archive
 
 ## Year
 ### 2023
-
-[Nginx Proxy Manager实现HTTPS反向代理](/posts/nginx-proxy-manager)
+#### April
+- [Nginx Proxy Manager实现HTTPS反向代理](/posts/nginx-proxy-manager)
+- [Oh-My-Zsh+Powerlevel10k: Zsh一键配置脚本](posts/zsh-auto-config-shell.md)

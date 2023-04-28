@@ -7,7 +7,7 @@ date: 2023-04-28
 
 ![ZSH A NICE terminal](https://s2.loli.net/2023/04/21/PMaimRyZsV6CXnk.webp)
 
-> 本文使用Ubuntu22.04 & Windows Terminal，点击[这里](#Configure-Script)直接跳转到自动配置脚本。
+> 本文使用Ubuntu22.04 & Windows Terminal，点击[这里](#configure-script)直接跳转到自动配置脚本。
 
 ## Why use zsh?
 
@@ -15,7 +15,7 @@ date: 2023-04-28
 1. 比Bash更好用的代码提示和自动补全；
 1. 丰富的插件以及主题支持。
 
-![image-20230428190430832](./../../../../AppData/Roaming/Typora/typora-user-images/image-20230428190430832.png)
+![image-20230428190430832](https://s2.loli.net/2023/04/28/HTpzjv492FYQin3.webp)
 
 ## Oh-My-Zsh
 
@@ -106,7 +106,7 @@ curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/zsh.sh | bash
 
 > 注意`githubusercontent.com`已被GFW封锁。
 
-### Muti-user
+## Muti-user
 
 以下脚本将Zsh配置添加到每一个新建用户的home目录中：
 
