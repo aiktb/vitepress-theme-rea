@@ -3,7 +3,7 @@ title: About
 ---
 # About me and the blog
 
-![image-20230424150006157](https://s2.loli.net/2023/04/24/jQ1JiRcBmbZ6vnH.webp)
+![如何为](https://s2.loli.net/2023/04/24/jQ1JiRcBmbZ6vnH.webp)
 
 ## About me
 
@@ -12,7 +12,7 @@ technically interested in ***Web Development, Server O&M, and Network Penetratio
 
 I am also very interested in ACG and have the wealth of animation viewing experience. 
 
-The id is taken from the song ***[aikotoba](https://www.youtube.com/watch?v=WptXk39wiIQ)*** of [**DECO*27**](https://www.youtube.com/@DECO27).
+My id is taken from the song ***[aikotoba](https://www.youtube.com/watch?v=WptXk39wiIQ)*** of **[DECO*27](https://www.youtube.com/@DECO27)**.
 
 ## Contact me
 
