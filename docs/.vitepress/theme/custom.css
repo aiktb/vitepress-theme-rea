@@ -37,12 +37,13 @@
 }
 
 .vp-doc :not(pre) > code {
-    border: solid 1pt var(--my-blue);
     white-space: nowrap;
+    background-color: var(--my-black-light);
+    color: var(--my-blue-light);
 }
 
 .content {
-    border-left: none!important;
+    border-left: none !important;
 }
 
 .title {
@@ -84,16 +85,26 @@ ul {
     top: 0;
 }
 
-a {
+.vp-doc a {
     color: var(--my-blue-light);
+    border-bottom: solid 2px var(--my-blue-light);
 }
 
-a:hover {
+.vp-doc a:hover {
     color: var(--my-blue-dark);
+    text-decoration: none;
+    border-bottom: solid 2px var(--my-blue-dark) !important;
 }
 
-.outline-link {
+.VPFooter a {
+    color: var(--my-blue-light);
+    border-bottom: solid 2px var(--my-blue-light);
+}
+
+.VPFooter a:hover {
+    color: var(--my-blue-dark);
     text-decoration: none;
+    border-bottom: solid 2px var(--my-blue-dark) !important;
 }
 
 .vp-doc ol {
