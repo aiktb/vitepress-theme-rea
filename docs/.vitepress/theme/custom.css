@@ -1,4 +1,4 @@
-:root{
+:root {
     --vp-font-family-base: 'JetBrains Mono', lntel;
     --vp-font-family-mono: 'JetBrains Mono', lntel;
 }
@@ -13,6 +13,7 @@
     --my-blue-dark: #2b7b86;
     --my-blue-light: #4df5ff;
     --my-gray: #9fa3a5;
+    --my-gray-dark: #364149;
 }
 
 :root {
@@ -54,12 +55,29 @@ ul {
 
 .vp-doc blockquote > p {
     color: var(--my-white) !important;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .vp-doc blockquote {
-    border-left: 4px solid var(--my-blue) !important;
+    border-left: none !important;
+    background-color: var(--my-gray-dark);
+    display: flex;
+    position: relative;
     padding-left: 10px;
-    border-radius: 1px;
+}
+
+.vp-doc blockquote::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background-color: var(--my-blue-dark);
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 a {
@@ -78,9 +96,10 @@ a:hover {
     padding-left: 2rem;
 }
 
-.VPNav{
+.VPNav {
     font-style: italic;
 }
+
 .VPLink {
     font-weight: bold !important;
 }
