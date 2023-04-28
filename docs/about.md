@@ -29,7 +29,7 @@ You can reach me on the following platforms, email is preferred:
 
 The name of the project ***rea*** is taken from the animation ***[Sankarea](https://en.wikipedia.org/wiki/Sankarea:_Undying_Love)***, which I had just finished watching when developing this project.
 
-This blog is currently running on [Contabo](https://contabo.com/)'s VPS, using [Cloudflare](https://www.cloudflare.com/)'s DNS and CDN services.
+This blog is currently running on [GitHub Pages](https://pages.github.com/), using [Cloudflare](https://www.cloudflare.com/)'s DNS and CDN services.
 
 Developed using [VitePress](https://vitepress.dev/), the code is hosted on [GitHub](https://github.com/aiktb/rea), using the [MIT license](https://github.com/aiktb/rea/blob/master/LICENSE). 
 
