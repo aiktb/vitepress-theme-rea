@@ -28,7 +28,7 @@
     --vp-c-divider: var(--my-blue);
     --vp-c-brand-dark: var(--my-blue-dark);
     --vp-c-bg-alt: var(--my-black-light);
-    --vp-c-bg-elv: var(--my-black)
+    --vp-c-bg-elv: var(--my-black);
 }
 
 .VPLocalNav {
@@ -72,6 +72,10 @@ a:hover {
 
 .outline-link {
     text-decoration: none;
+}
+
+.vp-doc ol {
+    padding-left: 2rem;
 }
 
 .VPNav{
