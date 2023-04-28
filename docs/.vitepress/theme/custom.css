@@ -98,13 +98,11 @@ ul {
 
 .VPFooter a {
     color: var(--my-blue-light);
-    border-bottom: solid 2px var(--my-blue-light);
 }
 
 .VPFooter a:hover {
     color: var(--my-blue-dark);
     text-decoration: none;
-    border-bottom: solid 2px var(--my-blue-dark) !important;
 }
 
 .vp-doc ol {
