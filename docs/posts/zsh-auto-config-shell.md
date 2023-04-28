@@ -96,11 +96,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}"
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
 ```
 
-> 很多Zsh插件的安装使用了以下Zsh语法拓展，请勿在Bash Script中使用：
->
-> ```bash
-> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
-> ```
+很多Zsh插件的安装使用了以下Zsh语法拓展，请勿在Bash Script中使用：
+
+```bash
+${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
+```
 
 建议使用以下命令：
 
