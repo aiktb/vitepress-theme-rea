@@ -12,8 +12,8 @@ date: 2023-04-28
 ## Why use zsh?
 
 1. 美观的Shell主题以及代码高亮；
-1. 比Bash更好用的代码提示和自动补全；
-1. 丰富的插件以及主题支持。
+2. 比Bash更好用的代码提示和自动补全；
+3. 丰富的插件以及主题支持。
 
 ![image-20230428190430832](https://s2.loli.net/2023/04/28/HTpzjv492FYQin3.webp)
 
@@ -26,7 +26,8 @@ date: 2023-04-28
 - [Themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
 - [Plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
-由于没有直接列出简短的描述，而且很多插件是开发者使用且没有什么大用，还需要点开链接才能查看具体的描述，不得不说这简直是浪费时间，所以以上的列表只适合想要淘宝的用户(尤其是在找寻alias的用户)，普通用户建议使用我推荐的插件和主题即可。
+由于没有直接列出简短的描述，而且很多插件是开发者使用且没有什么大用，还需要点开链接才能查看具体的描述，不得不说这简直是浪费时间，所以以上的列表只适合想要淘宝的用户(
+尤其是在找寻alias的用户)，普通用户建议使用我推荐的插件和主题即可。
 
 也有很多Zsh的插件和主题没有集成到Oh-My-Zsh中，比如Powerlevel10k、zsh-autosuggestions，这些需要去对应的GitHub仓库按要求下载才能在Zsh中使用。
 
@@ -38,15 +39,15 @@ date: 2023-04-28
 
 > `thefuck`插件与`sudo`不兼容，他们都使用`Double ESC`快捷键。
 
-| Name                                                         | Oh-My-Zsh | Priority | Description                             |
-| ------------------------------------------------------------ | --------- | -------- | --------------------------------------- |
-| [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | ❌         | High     | 支持Zsh终端输入代码高亮                 |
-| [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | ❌         | High     | 支持Zsh终端输入代码补全建议             |
-| [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo) | ✅         | Medium   | 按两次`ESC`为上一条或当前命令添加`sudo` |
-| [colored-man-pages](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages) | ✅         | Medium   | 支持man帮助手册语法着色                 |
-| [extract](https://github.com/le0me55i/zsh-extract)           | ✅         | Low      | 命令`x`解压所有类型压缩包               |
-| [autojump](https://github.com/wting/autojump)                | ✅         | Low      | 命令`j`根据以往记录自动跳转目录         |
-| [jsontools](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools) | ✅         | Low      | 接受json输入将其格式化输出              |
+| Name                                                                                          | Oh-My-Zsh | Priority | Description               |
+|-----------------------------------------------------------------------------------------------|-----------|----------|---------------------------|
+| [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)               | ❌         | High     | 支持Zsh终端输入代码高亮             |
+| [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)                       | ❌         | High     | 支持Zsh终端输入代码补全建议           |
+| [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)                           | ✅         | Medium   | 按两次`ESC`为上一条或当前命令添加`sudo` |
+| [colored-man-pages](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages) | ✅         | Medium   | 支持man帮助手册语法着色             |
+| [extract](https://github.com/le0me55i/zsh-extract)                                            | ✅         | Low      | 命令`x`解压所有类型压缩包            |
+| [autojump](https://github.com/wting/autojump)                                                 | ✅         | Low      | 命令`j`根据以往记录自动跳转目录         |
+| [jsontools](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools)                 | ✅         | Low      | 接受json输入将其格式化输出           |
 
 ![image-20230428201007113](https://s2.loli.net/2023/04/28/LwzD2PlKbQE8MAY.webp)
 
@@ -56,9 +57,10 @@ date: 2023-04-28
 
 P10K是目前Zsh使用人数最多的主题，并且没有包含在Oh-My-Zsh的默认配置中，足以看出Powerlevel10k的优秀和受欢迎。
 
-> Powerlevel10k is a theme for Zsh. It emphasizes [speed](https://github.com/romkatv/powerlevel10k#uncompromising-performance), [flexibility](https://github.com/romkatv/powerlevel10k#extremely-customizable) and [out-of-the-box experience](https://github.com/romkatv/powerlevel10k#configuration-wizard).
+> Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 
-Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powerlevel10k或者使用`p10k configure`命令时有界面提示可以配置Powerlevel的显示外观，比如是否显示Unicode字符、多条命令之间是否有间隙等。
+Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powerlevel10k或者使用`p10k configure`
+命令时有界面提示可以配置Powerlevel的显示外观，比如是否显示Unicode字符、多条命令之间是否有间隙等。
 
 ![image-20230428203111033](https://s2.loli.net/2023/04/28/AeXJUaTC2wO5LWp.webp)
 
@@ -68,8 +70,10 @@ Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powe
 
 1. Zsh兼容大部分Bash语法，但有少部分不兼容，特别是Zsh不兼容Bash文件通配符`*`的使用；
 
-2. Zsh有一部分Bash不含有的扩展语法，在目前Linux主流默认安装Bash的情况下建议不要使用Zsh扩展语法，Shell脚本也请使用`#!/bin/bash`以保证兼容性。
+2.
 
+Zsh有一部分Bash不含有的扩展语法，在目前Linux主流默认安装Bash的情况下建议不要使用Zsh扩展语法，Shell脚本也请使用`#!/bin/bash`
+以保证兼容性。
 
 ![bash&zsh](https://s2.loli.net/2023/04/28/Ewq3DWg7lcj1Tsx.webp)
 
