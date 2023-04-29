@@ -15,7 +15,7 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 - Google Analytics support
 - RSS feed
 - [Comment](https://github.com/giscus/giscus)
-- [Local search](https://github.com/emersonbottero/vitepress-plugin-search)
+- Local search
 
 ## Deploy
 
