@@ -42,6 +42,7 @@ date: 2023-04-28
 | ------------------------------------------------------------ | --------- | -------- | --------------------------------------- |
 | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | ❌         | High     | 支持Zsh终端输入代码高亮                 |
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | ❌         | High     | 支持Zsh终端输入代码补全建议             |
+| [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search) | ❌         | Medium   | 支持方向键上下移动搜索历史命令          |
 | [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo) | ✅         | Medium   | 按两次`ESC`为上一条或当前命令添加`sudo` |
 | [colored-man-pages](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages) | ✅         | Medium   | 支持`man`帮助手册语法着色               |
 | [extract](https://github.com/le0me55i/zsh-extract)           | ✅         | Low      | 命令`x`解压所有类型压缩包               |
@@ -89,7 +90,8 @@ export ZSH_CUSTOM
 # Configure plugins.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM}"/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git "${ZSH_CUSTOM}"/plugins/zsh-autosuggestions
-sed -i 's/^plugins=.*/plugins=(git extract sudo autojump jsontools colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)/g' ~/.zshrc
+git clone https://github.com/zsh-users/zsh-history-substring-search "${ZSH_CUSTOM}"/plugins/zsh-history-substring-search
+sed -i 's/^plugins=.*/plugins=(git\n extract\n sudo\n autojump\n jsontools\n colored-man-pages\n zsh-autosuggestions\n zsh-syntax-highlighting\n zsh-history-substring-search\n)/g' ~/.zshrc
 # Install powerlevel10k and configure it.
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}"/themes/powerlevel10k
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
