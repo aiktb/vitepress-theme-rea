@@ -26,8 +26,7 @@ date: 2023-04-28
 - [Themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
 - [Plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
-由于没有直接列出简短的描述，而且很多插件是开发者使用且没有什么大用，还需要点开链接才能查看具体的描述，不得不说这简直是浪费时间，所以以上的列表只适合想要淘宝的用户(
-尤其是在找寻alias的用户)，普通用户建议使用我推荐的插件和主题即可。
+由于没有直接列出简短的描述，而且很多插件是开发者使用且没有什么大用，还需要点开链接才能查看具体的描述，不得不说这简直是浪费时间，所以以上的列表只适合想要淘宝的用户，尤其是在找寻alias插件的用户， 普通用户建议使用我推荐的插件和主题即可。
 
 也有很多Zsh的插件和主题没有集成到Oh-My-Zsh中，比如Powerlevel10k、zsh-autosuggestions，这些需要去对应的GitHub仓库按要求下载才能在Zsh中使用。
 
@@ -59,8 +58,7 @@ P10K是目前Zsh使用人数最多的主题，并且没有包含在Oh-My-Zsh的�
 
 > Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 
-Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powerlevel10k或者使用`p10k configure`
-命令时有界面提示可以配置Powerlevel的显示外观，比如是否显示Unicode字符、多条命令之间是否有间隙等。
+Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powerlevel10k或者使用`p10k configure`命令时有界面提示可以配置Powerlevel的显示外观，比如是否显示Unicode字符、多条命令之间是否有间隙等。
 
 ![image-20230428203111033](https://s2.loli.net/2023/04/28/AeXJUaTC2wO5LWp.webp)
 
@@ -70,10 +68,7 @@ Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powe
 
 1. Zsh兼容大部分Bash语法，但有少部分不兼容，特别是Zsh不兼容Bash文件通配符`*`的使用；
 
-2.
-
-Zsh有一部分Bash不含有的扩展语法，在目前Linux主流默认安装Bash的情况下建议不要使用Zsh扩展语法，Shell脚本也请使用`#!/bin/bash`
-以保证兼容性。
+2. Zsh有一部分Bash不含有的扩展语法，在目前Linux主流默认安装Bash的情况下建议不要使用Zsh扩展语法，Shell脚本也请使用`#!/bin/bash`以保证兼容性。
 
 ![bash&zsh](https://s2.loli.net/2023/04/28/Ewq3DWg7lcj1Tsx.webp)
 
