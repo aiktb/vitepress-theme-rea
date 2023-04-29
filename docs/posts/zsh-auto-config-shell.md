@@ -38,15 +38,15 @@ date: 2023-04-28
 
 > `thefuck`插件与`sudo`不兼容，他们都使用`Double ESC`快捷键。
 
-| Name                                                                                          | Oh-My-Zsh | Priority | Description               |
-|-----------------------------------------------------------------------------------------------|-----------|----------|---------------------------|
-| [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)               | ❌         | High     | 支持Zsh终端输入代码高亮             |
-| [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)                       | ❌         | High     | 支持Zsh终端输入代码补全建议           |
-| [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)                           | ✅         | Medium   | 按两次`ESC`为上一条或当前命令添加`sudo` |
-| [colored-man-pages](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages) | ✅         | Medium   | 支持man帮助手册语法着色             |
-| [extract](https://github.com/le0me55i/zsh-extract)                                            | ✅         | Low      | 命令`x`解压所有类型压缩包            |
-| [autojump](https://github.com/wting/autojump)                                                 | ✅         | Low      | 命令`j`根据以往记录自动跳转目录         |
-| [jsontools](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools)                 | ✅         | Low      | 接受json输入将其格式化输出           |
+| Name                                                         | Oh-My-Zsh | Priority | Description                             |
+| ------------------------------------------------------------ | --------- | -------- | --------------------------------------- |
+| [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | ❌         | High     | 支持Zsh终端输入代码高亮                 |
+| [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | ❌         | High     | 支持Zsh终端输入代码补全建议             |
+| [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo) | ✅         | Medium   | 按两次`ESC`为上一条或当前命令添加`sudo` |
+| [colored-man-pages](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages) | ✅         | Medium   | 支持`man`帮助手册语法着色               |
+| [extract](https://github.com/le0me55i/zsh-extract)           | ✅         | Low      | 命令`x`解压所有类型压缩包               |
+| [autojump](https://github.com/wting/autojump)                | ✅         | Low      | 命令`j`根据以往记录自动跳转目录         |
+| [jsontools](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools) | ✅         | Low      | 接受json输入将其格式化输出              |
 
 ![image-20230428201007113](https://s2.loli.net/2023/04/28/LwzD2PlKbQE8MAY.webp)
 
@@ -131,3 +131,18 @@ curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/skel.sh | bas
 ```
 
 ![image-20230428220829254](https://s2.loli.net/2023/04/28/5qBetXNgchw9I3Z.webp)
+
+## Other than zsh
+
+推荐一个不在Zsh生态中的Shell插件[navi](https://github.com/denisidoro/navi)，它可以在一定程度上替代`man`，提供更方便易懂的命令行手册查询。
+
+由于`navi`依赖[fzf](https://github.com/junegunn/fzf)，下载要先安装fzf，且不支持`apt`包管理器，使用以下命令手动安装：
+
+```bash
+sudo apt install fzf
+bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
+```
+
+安装完成以后重启shell即可正常使用`navi`命令，然后下载所有的手册提示，就可以享受到更优秀的手册了。
+
+![image-20230429130724050](https://s2.loli.net/2023/04/29/tA86jhHdYQf5NZG.webp)
