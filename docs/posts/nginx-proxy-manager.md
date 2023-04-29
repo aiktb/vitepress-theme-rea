@@ -7,9 +7,9 @@ date: 2023-04-07
 
 ![- Nginx Proxy Manager -](https://s2.loli.net/2023/04/21/EhFNCoYxqg5mHU7.webp)
 
-## 介绍以及安装
+> 本文使用Ubuntu22.04 Server。
 
-> 本文使用Ubuntu22.04 Server
+## 介绍以及安装
 
 ### 介绍
 

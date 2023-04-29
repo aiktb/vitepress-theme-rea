@@ -26,7 +26,7 @@ date: 2023-04-28
 - [Themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
 - [Plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
-由于没有直接列出简短的描述，而且很多插件是开发者使用且没有什么大用，还需要点开链接才能查看具体的描述，不得不说这简直是浪费时间，所以以上的列表只适合想要淘宝的用户，尤其是在找寻alias插件的用户，普通用户建议使用我推荐的插件和主题即可。
+由于没有直接列出简短的描述，而且很多插件是开发者使用且没有什么大用，还需要点开链接才能查看具体的描述，不得不说这简直是浪费时间，所以以上的列表只适合想要淘宝的用户，尤其是在找寻alias插件的用户， 普通用户建议使用我推荐的插件和主题即可。
 
 也有很多Zsh的插件和主题没有集成到Oh-My-Zsh中，比如Powerlevel10k、zsh-autosuggestions，这些需要去对应的GitHub仓库按要求下载才能在Zsh中使用。
 
@@ -38,16 +38,16 @@ date: 2023-04-28
 
 > `thefuck`插件与`sudo`不兼容，他们都使用`Double ESC`快捷键。
 
-| Name                                                         | Oh-My-Zsh | Priority | Description                             |
-| ------------------------------------------------------------ | --------- | -------- | --------------------------------------- |
-| [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | ❌         | High     | 支持Zsh终端输入代码高亮                 |
-| [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | ❌         | High     | 支持Zsh终端输入代码补全建议             |
-| [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search) | ❌         | Medium   | 支持方向键上下移动搜索历史命令          |
-| [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo) | ✅         | Medium   | 按两次`ESC`为上一条或当前命令添加`sudo` |
-| [colored-man-pages](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages) | ✅         | Medium   | 支持`man`帮助手册语法着色               |
-| [extract](https://github.com/le0me55i/zsh-extract)           | ✅         | Low      | 命令`x`解压所有类型压缩包               |
-| [autojump](https://github.com/wting/autojump)                | ✅         | Low      | 命令`j`根据以往记录自动跳转目录         |
-| [jsontools](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools) | ✅         | Low      | 接受json输入将其格式化输出              |
+| Name                                                                                          | Oh-My-Zsh | Priority | Description                |
+|-----------------------------------------------------------------------------------------------|-----------|----------|----------------------------|
+| [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)               | ❌         | High     | 支持Zsh终端输入代码高亮              |
+| [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)                       | ❌         | High     | 支持Zsh终端输入代码补全建议            |
+| [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)     | ❌         | Medium   | 支持方向键上下移动按关键字搜索历史命令        |
+| [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)                           | ✅         | Medium   | 按两次`ESC`为上一条或当前命令添加`sudo`  |
+| [colored-man-pages](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages) | ✅         | Medium   | 支持`man`帮助手册语法着色            |
+| [extract](https://github.com/le0me55i/zsh-extract)                                            | ✅         | Low      | 命令`x`解压所有类型压缩包             |
+| [autojump](https://github.com/wting/autojump)                                                 | ✅         | Low      | 命令`j`根据以往记录自动跳转目录          |
+| [jsontools](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools)                 | ✅         | Low      | 命令`pp_json`接受JSON输入将其格式化输出 |
 
 ![image-20230428201007113](https://s2.loli.net/2023/04/28/LwzD2PlKbQE8MAY.webp)
 
@@ -136,7 +136,7 @@ curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/skel.sh | bas
 
 ## Other than zsh
 
-推荐一个不在Zsh生态中的Shell插件[navi](https://github.com/denisidoro/navi)，它可以在一定程度上替代`man`，提供更方便易懂的命令行手册查询。
+推荐一个不在Zsh生态中的Shell Tool: [navi](https://github.com/denisidoro/navi)，它可以在一定程度上替代`man`，提供更方便易懂的命令行手册查询。
 
 由于`navi`依赖[fzf](https://github.com/junegunn/fzf)，下载要先安装fzf，且不支持`apt`包管理器，使用以下命令手动安装：
 
@@ -148,3 +148,13 @@ bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts
 安装完成以后重启shell即可正常使用`navi`命令，然后下载所有的手册提示，就可以享受到更优秀的手册了。
 
 ![image-20230429130724050](https://s2.loli.net/2023/04/29/tA86jhHdYQf5NZG.webp)
+
+以及另外一个Shell Tool: [httpie](https://github.com/httpie/httpie)，[文档](https://httpie.io/docs/cli)中有详细的介绍和说明，简单来说这是一个`curl`的替代品，使用命令`http`和`https`具有将类似`curl`输出高亮和JSON自动格式化的能力，个人认为在一定程度上比`curl`好用并且更美观。
+
+用`apt`包管理器可以直接安装，注意`httpie`虽然包含在oh-my-zsh的插件列表中，却和`fzf`一样需要其他配置才能正常使用，并不如`apt`方便：
+
+```bash
+sudo apt install httpie
+```
+
+![image-20230430005928590](https://s2.loli.net/2023/04/30/NgYIk2xDApd6wKU.webp)
