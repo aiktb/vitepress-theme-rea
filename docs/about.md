@@ -13,8 +13,7 @@ technically interested in ***Web Development, Server O&M, and Network Penetratio
 
 I am also very interested in ACG and have the wealth of animation viewing experience.
 
-My id is taken from the song ***[aikotoba](https://www.youtube.com/watch?v=WptXk39wiIQ)*** of *
-*[DECO*27](https://www.youtube.com/@DECO27)**.
+My id is taken from the song ***[aikotoba](https://www.youtube.com/watch?v=WptXk39wiIQ)*** of **[DECO*27](https://www.youtube.com/@DECO27)**.
 
 ## Contact me
 
