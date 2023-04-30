@@ -5,7 +5,7 @@ date: 2023-04-28
 
 # Oh-My-Zsh+Powerlevel10k: Zsh一键配置脚本
 
-![ZSH A NICE terminal](https://s2.loli.net/2023/04/21/PMaimRyZsV6CXnk.webp)
+![cover](https://s2.loli.net/2023/04/21/PMaimRyZsV6CXnk.webp)
 
 > 本文使用Ubuntu22.04 & Windows Terminal，点击[这里](#configure-script)直接跳转到自动配置脚本。
 
@@ -15,7 +15,7 @@ date: 2023-04-28
 2. 比Bash更好用的代码提示和自动补全；
 3. 丰富的插件以及主题支持。
 
-![image-20230428190430832](https://s2.loli.net/2023/04/28/HTpzjv492FYQin3.webp)
+![zsh](https://s2.loli.net/2023/04/28/HTpzjv492FYQin3.webp)
 
 ## Oh-My-Zsh
 
@@ -26,11 +26,11 @@ date: 2023-04-28
 - [Themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
 - [Plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
-由于没有直接列出简短的描述，而且很多插件是开发者使用且没有什么大用，还需要点开链接才能查看具体的描述，不得不说这简直是浪费时间，所以以上的列表只适合想要淘宝的用户，尤其是在找寻alias插件的用户， 普通用户建议使用我推荐的插件和主题即可。
+由于没有直接列出简短的描述，而且很多插件是开发者使用且没有什么大用，还需要点开链接才能查看具体的描述，不得不说这简直是浪费时间，所以以上的列表只适合想要淘宝的用户，尤其是在找寻alias插件的用户，普通用户建议使用我推荐的插件和主题即可。
 
 也有很多Zsh的插件和主题没有集成到Oh-My-Zsh中，比如Powerlevel10k、zsh-autosuggestions，这些需要去对应的GitHub仓库按要求下载才能在Zsh中使用。
 
-![image-20230428223545110](https://s2.loli.net/2023/04/28/RBd4Tlu9xstwcLV.webp)
+![oh-my-zsh](https://s2.loli.net/2023/04/28/RBd4Tlu9xstwcLV.webp)
 
 ## Plugins
 
@@ -49,7 +49,7 @@ date: 2023-04-28
 | [autojump](https://github.com/wting/autojump)                                                 | ✅         | Low      | 命令`j`根据以往记录自动跳转目录          |
 | [jsontools](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools)                 | ✅         | Low      | 命令`pp_json`接受JSON输入将其格式化输出 |
 
-![image-20230428201007113](https://s2.loli.net/2023/04/28/LwzD2PlKbQE8MAY.webp)
+![colored-man-pages](https://s2.loli.net/2023/04/28/LwzD2PlKbQE8MAY.webp)
 
 ## Theme
 
@@ -61,7 +61,7 @@ P10K是目前Zsh使用人数最多的主题，并且没有包含在Oh-My-Zsh的�
 
 Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powerlevel10k或者使用`p10k configure`命令时有界面提示可以配置Powerlevel的显示外观，比如是否显示Unicode字符、多条命令之间是否有间隙等。
 
-![image-20230428203111033](https://s2.loli.net/2023/04/28/AeXJUaTC2wO5LWp.webp)
+![powerlevel10k](https://s2.loli.net/2023/04/28/AeXJUaTC2wO5LWp.webp)
 
 ## Zsh & Bash
 
@@ -71,7 +71,7 @@ Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powe
 
 2. Zsh有一部分Bash不含有的扩展语法，在目前Linux主流默认安装Bash的情况下建议不要使用Zsh扩展语法，Shell脚本也请使用`#!/bin/bash`以保证兼容性。
 
-![bash&zsh](https://s2.loli.net/2023/04/28/Ewq3DWg7lcj1Tsx.webp)
+![neofetch](https://s2.loli.net/2023/04/28/Ewq3DWg7lcj1Tsx.webp)
 
 ## Configure Script
 
@@ -132,11 +132,11 @@ sudo chown -R root:root /etc/skel/
 curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/skel.sh | bash
 ```
 
-![image-20230428220829254](https://s2.loli.net/2023/04/28/5qBetXNgchw9I3Z.webp)
+![cmatrix](https://s2.loli.net/2023/04/28/5qBetXNgchw9I3Z.webp)
 
 ## Other than zsh
 
-推荐一个不在Zsh生态中的Shell Tool: [navi](https://github.com/denisidoro/navi)，它可以在一定程度上替代`man`，提供更方便易懂的命令行手册查询。
+推荐一个不在Zsh生态中的Shell Tool:[navi](https://github.com/denisidoro/navi)，它可以在一定程度上替代`man`，提供更方便易懂的命令行手册查询。
 
 由于`navi`依赖[fzf](https://github.com/junegunn/fzf)，下载要先安装fzf，且不支持`apt`包管理器，使用以下命令手动安装：
 
@@ -147,9 +147,9 @@ bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts
 
 安装完成以后重启shell即可正常使用`navi`命令，然后下载所有的手册提示，就可以享受到更优秀的手册了。
 
-![image-20230429130724050](https://s2.loli.net/2023/04/29/tA86jhHdYQf5NZG.webp)
+![navi](https://s2.loli.net/2023/04/29/tA86jhHdYQf5NZG.webp)
 
-以及另外一个Shell Tool: [httpie](https://github.com/httpie/httpie)，[文档](https://httpie.io/docs/cli)中有详细的介绍和说明，简单来说这是一个`curl`的替代品，使用命令`http`和`https`具有将类似`curl`输出高亮和JSON自动格式化的能力，个人认为在一定程度上比`curl`好用并且更美观。
+以及另外一个Shell Tool:[httpie](https://github.com/httpie/httpie)，[文档](https://httpie.io/docs/cli)中有详细的介绍和说明，简单来说这是一个`curl`的替代品，使用命令`http`和`https`具有将类似`curl`输出高亮和JSON自动格式化的能力，个人认为在一定程度上比`curl`好用并且更美观。
 
 用`apt`包管理器可以直接安装，注意`httpie`虽然包含在oh-my-zsh的插件列表中，却和`fzf`一样需要其他配置才能正常使用，并不如`apt`方便：
 
@@ -157,4 +157,4 @@ bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts
 sudo apt install httpie
 ```
 
-![image-20230430005928590](https://s2.loli.net/2023/04/30/NgYIk2xDApd6wKU.webp)
+![httpie](https://s2.loli.net/2023/04/30/NgYIk2xDApd6wKU.webp)

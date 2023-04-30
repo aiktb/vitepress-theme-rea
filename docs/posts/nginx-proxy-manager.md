@@ -5,7 +5,7 @@ date: 2023-04-07
 
 # Nginx Proxy Manager实现HTTPS反向代理排疑
 
-![- Nginx Proxy Manager -](https://s2.loli.net/2023/04/21/EhFNCoYxqg5mHU7.webp)
+![cover](https://s2.loli.net/2023/04/21/EhFNCoYxqg5mHU7.webp)
 
 > 本文使用Ubuntu22.04 Server。
 
@@ -75,7 +75,7 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 根据Nginx Proxy Manager的文档，使用默认邮箱`admin@example.com`和默认密码`changeme`登录：
 
-![image-20230421115821193](https://s2.loli.net/2023/04/21/sQGzlq4JhtRY8fH.webp)
+![login](https://s2.loli.net/2023/04/21/sQGzlq4JhtRY8fH.webp)
 
 ### 添加SSL证书
 
@@ -86,9 +86,9 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 3. 配置DNS Challenge用于证书申请，CA机构通过DNS Challenge来验证你是否是这个域名的所有者，我使用Cloudflare按照官网的要求[获取API Token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)，然后填入对应的位置；
 4. Propagation Seconds不要填写即为使用默认值，选中同意Let's Encrypt的政策，点击`Save`即可完成证书申请。
 
-![image-20230421115854256](https://s2.loli.net/2023/04/21/XmRvQ4qsag3Kb5f.webp)
+![ssl](https://s2.loli.net/2023/04/21/XmRvQ4qsag3Kb5f.webp)
 
-![image-20230421115937506](https://s2.loli.net/2023/04/21/uDJ2ZLIKsqb4RwN.webp)
+![ssl](https://s2.loli.net/2023/04/21/uDJ2ZLIKsqb4RwN.webp)
 
 ## 反向代理Nginx Proxy Manager
 
@@ -109,7 +109,7 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 点击主页右上角的`Add Proxy Host`，填写对应的主机静态IP和端口：
 
-![image-20230421120002263](https://s2.loli.net/2023/04/21/4O3A9Whz5alrNFV.webp)
+![add-proxy-host](https://s2.loli.net/2023/04/21/4O3A9Whz5alrNFV.webp)
 
 注意Schema是根据你代理的服务是否实际开启了HTTPS来设置的：
 
@@ -127,7 +127,7 @@ sudo ufw allow 81 comment 'Nginx Proxy Manager'
 
 选中右上角的SSL，一目了然，添加刚刚自动申请的证书：
 
-![image-20230421120037388](https://s2.loli.net/2023/04/21/KpUh6q1Oy8BwXtW.webp)
+![add-ssl](https://s2.loli.net/2023/04/21/KpUh6q1Oy8BwXtW.webp)
 
 SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 
@@ -144,7 +144,7 @@ SSL相关的配置都是安全相关的，不关心的话全部启用就好。
 
 假如你想要将`www.aiktb.com`重定向到`aiktb.com`，那么你应该将`HTTP Code`设置为`308 Permanent Redirect`，并设置SSL，否则网页将无法打开：
 
-![image-20230421211728979](https://s2.loli.net/2023/04/21/ZzfLP8Crx7so52y.webp)
+![edit-redirection-host](https://s2.loli.net/2023/04/21/ZzfLP8Crx7so52y.webp)
 
 ## 常见错误排除
 

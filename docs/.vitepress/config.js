@@ -12,10 +12,12 @@ export default defineConfig({
     markdown: {
         lineNumbers: true,
     },
+    buildEnd: rss,
     head: [
         [
             'script',
-            {async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-MCQSMRVDJN'}],
+            {async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-MCQSMRVDJN'}
+        ],
         [
             'script',
             {},
@@ -76,5 +78,4 @@ export default defineConfig({
                       Copyright © 2023 <a href="/">aiktb</a>`,
         },
     },
-    buildEnd: rss
 })

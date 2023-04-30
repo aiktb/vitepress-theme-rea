@@ -58,9 +58,10 @@
     color: var(--my-white) !important;
 }
 
-.vp-doc th, .vp-doc td {
+ .vp-doc td {
     border: 1px solid var(--my-blue-dark);
 }
+
 .vp-doc blockquote > p {
     color: var(--my-white) !important;
     margin-left: 10px;

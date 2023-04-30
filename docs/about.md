@@ -4,7 +4,7 @@ title: About
 
 # About me and the blog
 
-![如何为](https://s2.loli.net/2023/04/24/jQ1JiRcBmbZ6vnH.webp)
+![about](https://s2.loli.net/2023/04/24/jQ1JiRcBmbZ6vnH.webp)
 
 ## About me
 
