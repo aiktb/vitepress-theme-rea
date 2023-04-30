@@ -26,7 +26,7 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 git clone https://github.com/aiktb/rea.git
 cd rea
 npm install
-tmux new-session -d 'npm run docs:deploy'
+tmux new-session -d 'npm run docs:build && npm run docs:preview'
 ```
 
 #### Stop
