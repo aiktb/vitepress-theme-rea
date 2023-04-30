@@ -136,7 +136,7 @@ curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/skel.sh | bas
 
 ## Other than zsh
 
-推荐一个不在Zsh生态中的Shell Tool:[navi](https://github.com/denisidoro/navi)，它可以在一定程度上替代`man`，提供更方便易懂的命令行手册查询。
+推荐一个不在Zsh生态中的Shell Tool: [navi](https://github.com/denisidoro/navi)，它可以在一定程度上替代`man`，提供更方便易懂的命令行手册查询。
 
 由于`navi`依赖[fzf](https://github.com/junegunn/fzf)，下载要先安装fzf，且不支持`apt`包管理器，使用以下命令手动安装：
 
@@ -149,7 +149,7 @@ bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts
 
 ![navi](https://s2.loli.net/2023/04/29/tA86jhHdYQf5NZG.webp)
 
-以及另外一个Shell Tool:[httpie](https://github.com/httpie/httpie)，[文档](https://httpie.io/docs/cli)中有详细的介绍和说明，简单来说这是一个`curl`的替代品，使用命令`http`和`https`具有将类似`curl`输出高亮和JSON自动格式化的能力，个人认为在一定程度上比`curl`好用并且更美观。
+以及另外一个Shell Tool: [httpie](https://github.com/httpie/httpie)，[文档](https://httpie.io/docs/cli)中有详细的介绍和说明，简单来说这是一个`curl`的替代品，使用命令`http`和`https`具有将类似`curl`输出高亮和JSON自动格式化的能力，个人认为在一定程度上比`curl`好用并且更美观。
 
 用`apt`包管理器可以直接安装，注意`httpie`虽然包含在oh-my-zsh的插件列表中，却和`fzf`一样需要其他配置才能正常使用，并不如`apt`方便：
 

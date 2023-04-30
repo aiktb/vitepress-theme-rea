@@ -68,6 +68,23 @@ npm install -D vitepress
 npx vitepress init
 ```
 
+项目目录结构：
+
+```yaml
+├─.github
+│  └─workflows
+├─.idea
+├─docs
+│  ├─.vitepress
+│  │  ├─cache
+│  │  ├─dist
+│  │  └─theme
+│  │      └─components
+│  ├─posts
+│  └─public
+└─node_modules
+```
+
 填写目录名称时，`docs`是默认名，该目录在GitHub的代码占比分析中会被忽略，参考[这个](https://github.com/github-linguist/linguist/blob/master/docs/overrides.md#documentation)，如果你的Repo Languages显示不正常，应该创建`.gitattributes`在你的项目根目录(最外层)，添加类似行：
 
 ```bash
@@ -112,7 +129,7 @@ markdown: {
 
 #### dark mode
 
-非常可惜目前的VitePress没有`dark mode only`，他只能将主题锁定在明亮模式并通过以下配置移除主题切换按钮：
+非常可惜目前的VitePress没有`dark mode only`，只能将主题锁定在明亮模式并通过以下配置移除主题切换按钮：
 
 ```js
 appearance: false,
@@ -179,9 +196,9 @@ head: [
 import {rss} from './theme/rss.js'
 
 ...
-head: [
-    buildEnd: js
-],
+export default defineConfig({
+    buildEnd: rss,
+})
 ...
 ```
 
@@ -244,7 +261,7 @@ themeConfig: {
 
 需要注意的是`Local Search`并不完美，仅仅是“能用”而已，还存在许多问题，特别是中文的处理上表现很糟糕。
 
-以前有`vitepress-plugin-search`插件用于支持本地搜索，我使用过该插件，效果上似乎差距不明显，但在样式上`Local Search`完胜对方，这很能减轻CSS开发工作量。
+以前有[vitepress-plugin-search](https://github.com/emersonbottero/vitepress-plugin-search)插件用于支持本地搜索，我使用过该插件，效果上似乎差距不明显，但在样式上`Local Search`完胜对方，这很能减轻CSS开发工作量。
 
 ![search](https://s2.loli.net/2023/04/30/gibULzPQ61pEoZN.webp)
 
@@ -274,7 +291,7 @@ Disqus和Gitalk存在我无法解决的Bug和样式问题，最终被放弃：
 1. Disqus我使用了[vue-disqus](https://github.com/ktquez/vue-disqus)组件，显示效果很糟糕，它在我的网站上显示为明亮模式，而且我用CSS完全无法控制它的样式；
 2. Gitalk同上，但可以用CSS调整，只是很烦人；
 
-最终实际的解决方案只剩下了Giscus，最初我使用了`<Giscus/>`这个[giscus-component](https://github.com/giscus/giscus-component)官方提供的VUE组件，参考issue:[#1776](https://github.com/vuejs/vitepress/issues/1776)发现存在2个显示bug：
+最终实际的解决方案只剩下了Giscus，最初我使用了`<Giscus/>`这个giscus官方提供的[VUE组件](https://github.com/giscus/giscus-component)，参考issue:[#1776](https://github.com/vuejs/vitepress/issues/1776)发现存在2个显示bug：
 
 1. 在多个页面切换时评论区没有被刷新，仍显示上个页面的评论，该错误由VUE的组件重用导致，通过`:key`被修复，在Disqus中出现了同样的问题，但Gitalk没有该问题；
 2. 从有评论的页面切换到没有评论的页面再返回有评论的页面，评论区将被截断，只能显示一小部分，推测该bug也是由VUE组件重用导致的，但不知如何修复。
@@ -384,7 +401,7 @@ export default createContentLoader('posts/*.md', {
 
 #### Import Layout
 
-参考[theme/components/Layout.vue](theme/components/Layout.vue)和[theme/index.js](theme/index.js)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
+参考[components/Layout.vue](theme/components/Layout.vue)和[theme/index.js](theme/index.js)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
 
 ### Custom CSS
 
@@ -446,7 +463,7 @@ Instead of /public/fonts/...woff2, use /fonts/...woff2.
 
 ### GitHub Action
 
-在这一点上我真的要称赞VitePress团队，因为他们的[文档](https://vitepress.dev/guide/deploy#github-pages)中的`.github/workflow/deploy.yml`文件不需要做任何修改就能在GitHub Action上使用！
+在这一点上我真的要称赞VitePress团队，因为他们[文档](https://vitepress.dev/guide/deploy#github-pages)中的`deploy.yml`文件不需要做任何修改就能在GitHub Action上直接使用，只需要将它放在你的`.github/workflow`目录下面。
 
 这种方式有一个优点是可以滚动更新，你的服务不会下线，如果你还使用`github.io`子域，那么你将没有任何花费。
 
