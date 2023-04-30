@@ -16,6 +16,6 @@ export default createContentLoader('posts/*.md', {
                     date: date
                 }
             }
-        })
+        }).slice(0, 9)
     }
 })
