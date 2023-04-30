@@ -8,8 +8,7 @@ title: Links
 
 ## Exchange friendship link
 
-If you like my blog, and you also have a blog, you are welcome to email me with the following information,
-and I will add your friendship link.
+If you like my blog, and you also have a blog, you are welcome to email me with the following information, and I will add your friendship link.
 
 The following information is required:
 

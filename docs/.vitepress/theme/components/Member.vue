@@ -18,7 +18,7 @@ const members = [
       },
       {
         icon: {svg: email},
-        link: 'mailto:aiktb@outlook.com?subject=Email%20Subject&body=Email%20Body'
+        link: 'mailto:aiktb@outlook.com'
       }
     ]
   }
