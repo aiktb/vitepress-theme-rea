@@ -22,7 +22,7 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 #### Start
 
 ```bash
-# Default port: 8083
+# Default port: 8080
 git clone https://github.com/aiktb/rea.git
 cd rea
 npm install
@@ -41,8 +41,10 @@ The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) licens
 
 ## Preview
 
-### Home![home](https://s2.loli.net/2023/04/28/J7lNFdkuBm9wptf.webp)
+### Home
+
+![image-20230430212626160](https://s2.loli.net/2023/04/30/9rb67scjOEtuzSY.webp)
 
 ### About
 
-![about](https://s2.loli.net/2023/04/28/rXCEel7Os8VMYKi.webp)
+![about](https://s2.loli.net/2023/04/30/mHQ3gZxB4kTLuYM.webp)

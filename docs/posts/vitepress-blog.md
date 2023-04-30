@@ -384,7 +384,7 @@ export default createContentLoader('posts/*.md', {
 
 参考[theme/components/Layout.vue](theme/components/Layout.vue)和[theme/index.js](theme/index.js)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
 
-## Custom CSS
+### Custom CSS
 
 整个开发过程工作量最大的就是自定义CSS来调整博客的主题，虽然有ChatGPT帮我写点，但是因为要微调的地方太多了，整体而言工作量还是很大的。
 
@@ -392,7 +392,7 @@ export default createContentLoader('posts/*.md', {
 
 这部分工作是很个性化且非常主观的，我只能简单谈谈有哪些注意事项，具体的CSS代码只能读者自己加油了！☕
 
-### Color
+#### Color
 
 对我个人的博客而言主要参考了以下两个网站的配色：
 
@@ -401,7 +401,7 @@ export default createContentLoader('posts/*.md', {
 
 改CSS的方法就是用`F12`开发者工具直接查看类名和使用的`:root`颜色名称，然后在`custom.css`中直接覆盖掉，必要时使用`!important`强制覆盖样式。
 
-### Font
+#### Font
 
 默认的`lnter`字体无需排除，用作第二字体即可：
 
@@ -490,4 +490,4 @@ tmux kill-session -t 0
 
 Docker不适用这个项目，因为需要频繁的更新源代码，每一次更新都需要重新构建镜像，当然也可以用GitHub Action自动构建镜像并推送到Docker Hub，然后用`docker compose`启动。
 
-这种方法比GitHub Pages还麻烦又没有什么明显的优势，那我为什么不直接用GitHub Pages？总之，VitePress开发博客别尝试使用Docker，这是个坑。
+这种方法比GitHub Pages还麻烦又没有什么明显的优势，那为什么不直接用GitHub Pages？总之，VitePress开发博客别尝试使用Docker，这是个坑。
