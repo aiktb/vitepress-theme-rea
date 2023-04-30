@@ -7,6 +7,7 @@ import Recent from "./Recent.vue"
 
 const {Layout} = DefaultTheme
 </script>
+
 <template>
   <Layout>
     <template #doc-after>
