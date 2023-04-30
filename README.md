@@ -6,6 +6,10 @@ My blog URL: https://aiktb.com
 
 Personal blog based on [VitePress](https://vitepress.dev/) default theme extension.
 
+Q: How to develop?
+
+A: Read this [blog](https://aiktb.com/posts/vitepress-blog).
+
 ## Feature
 
 - Simple tones
@@ -14,8 +18,8 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 - No sidebar
 - Google Analytics support
 - RSS feed
-- [Comment](https://github.com/giscus/giscus)
 - Local search
+- [Comment](https://github.com/giscus/giscus)
 
 ## Deploy
 
