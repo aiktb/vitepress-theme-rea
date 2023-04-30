@@ -13,5 +13,5 @@ title: Archive
 #### April
 
 - [Nginx Proxy Manager实现HTTPS反向代理](/posts/nginx-proxy-manager)
-- [Oh-My-Zsh+Powerlevel10k: Zsh一键配置脚本](posts/zsh-config.md)
+- [Oh-My-Zsh+Powerlevel10k: Zsh一键配置脚本](posts/zsh-config)
 - [VitePress利用默认主题拓展开发博客实录](/posts/vitepress-blog)
