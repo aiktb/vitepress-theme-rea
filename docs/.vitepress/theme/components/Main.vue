@@ -56,7 +56,6 @@
   align-items: center;
   padding: 0 15px;
   text-align: center;
-
 }
 
 .title {

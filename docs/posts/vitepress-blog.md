@@ -246,6 +246,8 @@ themeConfig: {
 
 以前有`vitepress-plugin-search`插件用于支持本地搜索，我使用过该插件，效果上似乎差距不明显，但在样式上`Local Search`完胜对方，这很能减轻CSS开发工作量。
 
+![search](https://s2.loli.net/2023/04/30/gibULzPQ61pEoZN.webp)
+
 ### Layout
 
 `Layout`组件的`slot`是自定义VitePress博客的要点，因为有了`slot`才使VitePress在默认主题下页面仍有一定可拓展的空间，使用方法在[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)中已经写明，`Layout`一共有3种布局，我只使用了`home`和`doc`，没有使用`page`布局。
