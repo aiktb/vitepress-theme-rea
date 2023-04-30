@@ -19,7 +19,7 @@ A: Read this [blog](https://aiktb.com/posts/vitepress-blog).
 - Google Analytics support
 - RSS feed
 - Local search
-- [Comment](https://github.com/giscus/giscus)
+- [Comments](https://github.com/giscus/giscus)
 
 ## Deploy
 
