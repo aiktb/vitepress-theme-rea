@@ -1,11 +1,11 @@
 ---
-title: 'Oh My Zsh + Powerlevel10k: Zsh一键配置脚本'
+title: 'Oh-My-Zsh + Powerlevel10k: Zsh一键配置脚本'
 date: 2023-04-28
 ---
 
 # Oh-My-Zsh+Powerlevel10k: Zsh一键配置脚本
 
-![cover](https://s2.loli.net/2023/04/21/PMaimRyZsV6CXnk.webp)
+![cover](https://s2.loli.net/2023/04/30/5UB3Dy8V4Fnim7c.webp)
 
 > 本文使用Ubuntu22.04 & Windows Terminal，点击[这里](#configure-script)直接跳转到自动配置脚本。
 
