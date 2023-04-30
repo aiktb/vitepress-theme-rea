@@ -63,6 +63,7 @@
   display: flex;
   align-items: center;
   font-size: 2.2em;
+  line-height: 1.2em;
 }
 
 .description {
