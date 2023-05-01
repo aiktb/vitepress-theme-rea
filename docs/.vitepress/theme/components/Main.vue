@@ -35,6 +35,7 @@
   height: 150px;
   border-radius: 50%;
   box-shadow: 0 0 20px 20px var(--my-blue-light);
+  background-color: var(--my-blue-light);
 }
 
 @keyframes avatar-transform {

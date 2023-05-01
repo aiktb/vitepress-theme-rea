@@ -111,7 +111,7 @@
     text-decoration: none;
 }
 
-.header-anchor {
+.header-anchor, .VPSocialLink {
     border-bottom: none !important;
 }
 
