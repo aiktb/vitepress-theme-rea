@@ -74,7 +74,7 @@ npx vitepress init
 
 项目目录结构：
 
-```text
+```txt
 ├─.github
 │  └─workflows
 ├─.idea
@@ -91,7 +91,7 @@ npx vitepress init
 
 填写目录名称时，`docs`是默认名，该目录在GitHub的代码占比分析中会被忽略，参考[这个](https://github.com/github-linguist/linguist/blob/master/docs/overrides.md#documentation)，如果你的Repo Languages显示不正常，应该创建`.gitattributes`在你的项目根目录(最外层)，添加类似行：
 
-```text
+```txt
 docs/** -linguist-documentation
 ```
 
@@ -471,7 +471,7 @@ src: url('../../public/fonts/jetbrains-mono-v17-latin-regular.woff2') format('wo
 
 而如果你使用相对路径，VitePress Console会不停输出以下信息：
 
-```text
+```txt
 files in the public directory are served at the root path.
 Instead of /public/fonts/...woff2, use /fonts/...woff2.
 ```
@@ -489,7 +489,7 @@ Instead of /public/fonts/...woff2, use /fonts/...woff2.
 1. 设置你的DNS解析记录一条`A`记录和`AAAA`记录指向GitHub的IPV4和IPV6地址，参考[文档](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)；
 2. 在以下GitHub仓库路径的设置将`Custom domain`设置为你想要的顶级域或子域。
 
-```text
+```txt
 https://github.com/${USER}/${REPO}/settings/pages
 ```
 

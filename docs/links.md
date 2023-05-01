@@ -1,6 +1,9 @@
 ---
 title: Links
 ---
+<script setup>
+import Friends from './.vitepress/theme/components/Friends.vue'
+</script>
 
 # Friendship links
 
@@ -8,7 +11,8 @@ title: Links
 
 ## Exchange friendship link
 
-If you like my blog, and you also have a blog, you are welcome to email me with the following information, and I will add your friendship link.
+If you like my blog, and you also have a blog, you're welcome to email me with the following information,
+and I will add your friendship link.
 
 The following information is required:
 
@@ -17,6 +21,10 @@ The following information is required:
 - Describe your blog in one sentence.
 - Any contact information for you.
 
-## Blog friendship links list
+> I'm going to have to clear dead links because dead links will cause the VitePress project to fail to build.
+
+## Friendship links list
 
 The following are in no particular order:
+
+<Friends/>
