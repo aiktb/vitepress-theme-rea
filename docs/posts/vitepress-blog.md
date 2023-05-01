@@ -57,6 +57,10 @@ A: 建议使用[GitHub Action](https://docs.github.com/en/actions)和`github.io`
 | [PicGo-APP](https://github.com/Molunerfinn/PicGo) | 和Typora配合实现粘贴图片自动转换为Webp并上传到多种图床      |
 | [ChatGPT](https://chat.openai.com/chat)           | 提供各种关于编码的建议，如果你没有太多前端开发经验，那么这很重要      |
 
+> 我的Typora已经调整至与博客主题一致，主题尚未开源。
+
+![image-20230501153523964](https://s2.loli.net/2023/05/01/XTlytev4ApwHMjh.webp)
+
 ## Development
 
 ### Start
@@ -70,7 +74,7 @@ npx vitepress init
 
 项目目录结构：
 
-```yaml
+```text
 ├─.github
 │  └─workflows
 ├─.idea
@@ -87,8 +91,7 @@ npx vitepress init
 
 填写目录名称时，`docs`是默认名，该目录在GitHub的代码占比分析中会被忽略，参考[这个](https://github.com/github-linguist/linguist/blob/master/docs/overrides.md#documentation)，如果你的Repo Languages显示不正常，应该创建`.gitattributes`在你的项目根目录(最外层)，添加类似行：
 
-```bash
-# .gitattributes
+```text
 docs/** -linguist-documentation
 ```
 
@@ -115,7 +118,7 @@ docs/** -linguist-documentation
         ]
 ```
 
-就在VitePress v1.0.0-alpha.73(写这篇文章的上一个版本)删除`sidebar`会导致移动视图的`on this page`整行消失，issue:[#2258](https://github.com/vuejs/vitepress/issues/2258)是我提的，然后它就在alpha.74被修复了。
+就在VitePress v1.0.0-alpha.73(写这篇文章的上一个版本)删除`sidebar`会导致移动视图的`on this page`整行消失，issue[#2258](https://github.com/vuejs/vitepress/issues/2258)是我提的，然后它就在alpha.74被修复了。
 
 #### lineNumbers
 
@@ -137,13 +140,13 @@ appearance: false,
 
 我的博客完全是在明亮模式的基础上修改的，为了减少工作量我只愿意开发一套主题，如果VitePress能锁定在dark mode，那将可以大大减少我的工作量。
 
-有一个可以参考的issue:[#1359](https://github.com/vuejs/vitepress/issues/1359)，这也许对你有用。
+有一个可以参考的issue[#1359](https://github.com/vuejs/vitepress/issues/1359)，这也许对你有用。
 
 #### head
 
 除去官网介绍的简单添加favicon功能，head还可以做很多事，[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)中提到的都是可添加项，用类似下面的方法可以将其添加到你的博客或文档中。
 
-比如支持[Google Analytics](https://analytics.google.com/analytics/web/)，参考issue:[#1131](https://github.com/vuejs/vitepress/issues/1131)，就像这样：
+比如支持[Google Analytics](https://analytics.google.com/analytics/web/)，参考issue[#1131](https://github.com/vuejs/vitepress/issues/1131)，就像这样：
 
 ```js
 head: [
@@ -183,7 +186,7 @@ head: [
 
 #### buildEnd
 
-这个功能可以在VitePress构建完成后调用特定的JavaScript，很适合用来添加类似RSS feed和Site map(issue:[#520](https://github.com/vuejs/vitepress/issues/520))的功能。
+这个功能可以在VitePress构建完成后调用特定的JavaScript，很适合用来添加类似RSS Feed和Site Map(issue[#520](https://github.com/vuejs/vitepress/issues/520))的功能。
 
 我将在这里用几步教会你为博客生成RSS feed：
 
@@ -219,11 +222,11 @@ date: 2023-04-30
 
 重要的只有一点：如何引用SVG文件图标为网站添加一个VitePress默认支持以外的图标(比如Telegram、Email)？
 
-图标可以从iconscout找，但VitePress Docs只给出了一种SVG硬编码引用方式，但其实有更好的方法，参考issue:[#2290](https://github.com/vuejs/vitepress/issues/2290)。
+图标可以从iconscout找，但VitePress Docs只给出了一种SVG硬编码引用方式，但其实有更好的方法，参考issue[#2290](https://github.com/vuejs/vitepress/issues/2290)。
 
 在VUE和JavaScript文件你都可以类似使用以下的格式引用，这需要你的`viewBox`设置和原始SVG一致并`xlink:href`引用正确的SVG 文件名和id：
 
-```javascript
+```js
 themeConfig: {
 	socialLinks: [
 		{
@@ -291,7 +294,7 @@ Disqus和Gitalk存在我无法解决的Bug和样式问题，最终被放弃：
 1. Disqus我使用了[vue-disqus](https://github.com/ktquez/vue-disqus)组件，显示效果很糟糕，它在我的网站上显示为明亮模式，而且我用CSS完全无法控制它的样式；
 2. Gitalk同上，但可以用CSS调整，只是很烦人；
 
-最终实际的解决方案只剩下了Giscus，最初我使用了`<Giscus/>`这个giscus官方提供的[VUE组件](https://github.com/giscus/giscus-component)，参考issue:[#1776](https://github.com/vuejs/vitepress/issues/1776)发现存在2个显示bug：
+最终实际的解决方案只剩下了Giscus，最初我使用了`<Giscus/>`这个giscus官方提供的[VUE组件](https://github.com/giscus/giscus-component)，参考issue[#1776](https://github.com/vuejs/vitepress/issues/1776)发现存在2个显示bug：
 
 1. 在多个页面切换时评论区没有被刷新，仍显示上个页面的评论，该错误由VUE的组件重用导致，通过`:key`被修复，在Disqus中出现了同样的问题，但Gitalk没有该问题；
 2. 从有评论的页面切换到没有评论的页面再返回有评论的页面，评论区将被截断，只能显示一小部分，推测该bug也是由VUE组件重用导致的，但不知如何修复。
@@ -329,6 +332,10 @@ const {title} = useData()
   </div>
 </template>
 ```
+
+可以在加入类似`comments: false`的`frontmatter`，并在VUE中根据这一特征来决定是否加载Giscus来关闭评论，这个功能很简单。
+
+但是关闭GitHub Discussion也可以做到禁止评论，我认为没有必要再引入更多复杂性，所以没有加入类似的`frontmatter`。
 
 ![giscus](https://s2.loli.net/2023/04/30/bBUk9hIy8DpQaxG.webp)
 
@@ -373,7 +380,7 @@ Recent.vue使用了这个函数用来获取`posts`目录下的所有`.md`文件�
 
 `createContentLoader`需要按照VitePress[文档](https://vitepress.dev/guide/data-loading#createcontentloader)的说明新建立一个`/theme/posts.data.js`文件来使用，因为这个函数无法在`.vue`文件中导入。
 
-UTC标准时间是精确到秒的，但写博客不可能将时间精确到秒，不做处理的话显示出来的时间后面跟着一串0，所以必须将date处理为字符串并只取日期部分，最后限制只取9篇最新的文章数据返回：
+UTC标准时间是精确到秒的，但写博客不可能将时间精确到秒，不做处理的话显示出来的时间后面跟着一串0，所以必须将date处理为字符串并只取日期部分：
 
 ```js
 import {createContentLoader} from 'vitepress';
@@ -394,14 +401,24 @@ export default createContentLoader('posts/*.md', {
                     date: date
                 }
             }
-        }).slice(0, 9)
+        })
     }
 })
 ```
 
+由于这个文件在博客中要被复用，这里没有在末尾使用`.slice(0, 9)`限制返回的数量，应该在引用这部分代码的地方单独做处理，例如：
+
+```vue
+<script setup>
+import {data} from '../posts.data.js'
+
+const posts = data.slice(0, 9)
+</script>
+```
+
 #### Import Layout
 
-参考[components/Layout.vue](theme/components/Layout.vue)和[theme/index.js](theme/index.js)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
+参考[Layout.vue](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/components/Layout.vue)和[index.js](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/index.js)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
 
 ### Custom CSS
 
@@ -454,7 +471,7 @@ src: url('../../public/fonts/jetbrains-mono-v17-latin-regular.woff2') format('wo
 
 而如果你使用相对路径，VitePress Console会不停输出以下信息：
 
-```js
+```text
 files in the public directory are served at the root path.
 Instead of /public/fonts/...woff2, use /fonts/...woff2.
 ```
@@ -472,7 +489,7 @@ Instead of /public/fonts/...woff2, use /fonts/...woff2.
 1. 设置你的DNS解析记录一条`A`记录和`AAAA`记录指向GitHub的IPV4和IPV6地址，参考[文档](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)；
 2. 在以下GitHub仓库路径的设置将`Custom domain`设置为你想要的顶级域或子域。
 
-```bash
+```text
 https://github.com/${USER}/${REPO}/settings/pages
 ```
 
@@ -480,7 +497,7 @@ https://github.com/${USER}/${REPO}/settings/pages
 
 ![github-setting](https://s2.loli.net/2023/04/30/SJIm4oFneKt5hZf.webp)
 
-> 顺带一提，如果你在用Cloudflare的CDN，并且发现你的VitePress项目404页面无法正常显示，那么参考issue:[#2270](https://github.com/vuejs/vitepress/issues/2270)。
+> 顺带一提，如果你在用Cloudflare的CDN，并且发现你的VitePress项目404页面无法正常显示，那么参考issue[#2270](https://github.com/vuejs/vitepress/issues/2270)。
 
 ### VPS
 
@@ -504,6 +521,8 @@ tmux kill-session -t 0
 ```
 
 这种方式在我的4C8G VPS上，构建一次项目并上线服务器大约只需要25s，而用GitHub Action需要45s。但VPS每次更新VitePress版本都需要重新执行`npm i`。
+
+想要自动化VPS运维流程需要自己编写特定的shell脚本，不建议折腾。
 
 ### Docker
 
