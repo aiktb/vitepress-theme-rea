@@ -29,7 +29,7 @@ const members = [
   {
     avatar: 'https://blognas.hwb0307.com/logo.jpg',
     name: 'bensz',
-    title: 'Blogger',
+    title: 'VPS Blogger',
     links: [
       {
         icon: {svg: blogger},
