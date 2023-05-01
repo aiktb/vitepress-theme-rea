@@ -41,9 +41,9 @@ function formatDate(dateStr) {
         <h2>{{ year }}</h2>
         <ul>
           <li v-for="(month) in monthsByYear(year)" :key="month" class="month">
-            <h3>{{ monthNames[parseInt(month)-1] }}</h3>
+            <h3>{{ monthNames[parseInt(month) - 1] }}</h3>
             <ul>
-              <li v-for="post in postsByYearMonth(year, month)" :key="post.id">
+              <li v-for="post in postsByYearMonth(year, month)" :key="post.id" class="blog-item">
                 <a :href="post.url">
                   <div class="blog-header">
                     <div class="blog-title">{{ post.title }}</div>
@@ -62,19 +62,40 @@ function formatDate(dateStr) {
 <style scoped>
 .blog-header {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+}
+
+.blog-item {
+  position: relative;
+}
+
+.blog-header::before {
+  content: "●";
+  color: var(--my-white);
+  flex-wrap: wrap;
 }
 
 .blog-title {
   font-size: 1.0em;
-  font-weight: bold;
+  padding-left: 10px;
+
 }
 
-.year, .month{
+.blog-date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.year, .month, .blog-item {
   list-style-type: none;
 }
+
 .month > h3 {
   margin: 0;
+}
+
+ul {
+  padding-left: 0;
 }
 </style>
