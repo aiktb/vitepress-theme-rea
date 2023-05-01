@@ -15,6 +15,8 @@ I am also very interested in ACG and have the wealth of animation viewing experi
 
 My id is taken from the song ***[aikotoba](https://www.youtube.com/watch?v=WptXk39wiIQ)*** of **[DECO*27](https://www.youtube.com/@DECO27)**.
 
+Since GitHub Pages offers free servers and my domain name costs less than $15 per year, you can trust that my blog will be around for a long time to come.
+
 ## Contact me
 
 In order to avoid unnecessary troubles, I will not provide any contact information within China.
