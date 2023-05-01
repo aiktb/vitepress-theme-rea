@@ -73,6 +73,7 @@ function formatDate(dateStr) {
   content: "●";
   color: var(--my-white);
   flex-wrap: wrap;
+  font-size: 12px;
 }
 
 .blog-title {
