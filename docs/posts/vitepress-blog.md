@@ -503,7 +503,7 @@ tmux new-session -d 'npm run docs:build && npm run docs:preview'
 tmux kill-session -t 0
 ```
 
-这种方式在我的4C8G VPS上，构建一次项目并上线服务器大约只需要25s，而用GitHub Action需要45s。但他每次更新VitePress版本都需要重新执行`npm i`。
+这种方式在我的4C8G VPS上，构建一次项目并上线服务器大约只需要25s，而用GitHub Action需要45s。但VPS每次更新VitePress版本都需要重新执行`npm i`。
 
 ### Docker
 
