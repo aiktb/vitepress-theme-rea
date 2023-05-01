@@ -6,7 +6,7 @@ import telegram from '/telegram.svg?raw'
 
 const members = [
   {
-    avatar: 'https://s.gravatar.com/avatar/646885b88df05b60e1eb4f3d5767c2e2?s=200',
+    avatar: '/avatar.jpg',
     name: 'aiktb',
     title: 'Blogger',
     links: [

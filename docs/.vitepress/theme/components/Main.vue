@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="content">
-      <img src="https://s.gravatar.com/avatar/646885b88df05b60e1eb4f3d5767c2e2?s=200" class="avatar" alt="avatar"/>
+      <img src="/avatar.jpg" class="avatar" alt="avatar"/>
     </div>
     <div class="share">
       <h1 class="title">
