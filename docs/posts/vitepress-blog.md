@@ -367,6 +367,16 @@ const members = [
 </script>
 ```
 
+这种方法导入的SVG图标触摸时不会显示文字，可以在SVG文件中添加以下`title`标签修复：
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="telegram">
+    <!--   NEW!   -->
+    <title>telegram</title> 
+    <path d=" ... "/>
+</svg>
+```
+
 
 
 ![members](https://s2.loli.net/2023/04/30/HCjTzVPk4hlvOo3.webp)
