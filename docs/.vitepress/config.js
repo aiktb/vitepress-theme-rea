@@ -32,11 +32,15 @@ export default defineConfig({
         ],
         [
             'link',
+            {rel: 'preconnect', href: 'https://s2.loli.net'}
+        ],
+        [
+            'link',
             {rel: 'preconnect', href: 'https://fonts.googleapis.com'}
         ],
         [
             'link',
-            {rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: ''},
+            {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: ''},
         ],
         [
             'link',

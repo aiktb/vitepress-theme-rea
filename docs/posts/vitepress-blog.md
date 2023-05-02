@@ -47,16 +47,16 @@ A: 建议使用[GitHub Action](https://docs.github.com/en/actions)和`github.io`
 
 ### Tool Box
 
-| Name                                              | Features                                                     |
-| ------------------------------------------------- | ------------------------------------------------------------ |
+| Name                                              | Features                              |
+|---------------------------------------------------|---------------------------------------|
 | [WebStorm](https://www.jetbrains.com/webstorm/)   | 提供一系列代码分析和补全的重量级IDE，实测比VSCode适合用来开发博客 |
-| [Typora](https://typora.io/)                      | 所见即所得的markdown编辑器，简洁美观，功能齐全               |
-| [Canva](https://www.canva.com/)                   | 用于设计博客所用的封面图片，提供云保存、在线编辑和大量免费模板 |
+| [Typora](https://typora.io/)                      | 所见即所得的markdown编辑器，简洁美观，功能齐全           |
+| [Canva](https://www.canva.com/)                   | 用于设计博客所用的封面图片，提供云保存、在线编辑和大量免费模板       |
 | [IconScout](https://iconscout.com/)               | 搜寻博客需要使用的各种SVG图标，如SocialLink，免费图标就够用  |
-| [SM.MS](https://sm.ms/)                           | 免费的在线图床服务，如果不想将图片保存在GitHub Repo的话很有用 |
-| [PicGo-APP](https://github.com/Molunerfinn/PicGo) | 和Typora配合实现粘贴图片自动转换为Webp并上传到多种图床       |
-| [InkScape](https://inkscape.org/)                 | 开源SVG图形编辑器，用于简单编辑SVG图形的大小和颜色           |
-| [ChatGPT](https://chat.openai.com/chat)           | 提供各种关于编码的建议，如果你没有太多前端开发经验，那么这很重要 |
+| [SM.MS](https://sm.ms/)                           | 免费的在线图床服务，如果不想将图片保存在GitHub Repo的话很有用  |
+| [PicGo-APP](https://github.com/Molunerfinn/PicGo) | 和Typora配合实现粘贴图片自动转换为Webp并上传到多种图床      |
+| [InkScape](https://inkscape.org/)                 | 开源SVG图形编辑器，用于简单编辑SVG图形的大小和颜色          |
+| [ChatGPT](https://chat.openai.com/chat)           | 提供各种关于编码的建议，如果你没有太多前端开发经验，那么这很重要      |
 
 > 我的Typora已经调整至与博客主题一致，主题尚未开源。
 
@@ -176,7 +176,7 @@ head: [
     ],
     [
         'link',
-        {rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: ''},
+        {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: ''},
     ],
     [
         'link',
@@ -189,7 +189,7 @@ head: [
 
 这个功能可以在VitePress构建完成后调用特定的JavaScript，很适合用来添加类似RSS Feed和Site Map(issue[#520](https://github.com/vuejs/vitepress/issues/520))的功能。
 
-我将在这里用几步教会你为博客生成RSS feed：
+我将在这里用几步教会你为博客生成RSS Feed：
 
 1. 运行`npm i -D feed`安装依赖；
 2. 建立`/theme/rss.js`文件；
