@@ -106,17 +106,19 @@ docs/** -linguist-documentation
 
 #### sidebar
 
-对于文档而言这是必要的，但对博客而言需要去掉它来节省空间，从`confgi.js`中删除以下行以关闭它：
+对于文档而言这是必要的，但对博客而言需要去掉它来节省空间，从`confgi.js`中删除以下行关闭它：
 
 ```js
- sidebar: [
-      {
-        text: 'Guide',
+sidebar: [
+    {
+		text: 'Guide',
         items: [
-          { text: 'Introduction', link: '/introduction' },
-          { text: 'Getting Started', link: '/getting-started' },
-          ...
+            { text: 'Introduction', link: '/introduction' },
+            { text: 'Getting Started', link: '/getting-started' },
+            ...
         ]
+    }
+]
 ```
 
 就在VitePress v1.0.0-alpha.73(写这篇文章的上一个版本)删除`sidebar`会导致移动视图的`on this page`整行消失，issue[#2258](https://github.com/vuejs/vitepress/issues/2258)是我提的，然后它就在alpha.74被修复了。
@@ -371,8 +373,8 @@ const members = [
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="telegram">
-    <!--   NEW!   -->
-    <title>telegram</title> 
+    <!--      NEW!      -->
+    <title>Telegram</title> 
     <path d=" ... "/>
 </svg>
 ```

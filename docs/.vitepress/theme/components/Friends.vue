@@ -3,7 +3,8 @@
 import {VPTeamMembers} from 'vitepress/theme'
 import email from '/email.svg?raw'
 import telegram from '/telegram.svg?raw'
-import blogger from '/blogger.svg?raw'
+import link from '/link.svg?raw'
+
 
 const members = [
   {
@@ -12,7 +13,7 @@ const members = [
     title: 'Tester',
     links: [
       {
-        icon: {svg: blogger},
+        icon: {svg: link},
         link: 'https://aiktb.com/'
       },
       {icon: 'github', link: 'https://github.com/aiktb'},
@@ -32,7 +33,7 @@ const members = [
     title: 'VPS Blogger',
     links: [
       {
-        icon: {svg: blogger},
+        icon: {svg: link},
         link: 'https://blognas.hwb0307.com/'
       },
       {
