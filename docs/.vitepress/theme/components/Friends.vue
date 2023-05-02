@@ -39,7 +39,7 @@ const members = [
         icon: {svg: telegram},
         link: 'https://t.me/benszconan'
       },
-      {icon:"github", link: 'https://github.com/huangwb8'}
+      {icon:"github", link: 'https://github.com/huangwb8'},
     ]
   },
 ]

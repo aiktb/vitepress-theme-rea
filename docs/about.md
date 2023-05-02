@@ -25,8 +25,6 @@ You can reach me on the following platforms, email is preferred:
 
 - [Email](mailto:aiktb@outlook.com)
 - [Telegram](https://t.me/aiktb)
-- [Twitter](https://twitter.com/aiktb39)
-- [GitHub](https://github.com/aiktb)
 
 ## About the blog item
 
