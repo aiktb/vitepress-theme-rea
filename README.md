@@ -8,7 +8,7 @@ Personal blog based on [VitePress](https://vitepress.dev/) default theme extensi
 
 Q: How to develop?
 
-A: Read this [blog](https://aiktb.com/posts/vitepress-blog).
+A: Read this [blog](https://aiktb.com/posts/vitepress-blog)(Chinese).
 
 ## Feature
 
