@@ -1,5 +1,4 @@
-// .vitepress/config.js
-import {defineConfig} from 'vitepress';
+import {defineConfig} from 'vitepress'
 import {rss} from './theme/rss.js'
 
 export default defineConfig({
