@@ -100,7 +100,7 @@ docs/** -linguist-documentation
 
 ![repo-languages](https://s2.loli.net/2023/04/30/tsWaX5FJBwelh6D.webp)
 
-### config.js
+### config.ts
 
 关于这个文件的普通案例在[文档](https://vitepress.dev/reference/site-config)中已经写的比较清晰了，可以参考我的[文件](https://github.com/aiktb/rea/blob/master/docs/.vitepress/config.js)，在这篇博客我只会写文档中没有或者可能需要的内容。
 
@@ -125,7 +125,7 @@ sidebar: [
 
 #### lineNumbers
 
-这是我唯一使用的markdown配置，且很有用，我查看了许多人的VitePress项目，发现他们都没有开启代码块行号显示选项，我建议你在`config.js`中开启它：
+这是我唯一使用的markdown配置，且很有用，我查看了许多人的VitePress项目，发现他们都没有开启代码块行号显示选项，我建议你在`config.ts`中开启它：
 
 ```js
 markdown: {
@@ -196,7 +196,7 @@ head: [
 1. 运行`npm i -D feed`安装依赖；
 2. 建立`/theme/rss.js`文件；
 3. 复制粘贴[我的代码](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/rss.js)，并修改相应的个人信息；
-4. 在`config.js`中加入以下几行代码。
+4. 在`config.ts`中加入以下几行代码。
 
 ```js
 import {rss} from './theme/rss.js'
@@ -349,7 +349,7 @@ const {title} = useData()
 
 这个组件很简单，参考[文档](https://vitepress.dev/reference/default-theme-team-page)为VitePress提供的`<VPTeamMembers/>`组件添加头像、描述和4个链接就完成了。
 
-需要注意的是`.vue`文件可以用以下语法导入SVG文件，比`config.js`方便的多：
+需要注意的是`.vue`文件可以用以下语法导入SVG文件，比`config.ts`方便的多：
 
 ```vue
 <script setup>
