@@ -1,7 +1,5 @@
 import {createContentLoader} from 'vitepress';
 
-export let data;
-
 export default createContentLoader('posts/*.md', {
     transform(rawData) {
         return rawData.sort((a, b) => {

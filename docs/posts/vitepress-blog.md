@@ -434,7 +434,7 @@ const posts = data.slice(0, 9)
 
 #### Import Layout
 
-参考[Layout.vue](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/components/Layout.vue)和[index.js](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/index.js)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
+参考[Layout.vue](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/components/Layout.vue)和[index.ts](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/index.js)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
 
 ### Custom CSS
 

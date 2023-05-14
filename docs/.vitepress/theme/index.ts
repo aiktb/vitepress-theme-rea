@@ -1,4 +1,3 @@
-// .vitepress/theme/index.js
 import Layout from './components/Layout.vue';
 
 import './custom.css'

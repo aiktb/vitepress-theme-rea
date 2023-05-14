@@ -10,6 +10,10 @@ Q: How to develop?
 
 A: Read this [blog](https://aiktb.com/posts/vitepress-blog)(Chinese).
 
+## Next step
+
+Refactor: JavaScript to TypeScript
+
 ## Feature
 
 - Simple tones
