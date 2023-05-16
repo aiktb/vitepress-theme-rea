@@ -1,4 +1,4 @@
-import * as path from 'path'
+import path from 'path'
 import {writeFileSync} from 'fs'
 import {Feed} from 'feed'
 import {type ContentData, createContentLoader, type SiteConfig} from 'vitepress'

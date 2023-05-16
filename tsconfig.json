@@ -11,5 +11,8 @@
   "include": [
     "docs/.vitepress/**/*.ts",
     "docs/.vitepress/**/*.vue"
+  ],
+  "exclude": [
+
   ]
 }
