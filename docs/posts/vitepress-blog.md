@@ -95,9 +95,9 @@ npx vitepress init
 docs/** -linguist-documentation
 ```
 
-这样你的Repo Languages在项目开发完后最终应该类似：
+这样你的Repo Languages在项目开发完后应该类似：
 
-![repo-languages](https://s2.loli.net/2023/04/30/tsWaX5FJBwelh6D.webp)
+![repo-languages](https://s2.loli.net/2023/05/16/tJvEQAreSX8mPq7.webp)
 
 ### config.ts
 
@@ -477,7 +477,7 @@ const posts = data.slice(0, 9)
 
 #### Import Layout
 
-参考[Layout.vue](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/components/Layout.vue)和[index.ts](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/index.ts)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
+参考[Layout.vue](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/components/Layout.vue)和[index.ts](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/index.ts)文件，具体的用法文档写的很详细了，不做赘述。
 
 ### Custom CSS
 
