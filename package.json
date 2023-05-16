@@ -10,7 +10,6 @@
     "vitepress": "^1.0.0-alpha.74"
   },
   "devDependencies": {
-    "@types/node": "^20.1.5",
     "feed": "^4.2.2"
   }
 }

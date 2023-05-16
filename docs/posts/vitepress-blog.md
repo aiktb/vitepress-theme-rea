@@ -35,15 +35,15 @@ A: 想着自己搞个自定义博客，看VUE3的文档时发现了这个项目�
 
 Q: 需要掌握哪些技术才能自定义主题？
 
-A: 最基本的CSS、HTML和JavaScript，以及一点点VUE，会用浏览器的`F12`开发者工具。
+A: 最基本的`CSS`、`HTML`和`TypeScript`，以及一点点`VUE`，会用浏览器`F12`开发者工具。
 
-Q: 有哪些最有价值的文档和社区可以参考？
+Q: 有哪些有价值的文档和社区可以参考？
 
 A: [GitHub Issue](https://github.com/vuejs/vitepress/issues)、[VitePress Docs](https://vitepress.dev/)、[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)以及[GitHub Search](https://github.com/search?q=vitepress%20blog&type=repositories)。
 
-Q: 如何部署/上线博客到公网？
+Q: 如何部署博客到公网？
 
-A: 建议使用[GitHub Action](https://docs.github.com/en/actions)和`github.io`的子域名即可，有钱也可以上VPS和自定义域名，这两种方式我都会提到。
+A: 建议使用[GitHub Action](https://docs.github.com/en/actions)和`github.io`的子域名即可，不需要任何花费。
 
 ### Tool Box
 
@@ -78,7 +78,6 @@ npx vitepress init
 ```txt
 ├─.github
 │  └─workflows
-├─.idea
 ├─docs
 │  ├─.vitepress
 │  │  ├─cache
@@ -90,7 +89,7 @@ npx vitepress init
 └─node_modules
 ```
 
-填写目录名称时，`docs`是默认名，该目录在GitHub的代码占比分析中会被忽略，参考[这个](https://github.com/github-linguist/linguist/blob/master/docs/overrides.md#documentation)，如果你的Repo Languages显示不正常，应该创建`.gitattributes`在你的项目根目录(最外层)，添加类似行：
+填写目录名称时，`docs`是默认名，该目录在GitHub的代码占比分析中会被忽略，参考[linguist](https://github.com/github-linguist/linguist/blob/master/docs/overrides.md#documentation)，如果你的Repo Languages显示不正常，应该创建`.gitattributes`在你的项目根目录(最外层)，添加类似行：
 
 ```txt
 docs/** -linguist-documentation
@@ -102,13 +101,13 @@ docs/** -linguist-documentation
 
 ### config.ts
 
-关于这个文件的普通案例在[文档](https://vitepress.dev/reference/site-config)中已经写的比较清晰了，可以参考我的[文件](https://github.com/aiktb/rea/blob/master/docs/.vitepress/config.js)，在这篇博客我只会写文档中没有或者可能需要的内容。
+关于这个文件的普通案例在文档中已经写的比较清晰了，在这篇博客我只会写文档中没有或者可能需要的内容。
 
 #### sidebar
 
-对于文档而言这是必要的，但对博客而言需要去掉它来节省空间，从`confgi.js`中删除以下行关闭它：
+对于文档而言这是必要的，但对博客而言需要去掉它来节省空间，从`config.ts`中删除以下行关闭它：
 
-```js
+```typescript
 sidebar: [
     {
 		text: 'Guide',
@@ -121,13 +120,11 @@ sidebar: [
 ]
 ```
 
-就在VitePress v1.0.0-alpha.73(写这篇文章的上一个版本)删除`sidebar`会导致移动视图的`on this page`整行消失，issue[#2258](https://github.com/vuejs/vitepress/issues/2258)是我提的，然后它就在alpha.74被修复了。
-
 #### lineNumbers
 
 这是我唯一使用的markdown配置，且很有用，我查看了许多人的VitePress项目，发现他们都没有开启代码块行号显示选项，我建议你在`config.ts`中开启它：
 
-```js
+```typescript
 markdown: {
     lineNumbers: true,
 },
@@ -137,7 +134,7 @@ markdown: {
 
 非常可惜目前的VitePress没有`dark mode only`，只能将主题锁定在明亮模式并通过以下配置移除主题切换按钮：
 
-```js
+```typescript
 appearance: false,
 ```
 
@@ -149,9 +146,9 @@ appearance: false,
 
 除去官网介绍的简单添加favicon功能，head还可以做很多事，[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)中提到的都是可添加项，用类似下面的方法可以将其添加到你的博客或文档中。
 
-比如支持[Google Analytics](https://analytics.google.com/analytics/web/)，参考issue[#1131](https://github.com/vuejs/vitepress/issues/1131)，就像这样：
+比如支持[Google Analytics](https://analytics.google.com/analytics/web/)，就像这样：
 
-```js
+```typescript
 head: [
     [
         'script',
@@ -170,7 +167,7 @@ head: [
 
 比如说你还可以像这样加载[Google Fonts](https://fonts.google.com/)中的`JetBrains Mono`字体，以便在CSS中直接使用它：
 
-```js
+```typescript
 head: [
 	[
         'link',
@@ -194,11 +191,57 @@ head: [
 我将在这里用几步教会你为博客生成RSS Feed：
 
 1. 运行`npm i -D feed`安装依赖；
-2. 建立`/theme/rss.ts`文件；
-3. 复制粘贴[我的代码](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/rss.js)，并修改相应的个人信息；
-4. 在`config.ts`中加入以下几行代码。
 
-```js
+2. 编辑`/theme/rss.ts`和`config.ts`文件:
+
+```typescript
+import * as path from 'path'
+import {writeFileSync} from 'fs'
+import {Feed} from 'feed'
+import {type ContentData, createContentLoader, type SiteConfig} from 'vitepress'
+
+const id: string = 'aiktb'
+const baseUrl: string = `https://${id}.com`
+type RssGenerator = (config: SiteConfig) => Promise<void>;
+export const rss: RssGenerator = async (config) => {
+    const feed: Feed = new Feed({
+        title: `${id}'s blog`,
+        description: 'My Personal Blog',
+        id: baseUrl,
+        link: baseUrl,
+        language: 'zh-CN',
+        image: `${baseUrl}/avatar.jpg`,
+        favicon: `${baseUrl}/favicon.svg`,
+        copyright: `Copyright (c) 2023 ${id}`
+    })
+
+    const posts: ContentData[] = await createContentLoader('posts/*.md', {
+        excerpt: true,
+        render: true,
+        transform: (rawData) => {
+            return rawData.sort((a, b) => {
+                return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
+            })
+        }
+    }).load()
+
+    for (const {url, excerpt, frontmatter, html} of posts) {
+        feed.addItem({
+            title: frontmatter.title,
+            id: `${baseUrl}${url}`,
+            link: `${baseUrl}${url}`,
+            description: excerpt,
+            content: html,
+            author: [{name: `${id}`}],
+            date: frontmatter.date
+        })
+    }
+
+    writeFileSync(path.join(config.outDir, 'rss.xml'), feed.rss2())
+}
+```
+
+```typescript
 import {rss} from './theme/rss.ts'
 
 ...
@@ -208,7 +251,7 @@ export default defineConfig({
 ...
 ```
 
-这个方法基本参考了尤雨溪在`Vue Blog`中编写的[代码](https://github.com/vuejs/blog/blob/main/.vitepress/genFeed.ts)，但他使用了错误的`'feed.rss'`文件名，应该使用`.xml`格式，否则RSS订阅文件将无法被浏览器正确显示。
+这个方法基本参考了[VUE Blog](https://github.com/vuejs/blog/blob/main/.vitepress/genFeed.ts)，但他使用了错误的`'feed.rss'`文件名，应该使用`.xml`格式，否则RSS订阅文件将无法被浏览器正确显示。
 
 并且我的方法依赖了每篇文章中开头有如下格式的`frontmatter`，并且博客文章目录名为`posts`，关于`frontmatter`的应用接下来还会详细提到，参考[VitePress Docs](https://vitepress.dev/reference/frontmatter-config#frontmatter-config):
 
@@ -226,11 +269,11 @@ date: 2023-04-30
 
 重要的只有一点：如何引用SVG文件图标为网站添加一个VitePress默认支持以外的图标(比如Telegram、Email)？
 
-图标可以从iconscout找，但VitePress Docs只给出了一种SVG硬编码引用方式，但其实有更好的方法，参考issue[#2290](https://github.com/vuejs/vitepress/issues/2290)。
+图标可以从iconscout找，但VitePress Docs只给出了一种SVG硬编码引用方式，但其实有更好的方法。
 
-在VUE和JavaScript文件你都可以类似使用以下的格式引用，这需要你的`viewBox`设置和原始SVG一致并`xlink:href`引用正确的SVG 文件名和id：
+在VUE和JavaScript文件你都可以类似使用以下的格式引用，这需要你的`viewBox`设置和原始SVG一致并`xlink:href`引用正确的SVG文件名和id：
 
-```js
+```typescript
 themeConfig: {
 	socialLinks: [
 		{
@@ -260,7 +303,7 @@ themeConfig: {
 
 新建立的文档和博客还没有内容来充实它，申请[Algolia DocSearch](https://docsearch.algolia.com/docs/what-is-docsearch)有点为难人，不过VitePress就在alpha.66版本加入了`Local Search`功能，可以按照文档的说明简单快捷的启用它，只需要几行代码：
 
-```js
+```typescript
  themeConfig: {
     search: {
       provider: 'local'
@@ -268,17 +311,17 @@ themeConfig: {
   }
 ```
 
-需要注意的是`Local Search`并不完美，仅仅是“能用”而已，还存在许多问题，特别是中文的处理上表现很糟糕。
+需要注意的是`Local Search`并不完美，仅仅是"能用"而已，还存在许多问题，特别是中文的处理上表现很糟糕。
 
-以前有[vitepress-plugin-search](https://github.com/emersonbottero/vitepress-plugin-search)插件用于支持本地搜索，我使用过该插件，效果上似乎差距不明显，但在样式上`Local Search`完胜对方，这很能减轻CSS开发工作量。
+以前有[vitepress-plugin-search](https://github.com/emersonbottero/vitepress-plugin-search)插件用于支持本地搜索，我使用过该插件，效果上似乎差距不明显，但在样式上`Local Search`完胜，这能减轻CSS开发工作量。
 
 ![search](https://s2.loli.net/2023/04/30/gibULzPQ61pEoZN.webp)
 
 ### Layout
 
-`Layout`组件的`slot`是自定义VitePress博客的要点，因为有了`slot`才使VitePress在默认主题下页面仍有一定可拓展的空间，使用方法在[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)中已经写明，`Layout`一共有3种布局，我只使用了`home`和`doc`，没有使用`page`布局。
+`Layout`组件的`slot`是自定义VitePress博客的要点，因为有了`slot`才使VitePress在默认主题下页面仍有一定可拓展的空间，`Layout`一共有3种布局，我只使用了`home`和`doc`，没有使用`page`布局。
 
-我的博客一共使用了4个`slot`用于插入自定义的VUE组件，`slot`具体在什么位置还是要靠自己尝试：
+我的博客一共使用了4个`slot`用于插入自定义的VUE组件：
 
 | Name                 | Component    | Function                                             |
 |----------------------|--------------|------------------------------------------------------|
@@ -298,7 +341,7 @@ themeConfig: {
 Disqus和Gitalk存在我无法解决的Bug和样式问题，最终被放弃：
 
 1. Disqus我使用了[vue-disqus](https://github.com/ktquez/vue-disqus)组件，显示效果很糟糕，它在我的网站上显示为明亮模式，而且我用CSS完全无法控制它的样式；
-2. Gitalk同上，但可以用CSS调整，只是很烦人；
+2. Gitalk同上，但可以用CSS调整。
 
 最终实际的解决方案只剩下了Giscus，最初我使用了`<Giscus/>`这个giscus官方提供的[VUE组件](https://github.com/giscus/giscus-component)，参考issue[#1776](https://github.com/vuejs/vitepress/issues/1776)发现存在2个显示bug：
 
@@ -386,19 +429,19 @@ const members = [
 
 #### Main.vue & Recent.vue
 
-这两个组件构成了我的博客主页，主要参考了[clark-cui](https://github.com/clark-cui)的[博客](https://visionary-sunflower-dc7ae3.netlify.app/)和[源码](https://github.com/clark-cui/vitepress-blog-zaun)，移除了略复杂的分页功能并且调整了CSS来适应我的主题。
+这两个组件构成了我的博客主页，主要参考了[clark-cui](https://visionary-sunflower-dc7ae3.netlify.app/)的博客源码，移除了略复杂的分页功能并且调整了CSS来适应我的主题。
 
-注意使用这种方式自定义的Home主页应该移除所有的`index.md`中的VitePress默认配置的`frontmatter`。
+注意使用这种方式自定义的`Home`主页应该移除`index.md`中默认的`frontmatter`。
 
 #### createContentLoader
 
-Recent.vue使用了这个函数用来获取`posts`目录下的所有`.md`文件数据，并且用`JavaScript`处理数据并渲染在页面。
+`Recent.vue`使用了这个函数用来获取`posts`目录下的所有`.md`文件数据，并且用`JavaScript`处理数据并渲染页面。
 
-`createContentLoader`需要按照VitePress[文档](https://vitepress.dev/guide/data-loading#createcontentloader)的说明新建立一个`/theme/posts.data.js`文件来使用，因为这个函数无法在`.vue`文件中导入。
+`createContentLoader`需要按照文档的说明新建立一个`/theme/posts.data.ts`文件来使用，因为这个函数无法在`.vue`文件中导入。
 
-UTC标准时间是精确到秒的，但写博客不可能将时间精确到秒，不做处理的话显示出来的时间后面跟着一串0，所以必须将date处理为字符串并只取日期部分：
+UTC标准时间是精确到秒的，但写博客不可能将时间精确到秒，不做处理的话显示出来的时间后面会跟着一串0，所以必须将date处理为字符串并只取日期部分：
 
-```js
+```typescript
 import {createContentLoader} from 'vitepress';
 
 export let data;
@@ -426,7 +469,7 @@ export default createContentLoader('posts/*.md', {
 
 ```vue
 <script setup>
-import {data} from '../posts.data.js'
+import {data} from '../posts.data.ts'
 
 const posts = data.slice(0, 9)
 </script>
@@ -434,7 +477,7 @@ const posts = data.slice(0, 9)
 
 #### Import Layout
 
-参考[Layout.vue](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/components/Layout.vue)和[index.ts](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/index.js)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
+参考[Layout.vue](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/components/Layout.vue)和[index.ts](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/index.ts)文件，具体的用法[文档](https://vitepress.dev/guide/extending-default-theme#layout-slots)写的很详细了，不做赘述。
 
 ### Custom CSS
 

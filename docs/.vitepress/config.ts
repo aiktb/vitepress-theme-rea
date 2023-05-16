@@ -60,7 +60,6 @@ export default defineConfig({
         nav: [
             {text: '✨Home', link: '/'},
             {text: '✨About', link: '/about'},
-            {text: '✨Archive', link: '/archive'},
             {text: '✨Links', link: '/links'},
         ],
         socialLinks: [

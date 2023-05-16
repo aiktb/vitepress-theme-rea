@@ -1,5 +1,5 @@
 <script setup>
-import {data} from '../posts.data.js'
+import {data} from '../posts.data.ts'
 
 const posts = data.slice(0, 9)
 </script>
