@@ -1,23 +1,23 @@
 import path from 'path'
 import {writeFileSync} from 'fs'
 import {Feed} from 'feed'
-import {createContentLoader} from 'vitepress'
+import {type ContentData, createContentLoader, type SiteConfig} from 'vitepress'
 
-const baseUrl = `https://aiktb.com`
-
-export async function rss(config) {
-    const feed = new Feed({
+const baseUrl: string = `https://aiktb.com`
+type RssGenerator = (config: SiteConfig) => Promise<void>;
+export const rss: RssGenerator = async (config: SiteConfig): Promise<void> => {
+    const feed: Feed = new Feed({
         title: `aiktb's blog`,
         description: 'My Personal Blog',
         id: baseUrl,
         link: baseUrl,
         language: 'zh-CN',
-        image: 'https://s.gravatar.com/avatar/646885b88df05b60e1eb4f3d5767c2e2?s=200',
-        favicon: `${baseUrl}/favicon.svg`,
+        image: `${baseUrl}/avatar.jpg`,
+        favicon: `${baseUrl}/avatar.jpg`,
         copyright: 'Copyright (c) 2023 aiktb'
     })
 
-    const posts = await createContentLoader('posts/*.md', {
+    const posts: ContentData[] = await createContentLoader('posts/*.md', {
         excerpt: true,
         render: true,
         transform(rawData) {

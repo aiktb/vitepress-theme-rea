@@ -1,5 +1,5 @@
 import {defineConfig} from 'vitepress'
-import {rss} from './theme/rss.js'
+import {rss} from './theme/rss'
 
 export default defineConfig({
     lang: "zh-CN",

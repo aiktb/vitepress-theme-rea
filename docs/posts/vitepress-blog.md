@@ -194,12 +194,12 @@ head: [
 我将在这里用几步教会你为博客生成RSS Feed：
 
 1. 运行`npm i -D feed`安装依赖；
-2. 建立`/theme/rss.js`文件；
+2. 建立`/theme/rss.ts`文件；
 3. 复制粘贴[我的代码](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/rss.js)，并修改相应的个人信息；
 4. 在`config.ts`中加入以下几行代码。
 
 ```js
-import {rss} from './theme/rss.js'
+import {rss} from './theme/rss.ts'
 
 ...
 export default defineConfig({
