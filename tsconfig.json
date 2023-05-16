@@ -9,8 +9,7 @@
     "noUnusedLocals": true
   },
   "include": [
-    "docs/.vitepress/config.ts",
-    "docs/.vitepress/theme/*.ts",
-    "docs/.vitepress/theme/components/*.vue"
+    "docs/.vitepress/**/*.ts",
+    "docs/.vitepress/**/*.vue"
   ]
 }
