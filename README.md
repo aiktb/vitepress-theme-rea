@@ -10,21 +10,16 @@ Q: How to develop?
 
 A: Read this [blog](https://aiktb.com/posts/vitepress-blog)(Chinese).
 
-## Next step
-
-Refactor: JavaScript to TypeScript
-
 ## Feature
 
 - Simple tones
 - Dark mode only
 - Recent blogs
-- No sidebar
 - Google Analytics support
 - RSS feed
 - Local search
 - GitHub Action
-- [Comments](https://github.com/giscus/giscus)
+- Comments
 
 ## Deploy
 
@@ -52,8 +47,8 @@ The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) licens
 
 ### Home
 
-![image-20230430212626160](https://s2.loli.net/2023/04/30/9rb67scjOEtuzSY.webp)
+![home](https://s2.loli.net/2023/05/17/cyqreZ9uBmgiUfE.webp)
 
 ### About
 
-![about](https://s2.loli.net/2023/04/30/mHQ3gZxB4kTLuYM.webp)
+![about](https://s2.loli.net/2023/05/17/jJXMPVtEk4e3qQf.webp)
