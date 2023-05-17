@@ -132,8 +132,6 @@ sudo chown -R root:root /etc/skel/
 curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/skel.sh | bash
 ```
 
-![cmatrix](https://s2.loli.net/2023/04/28/5qBetXNgchw9I3Z.webp)
-
 ## Other than zsh
 
 推荐一个不在Zsh生态中的Shell Tool: [navi](https://github.com/denisidoro/navi)，它可以在一定程度上替代`man`，提供更方便易懂的命令行手册查询。
