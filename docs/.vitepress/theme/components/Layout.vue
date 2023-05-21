@@ -1,8 +1,8 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
-import Member from "./Me.vue"
+import Member from "./Avatar.vue"
 import Comments from "./Comments.vue"
-import Home from "./Main.vue"
+import Home from "./Hero.vue"
 import Recent from "./Recent.vue"
 
 const {Layout} = DefaultTheme
