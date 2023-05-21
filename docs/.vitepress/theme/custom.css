@@ -32,6 +32,7 @@
     --vp-c-bg-elv: var(--my-black);
     --vp-custom-block-details-bg: var(--my-black-light);
     --vp-custom-block-details-text: var(--my-white);
+    --vp-c-bg-elv-mute: var(--my-gray-dark);
 }
 
 .VPLocalNav {
