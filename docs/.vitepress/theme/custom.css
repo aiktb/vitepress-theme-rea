@@ -30,6 +30,8 @@
     --vp-c-brand-dark: var(--my-blue-dark);
     --vp-c-bg-alt: var(--my-black-light);
     --vp-c-bg-elv: var(--my-black);
+    --vp-custom-block-details-bg: var(--my-black-light);
+    --vp-custom-block-details-text: var(--my-white);
 }
 
 .VPLocalNav {
@@ -58,7 +60,7 @@
     color: var(--my-white) !important;
 }
 
- .vp-doc td {
+.vp-doc td {
     border: 1px solid var(--my-blue-dark);
 }
 
