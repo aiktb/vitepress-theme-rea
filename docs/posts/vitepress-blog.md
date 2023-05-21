@@ -451,7 +451,7 @@ export default {
 
 ::: code-group
 
-```vue [Me.vue]
+```vue [Avatar.vue]
 <script setup>
 import {VPTeamMembers} from 'vitepress/theme'
 import email from '/email.svg?raw' // [!code ++]
