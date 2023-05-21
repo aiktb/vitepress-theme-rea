@@ -11,5 +11,8 @@
   "include": [
     "docs/**/*.ts",
     "docs/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
