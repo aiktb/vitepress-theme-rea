@@ -77,11 +77,11 @@ Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powe
 
 以下脚本为当前的终端用户安装并配置Zsh插件和主题：
 
-```bash
-#!/bin/bash
-# zsh.sh
+::: code-group
 
-# Or yum.
+```bash [zsh.sh]
+#!/bin/bash
+
 sudo apt install zsh -y
 # Install oh-my-zsh.
 0>/dev/null sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -96,6 +96,9 @@ sed -i 's/^plugins=.*/plugins=(git\n extract\n sudo\n autojump\n jsontools\n col
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}"/themes/powerlevel10k
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
 ```
+
+:::
+
 
 很多Zsh插件的安装使用了以下Zsh语法拓展，请勿在Bash Script中使用：
 
@@ -115,9 +118,10 @@ curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/zsh.sh | bash
 
 以下脚本将Zsh配置添加到每一个新建用户的home目录中：
 
-```bash
+::: code-group
+
+```bash [skel.sh]
 #!/bin/bash
-# skel.sh
 
 sudo cp ~/.zshrc /etc/skel/
 sudo cp ~/.p10k.zsh /etc/skel/
@@ -125,6 +129,8 @@ sudo cp -r ~/.oh-my-zsh /etc/skel/
 sudo chmod -R 755 /etc/skel/
 sudo chown -R root:root /etc/skel/
 ```
+
+:::
 
 建议使用以下命令：
 

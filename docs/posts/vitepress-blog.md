@@ -7,13 +7,11 @@ date: 2023-04-30
 
 ![cover](https://s2.loli.net/2023/04/30/KQrvZSeBiFujawC.webp)
 
-> 本文使用VitePress v1.0.0-alpha.74，VitePress仍在开发中，请留意更新。
+> 本文使用VitePress v1.0.0-alpha.76，VitePress仍在开发中，请留意更新。
 
 ## Before the start
 
-### Goal
-
-这篇博客的目的是给出自定义VitePress博客整套可行的开发方案和注意事项。
+这篇博客的目的是给出自定义VitePress博客主题的注意事项，但是如果想构建一个完整的项目你仍然需要熟悉VitePress文档。
 
 这个博客项目参考了许多博客和GitHub仓库，我会使用外链表明参考对象。
 
@@ -31,11 +29,11 @@ date: 2023-04-30
 
 Q: 为什么会想到用VitePress构建自定义博客？
 
-A: 想着自己搞个自定义博客，看VUE3的文档时发现了这个项目，查看文档后觉得很适合，于是选用。
+A: 想着自己搞个自定义博客，看Vue3的文档时发现了这个项目，查看文档后觉得很适合，于是选用。
 
 Q: 需要掌握哪些技术才能自定义主题？
 
-A: 最基本的`CSS`、`HTML`和`TypeScript`，以及一点点`VUE`，会用浏览器`F12`开发者工具。
+A: 最基本的`CSS`、`HTML`和`JavaScript`，这里使用的所有`TypeScript`都可以很简单的更换为JavaScript，无需任何顾虑。
 
 Q: 有哪些有价值的文档和社区可以参考？
 
@@ -57,10 +55,6 @@ A: 建议使用[GitHub Action](https://docs.github.com/en/actions)和`github.io`
 | [PicGo-APP](https://github.com/Molunerfinn/PicGo) | 和Typora配合实现粘贴图片自动转换为Webp并上传到多种图床      |
 | [InkScape](https://inkscape.org/)                 | 开源SVG图形编辑器，用于简单编辑SVG图形的大小和颜色          |
 | [ChatGPT](https://chat.openai.com/chat)           | 提供各种关于编码的建议，如果你没有太多前端开发经验，那么这很重要      |
-
-> 我的Typora已经调整至与博客主题一致，主题尚未开源。
-
-![image-20230501153523964](https://s2.loli.net/2023/05/01/XTlytev4ApwHMjh.webp)
 
 ## Development
 
@@ -99,6 +93,31 @@ docs/** -linguist-documentation
 
 ![repo-languages](https://s2.loli.net/2023/05/16/tJvEQAreSX8mPq7.webp)
 
+::: details tsconfig.json 如果你使用JavaScript那么可以忽略它。
+
+```json
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": true
+  },
+  "include": [
+    "docs/**/*.ts",
+    "docs/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+```
+
+:::
+
 ### config.ts
 
 关于这个文件的普通案例在文档中已经写的比较清晰了，在这篇博客我只会写文档中没有或者可能需要的内容。
@@ -108,7 +127,7 @@ docs/** -linguist-documentation
 对于文档而言这是必要的，但对博客而言需要去掉它来节省空间，从`config.ts`中删除以下行关闭它：
 
 ```typescript
-sidebar: [
+sidebar: [ // [!code --:10]
     {
 		text: 'Guide',
         items: [
@@ -146,7 +165,7 @@ appearance: false,
 
 除去官网介绍的简单添加favicon功能，head还可以做很多事，[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)中提到的都是可添加项，用类似下面的方法可以将其添加到你的博客或文档中。
 
-比如支持[Google Analytics](https://analytics.google.com/analytics/web/)，就像这样：
+最常用的就是加载外部JavaScript，比如支持[Google Analytics](https://analytics.google.com/analytics/web/)，就像这样：
 
 ```typescript
 head: [
@@ -165,7 +184,7 @@ head: [
 ]
 ```
 
-比如说你还可以像这样加载[Google Fonts](https://fonts.google.com/)中的`JetBrains Mono`字体，以便在CSS中直接使用它：
+你还可以像这样加载[Google Fonts](https://fonts.google.com/)中的`JetBrains Mono`字体，以便在CSS中直接使用它：
 
 ```typescript
 head: [
@@ -186,23 +205,33 @@ head: [
 
 #### buildEnd
 
-这个功能可以在VitePress构建完成后调用特定的JavaScript，很适合用来添加类似RSS Feed和Site Map(issue[#520](https://github.com/vuejs/vitepress/issues/520))的功能。
+这个功能可以在VitePress构建完成后调用特定的JavaScript，很适合用来添加类似RSS Feed和Site Map的功能。
 
 我将在这里用几步教会你为博客生成RSS Feed：
 
 1. 运行`npm i -D feed`安装依赖；
-
 2. 编辑`/theme/rss.ts`和`config.ts`文件:
 
-```typescript
-import * as path from 'path'
+::: code-group
+
+
+```typescript {4} [config.ts]
+import {rss} from './theme/rss.ts'
+
+export default defineConfig({
+    buildEnd: rss,
+})
+```
+
+```typescript [rss.ts]
+import path from 'path'
 import {writeFileSync} from 'fs'
 import {Feed} from 'feed'
 import {type ContentData, createContentLoader, type SiteConfig} from 'vitepress'
 
 const id: string = 'aiktb'
 const baseUrl: string = `https://${id}.com`
-type RssGenerator = (config: SiteConfig) => Promise<void>;
+type RssGenerator = (config: SiteConfig) => Promise<void>
 export const rss: RssGenerator = async (config) => {
     const feed: Feed = new Feed({
         title: `${id}'s blog`,
@@ -241,19 +270,11 @@ export const rss: RssGenerator = async (config) => {
 }
 ```
 
-```typescript
-import {rss} from './theme/rss.ts'
+:::
 
-...
-export default defineConfig({
-    buildEnd: rss,
-})
-...
-```
+这个方法基本参考了尤雨溪[Vue Blog](https://github.com/vuejs/blog/blob/main/.vitepress/genFeed.ts)源码，但他使用了错误的`'feed.rss'`文件名，应该使用`.xml`格式，否则RSS订阅文件将无法被浏览器正确显示。
 
-这个方法基本参考了[VUE Blog](https://github.com/vuejs/blog/blob/main/.vitepress/genFeed.ts)，但他使用了错误的`'feed.rss'`文件名，应该使用`.xml`格式，否则RSS订阅文件将无法被浏览器正确显示。
-
-并且我的方法依赖了每篇文章中开头有如下格式的`frontmatter`，并且博客文章目录名为`posts`，关于`frontmatter`的应用接下来还会详细提到，参考[VitePress Docs](https://vitepress.dev/reference/frontmatter-config#frontmatter-config):
+并且我的方法依赖每篇文章中开头有如下格式的`frontmatter`，并且博客文章目录名为`posts`，关于`frontmatter`的应用接下来还会详细提到。
 
 ```markdown
 ---
@@ -263,17 +284,19 @@ date: 2023-04-30
 ```
 
 > 1. 注意时间格式很重要，不要修改它，那会导致报错。
-> 2. Google支持使用RSS作为站点地图，没有必要再单独生成sitemap。
+> 2. Google Search支持使用RSS Feed作为站点地图，没有必要再单独生成sitemap。
 
 #### socialLinks
 
 重要的只有一点：如何引用SVG文件图标为网站添加一个VitePress默认支持以外的图标(比如Telegram、Email)？
 
-图标可以从iconscout找，但VitePress Docs只给出了一种SVG硬编码引用方式，但其实有更好的方法。
+图标可以从iconscout找，但VitePress Docs只给出了一种SVG硬编码引用方式，其实有更好的方法。
 
-在VUE和JavaScript文件你都可以类似使用以下的格式引用，这需要你的`viewBox`设置和原始SVG一致并`xlink:href`引用正确的SVG文件名和id：
+在Vue和JavaScript文件你都可以类似使用以下的格式引用，这需要你的`viewBox`设置和原始SVG一致并`xlink:href`引用正确的SVG文件名和id：
 
-```typescript
+::: code-group
+
+```typescript {5-8} [config.ts]
 themeConfig: {
 	socialLinks: [
 		{
@@ -289,13 +312,13 @@ themeConfig: {
 }
 ```
 
-`public/rss.svg`应该像这样:
-
-```xml
+```xml {1} [rss.svg]
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="rss">
     <path d=" ... "/>
 </svg>
 ```
+
+:::
 
 > 从iconscout获得的SVG图标可能与画布之间存在空隙，需要用InkScape调整图标大小以充满画布。
 
@@ -311,9 +334,9 @@ themeConfig: {
   }
 ```
 
-需要注意的是`Local Search`并不完美，仅仅是"能用"而已，还存在许多问题，特别是中文的处理上表现很糟糕。
+需要注意的是`Local Search`并不完美，仅仅是"能用"而已，还存在许多问题有待解决，特别是中文的处理上表现很糟糕。
 
-以前有[vitepress-plugin-search](https://github.com/emersonbottero/vitepress-plugin-search)插件用于支持本地搜索，我使用过该插件，效果上似乎差距不明显，但在样式上`Local Search`完胜，这能减轻CSS开发工作量。
+以前有[vitepress-plugin-search](https://github.com/emersonbottero/vitepress-plugin-search)插件用于支持本地搜索，我使用过该插件，效果上似乎差距不明显，但在样式上`Local Search`完胜，这能减轻你的CSS开发工作量。
 
 ![search](https://s2.loli.net/2023/04/30/gibULzPQ61pEoZN.webp)
 
@@ -323,12 +346,12 @@ themeConfig: {
 
 我的博客一共使用了4个`slot`用于插入自定义的VUE组件：
 
-| Name                 | Component    | Function                                             |
-|----------------------|--------------|------------------------------------------------------|
+| Name                 | Component    | Function                                                     |
+| -------------------- | ------------ | ------------------------------------------------------------ |
 | doc-after            | \<Comments/> | 在文章末尾提供[Giscus](https://github.com/giscus/giscus)评论区 |
-| aside-outline-before | \<Me/>       | 在右侧加入\<Member/>显示头像和联系方式                             |
-| home-hero-before     | \<Main/>     | 在主页显示头像和一些简短的描述                                      |
-| home-hero-after      | \<Recent/>   | 按时间排序显示最近发布的文章                                       |
+| aside-outline-before | \<Avatar/>   | 在右侧加入\<Member/>显示头像和联系方式                       |
+| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述                               |
+| home-hero-after      | \<Recent/>   | 按时间排序显示最近发布的文章                                 |
 
 #### Comments.vue
 
@@ -343,7 +366,7 @@ Disqus和Gitalk存在我无法解决的Bug和样式问题，最终被放弃：
 1. Disqus我使用了[vue-disqus](https://github.com/ktquez/vue-disqus)组件，显示效果很糟糕，它在我的网站上显示为明亮模式，而且我用CSS完全无法控制它的样式；
 2. Gitalk同上，但可以用CSS调整。
 
-最终实际的解决方案只剩下了Giscus，最初我使用了`<Giscus/>`这个giscus官方提供的[VUE组件](https://github.com/giscus/giscus-component)，参考issue[#1776](https://github.com/vuejs/vitepress/issues/1776)发现存在2个显示bug：
+最终实际的解决方案只剩下了Giscus，最初我使用了`<Giscus/>`这个giscus官方提供的[VUE组件](https://github.com/giscus/giscus-component)，发现存在2个显示bug：
 
 1. 在多个页面切换时评论区没有被刷新，仍显示上个页面的评论，该错误由VUE的组件重用导致，通过`:key`被修复，在Disqus中出现了同样的问题，但Gitalk没有该问题；
 2. 从有评论的页面切换到没有评论的页面再返回有评论的页面，评论区将被截断，只能显示一小部分，推测该bug也是由VUE组件重用导致的，但不知如何修复。
@@ -352,7 +375,9 @@ Disqus和Gitalk存在我无法解决的Bug和样式问题，最终被放弃：
 
 以下代码可以完成构建一个美观`<Comments/>`组件的任务，具体的参数参照[Giscus文档](https://giscus.app/)，注意Giscus的主题是可选的，显示效果很棒。
 
-```vue
+::: code-group
+
+```vue {4,10-11,23} [comments.vue]
 <script setup>
 import {useData} from 'vitepress';
 
@@ -382,30 +407,62 @@ const {title} = useData()
 </template>
 ```
 
+```vue {10-12} [Layout.vue]
+<script setup>
+import DefaultTheme from 'vitepress/theme'
+import Comments from "./Comments.vue"
+
+const {Layout} = DefaultTheme
+</script>
+
+<template>
+  <Layout>
+    <template #doc-after>
+      <Comments/>
+    </template>
+  </Layout>
+</template>
+
+```
+
+```typescript [index.ts]
+import Layout from './components/Layout.vue';
+
+export default {
+    Layout: Layout,
+}
+```
+
+:::
+
 可以在加入类似`comments: false`的`frontmatter`，并在VUE中根据这一特征来决定是否加载Giscus来关闭评论，这个功能很简单。
 
 但是关闭GitHub Discussion也可以做到禁止评论，我认为没有必要再引入更多复杂性，所以没有加入类似的`frontmatter`。
 
 ![giscus](https://s2.loli.net/2023/04/30/bBUk9hIy8DpQaxG.webp)
 
-#### Me.vue
+#### Avatar.vue
 
-这个组件很简单，参考[文档](https://vitepress.dev/reference/default-theme-team-page)为VitePress提供的`<VPTeamMembers/>`组件添加头像、描述和4个链接就完成了。
+这个组件很简单，为VitePress提供的`<VPTeamMembers/>`组件添加头像、描述和4个链接就完成了。
 
-需要注意的是`.vue`文件可以用以下语法导入SVG文件，比`config.ts`方便的多：
+需要注意的是`.vue`文件可以用以下语法导入SVG文件，比`config.ts`方便的多。
 
-```vue
+这种方法导入的SVG图标触摸时不会显示文字，可以在SVG文件中添加`title`标签修复。
+
+::: code-group
+
+```vue [Me.vue]
 <script setup>
 import {VPTeamMembers} from 'vitepress/theme'
-import email from '/email.svg?raw'
+import email from '/email.svg?raw' // [!code ++]
 
 const members = [
   {
     ...
     links: [
       {
-        icon: {svg: email},
-        link: 'mailto:aiktb@outlook.com'
+        icon: {svg: email}, // [!code ++]
+        link: 'mailto:aiktb@outlook.com' 
       }
     ]
   }
@@ -413,17 +470,14 @@ const members = [
 </script>
 ```
 
-这种方法导入的SVG图标触摸时不会显示文字，可以在SVG文件中添加以下`title`标签修复：
-
-```xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="telegram">
-    <!--      NEW!      -->
-    <title>Telegram</title> 
+```xml [email.svg]
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="email">
+    <title>Email</title> // [!code ++]
     <path d=" ... "/>
 </svg>
 ```
 
-
+:::
 
 ![members](https://s2.loli.net/2023/04/30/HCjTzVPk4hlvOo3.webp)
 
@@ -441,18 +495,16 @@ const members = [
 
 UTC标准时间是精确到秒的，但写博客不可能将时间精确到秒，不做处理的话显示出来的时间后面会跟着一串0，所以必须将date处理为字符串并只取日期部分：
 
-```typescript
+```typescript {9}
 import {createContentLoader} from 'vitepress';
 
-export let data;
-
 export default createContentLoader('posts/*.md', {
-    transform(rawData) {
+    transform: (rawData) => {
         return rawData.sort((a, b) => {
             return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
         }).map(post => {
             const { frontmatter, ...rest } = post
-            const date = new Date(frontmatter.date).toISOString().slice(0, 10)
+            const date: string = new Date(frontmatter.date).toISOString().slice(0, 10)
             return {
                 ...rest,
                 frontmatter: {
@@ -465,7 +517,7 @@ export default createContentLoader('posts/*.md', {
 })
 ```
 
-由于这个文件在博客中要被复用，这里没有在末尾使用`.slice(0, 9)`限制返回的数量，应该在引用这部分代码的地方单独做处理，例如：
+由于这个文件在博客中要被复用，这里没有在末尾使用`.slice(0, 9)`限制返回的数量，应该在引用这部分代码的地方单独做处理，例如`Recent.vue`：
 
 ```vue
 <script setup>
@@ -475,15 +527,11 @@ const posts = data.slice(0, 9)
 </script>
 ```
 
-#### Import Layout
-
-参考[Layout.vue](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/components/Layout.vue)和[index.ts](https://github.com/aiktb/rea/blob/master/docs/.vitepress/theme/index.ts)文件，具体的用法文档写的很详细了，不做赘述。
-
 ### Custom CSS
 
 整个开发过程工作量最大的就是自定义CSS来调整博客的主题，虽然有ChatGPT帮我写点，但是因为要微调的地方太多了，整体而言工作量还是很大的。
 
-我的`custom.css`文件很难说有什么参考价值，因为我不是专业的前端开发人员，写的CSS真的是乱糟糟的毫无美感，只是不停的打补丁来调整样式。
+我的`custom.css`文件很难说有什么参考价值，因为我不是专业的前端开发人员，写的CSS毫无美感，只是不停的打补丁来调整样式，未来有计划重构这部分代码。
 
 这部分工作是很个性化且非常主观的，我只能简单谈谈有哪些注意事项，具体的CSS代码只能读者自己加油了！☕
 
