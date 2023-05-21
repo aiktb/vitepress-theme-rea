@@ -7,7 +7,7 @@
     "docs:preview": "vitepress preview docs --port 8080"
   },
   "dependencies": {
-    "vitepress": "^1.0.0-alpha.74"
+    "vitepress": "^1.0.0-alpha.76"
   },
   "devDependencies": {
     "feed": "^4.2.2"
