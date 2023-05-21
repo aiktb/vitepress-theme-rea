@@ -12,6 +12,17 @@ export default defineConfig({
         lineNumbers: true,
     },
     buildEnd: rss,
+    locales: {
+        root: {
+            label: 'Chinese',
+            lang: 'zh-CN',
+        },
+        cn: {
+            label: 'English',
+            lang: 'en-US',
+            link: '/en'
+        },
+    },
     head: [
         [
             'script',
