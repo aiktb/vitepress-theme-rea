@@ -78,6 +78,7 @@ export default defineConfig({
             message: `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> | 
                       <a href="https://github.com/aiktb/rea/blob/master/LICENSE" target="_blank">MIT License</a> | 
                       Copyright © 2023 <a href="/">aiktb</a>`,
+            copyright: `Proudly hosted with <a href="https://pages.github.com/">GitHub Pages</a>`
         },
     },
 })
