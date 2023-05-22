@@ -49,14 +49,21 @@
     border-left: none !important;
 }
 
-.translations button{
+.translations button {
     display: block;
     margin: 0 auto;
 }
+
 .translations a {
     display: block;
     margin: 0 auto;
 }
+
+.vp-doc img {
+    display: block;
+    margin: 0 auto;
+}
+
 .title {
     color: var(--my-blue-light) !important;
 }
