@@ -18,9 +18,7 @@ outline: 2
 
 ![photo](https://s2.loli.net/2023/05/21/NSDwUGvj362leyM.webp)
 
-## Editor & IDE
-
-### Visual Studio Code
+## Visual Studio Code
 
 在桌面操作系统上我只会使用VSCode作为我的文本编辑器，在一些轻量的坏境下很好用。
 
@@ -28,7 +26,7 @@ outline: 2
 
 值得一提的是VSCode对编写Bash Script具有一流的支持，尤其是和WSL2协作时，VSCode Remote不愧是VSCode的杀手级功能。
 
-### Nano
+## Nano
 
 Linux终端命令行限定，我从不在CLI上进行复杂的文本编辑，只是偶尔会修改一些轻量的配置文件。
 
@@ -47,7 +45,7 @@ set afterends		# Ctrl+Right will move to end of word instead of beginning.
 
 :::
 
-### Typora
+## Typora
 
 Typora是我最喜欢用的Markdown编辑器，我所有的`.md`文件都是使用Typora编写的，包括这个博客的所有文章。
 
@@ -55,7 +53,7 @@ Typora是我最喜欢用的Markdown编辑器，我所有的`.md`文件都是使�
 
 目前我正在使用[Drake-Material](https://theme.typora.io/theme/Drake/)主题，我稍微修改了该主题的CSS，以让它贴合我的博客主题。
 
-### JetBrains IDE
+## JetBrains IDE
 
 JetBrains全家桶中我最常用的是WebStorm、IntelliJ IDEA Ultimate，我相信这是世界上最好用的IDE。
 
@@ -72,7 +70,7 @@ JetBrains全家桶中我最常用的是WebStorm、IntelliJ IDEA Ultimate，我�
 - [GitToolBox](https://plugins.jetbrains.com/plugin/7499-gittoolbox)
 - [Grazie Professional](https://plugins.jetbrains.com/plugin/16136-grazie-professional)
 
-## Brower
+## Chrome
 
 Chrome有相对于Edge的绝对优势吗？我的回答是NO，Firefox/Chrome/Edge的使用体验大差不差，但我只需要一个浏览器。
 
@@ -90,3 +88,18 @@ Chrome有相对于Edge的绝对优势吗？我的回答是NO，Firefox/Chrome/Ed
 - [uBlacklist](https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?hl=en-US)
 - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en-US)
 
+## Terminal
+
+### Windows Terminal
+
+WSL2配合Windows Terminal在Windows上提供了极佳的Linux坏境，并且这并不复杂，我很喜欢这个终端。
+
+### [Termius](https://termius.com/)
+
+一款支持移动设备的SSH终端，用于管理多个SSH会话，非常美观、轻便，我经常使用它。
+
+## Shell
+
+我在终端中为了方便使用Zsh，而在脚本中为了兼容性使用Bash。
+
+关于我的Zsh配置你可以在[这篇文章](https://aiktb.com/posts/zsh-config)中查看。
