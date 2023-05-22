@@ -20,7 +20,7 @@ export default defineConfig({
             label: 'English',
             lang: 'en-US',
             link: '/en'
-        },
+        }
     },
     head: [
         [
@@ -36,24 +36,22 @@ export default defineConfig({
             gtag('config', 'G-MCQSMRVDJN');`
         ],
         [
+            'style',
+            {},
+            `@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');`
+        ],
+        [
+            'style',
+            {},
+            `@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');`
+        ],
+        [
             'link',
             {rel: 'icon', type: 'image/svg+xml',href: '/favicon.svg',}
         ],
         [
             'link',
             {rel: 'preconnect', href: 'https://s2.loli.net'}
-        ],
-        [
-            'link',
-            {rel: 'preconnect', href: 'https://fonts.googleapis.com'}
-        ],
-        [
-            'link',
-            {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: ''},
-        ],
-        [
-            'link',
-            {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap'},
         ],
     ],
     themeConfig: {
@@ -70,6 +68,7 @@ export default defineConfig({
         nav: [
             {text: '✨Home', link: '/'},
             {text: '✨About', link: '/about'},
+            {text: '✨Using', link: '/using'},
             {text: '✨Links', link: '/links'},
         ],
         socialLinks: [
@@ -87,8 +86,8 @@ export default defineConfig({
         footer: {
             message: `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> | 
                       <a href="https://github.com/aiktb/rea/blob/master/LICENSE" target="_blank">MIT License</a> | 
-                      Copyright © 2023 <a href="/">aiktb</a>`,
-            copyright: `Proudly hosted with <a href="https://pages.github.com/">GitHub Pages</a>`
+                      Copyright © 2023 <a href="mailto:aiktb@outlook.com" target="_blank">aiktb</a>.`,
+            copyright: `Proudly hosted with <a href="https://pages.github.com/">GitHub Pages</a>.`
         },
     },
 })
