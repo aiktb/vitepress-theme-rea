@@ -107,8 +107,8 @@ docs/** -linguist-documentation
     "noUnusedLocals": true
   },
   "include": [
-    "docs/**/*.ts",
-    "docs/**/*.vue"
+    "docs/.vitepress/**/*.ts",
+    "docs/.vitepress/**/*.vue"
   ],
   "exclude": [
     "node_modules"
@@ -184,9 +184,11 @@ head: [
 ]
 ```
 
-你还可以像这样加载[Google Fonts](https://fonts.google.com/)中的`JetBrains Mono`字体，以便在CSS中直接使用它：
+你还可以像这样加载[Google Fonts](https://fonts.google.com/)中的`JetBrains Mono`字体，以便在CSS中直接使用它，以下两种方式都是可行的：
 
-```typescript
+::: code-group
+
+```typescript [link]
 head: [
 	[
         'link',
@@ -202,6 +204,18 @@ head: [
     ],
 ]
 ```
+
+```typescript [style]
+head: [
+    [
+        'style',
+        {},
+        `@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');`
+    ],
+]
+```
+
+:::
 
 #### buildEnd
 
@@ -550,12 +564,12 @@ const posts = data.slice(0, 9)
 
 ```css
 :root {
-    --vp-font-family-base: 'JetBrains Mono', lnter;
+    --vp-font-family-base: 'JetBrains Mono', lnter, 'M PLUS Rounded 1c';
     --vp-font-family-mono: 'JetBrains Mono', lnter;
 }
 ```
 
-拉丁字体可以从[google-web-fonts-helper](https://gwfh.mranftl.com/)获取下载，但是中文字体很困难，不建议尝试。
+字体可以从[google-web-fonts-helper](https://gwfh.mranftl.com/)获取下载，注意中文字体从日语分类里找比较多。
 
 建议还是添加`head`从网络导入Google Fonts，这要不了几行代码，但如果你执意用类似以下的方法加载字体：
 
