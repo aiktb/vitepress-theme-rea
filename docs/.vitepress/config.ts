@@ -2,6 +2,7 @@ import {defineConfig} from 'vitepress'
 import {rss} from './theme/rss'
 
 export default defineConfig({
+    lang: 'zh-CN',
     title: "aiktb",
     description: `aiktb's blog`,
     lastUpdated: true,
@@ -11,17 +12,6 @@ export default defineConfig({
         lineNumbers: true,
     },
     buildEnd: rss,
-    locales: {
-        root: {
-            label: 'Chinese',
-            lang: 'zh-CN',
-        },
-        en: {
-            label: 'English',
-            lang: 'en-US',
-            link: '/en'
-        }
-    },
     head: [
         [
             'script',
