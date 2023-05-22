@@ -375,12 +375,12 @@ themeConfig: {
 
 我的博客一共使用了4个`slot`用于插入自定义的VUE组件：
 
-| Name                 | Component    | Function                                                     |
-| -------------------- | ------------ | ------------------------------------------------------------ |
+| Name                 | Component    | Function                                             |
+|----------------------|--------------|------------------------------------------------------|
 | doc-after            | \<Comments/> | 在文章末尾提供[Giscus](https://github.com/giscus/giscus)评论区 |
-| aside-outline-before | \<Avatar/>   | 在右侧加入\<Member/>显示头像和联系方式                       |
-| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述                               |
-| home-hero-after      | \<Recent/>   | 按时间排序显示最近发布的文章                                 |
+| aside-outline-before | \<Avatar/>   | 在右侧加入\<Member/>显示头像和联系方式                             |
+| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述                                      |
+| home-hero-after      | \<Recent/>   | 按时间排序显示最近发布的文章                                       |
 
 #### Comments.vue
 
