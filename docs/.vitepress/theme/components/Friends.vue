@@ -5,7 +5,6 @@ import email from '/email.svg?raw'
 import telegram from '/telegram.svg?raw'
 import link from '/link.svg?raw'
 
-
 const members = [
   {
     avatar: '/avatar.jpg',
@@ -40,7 +39,7 @@ const members = [
         icon: {svg: telegram},
         link: 'https://t.me/benszconan'
       },
-      {icon:"github", link: 'https://github.com/huangwb8'},
+      {icon: "github", link: 'https://github.com/huangwb8'},
     ]
   },
 ]
