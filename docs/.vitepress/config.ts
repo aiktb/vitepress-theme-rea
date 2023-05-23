@@ -65,7 +65,7 @@ export default defineConfig({
             {icon: 'github', link: 'https://github.com/aiktb/rea'},
             {
                 icon: {
-                    svg: `<svg role="img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    svg: `<svg role="img" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                             <title>RSS</title>
                             <use xlink:href="/rss.svg#rss"/>
                           </svg>`
