@@ -37,7 +37,7 @@ A: 最基本的`CSS`、`HTML`和`JavaScript`，这里使用的所有`TypeScript`
 
 Q: 有哪些有价值的文档和社区可以参考？
 
-A: [GitHub Issue](https://github.com/vuejs/vitepress/issues)、[VitePress Docs](https://vitepress.dev/)、[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)以及[GitHub Search](https://github.com/search?q=vitepress%20blog&type=repositories)。
+A: [GitHub Issue](https://github.com/vuejs/vitepress/issues)、[VitePress Docs](https://vitepress.dev/)、[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)。
 
 Q: 如何部署博客到公网？
 
