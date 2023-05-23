@@ -585,7 +585,7 @@ const posts = data.slice(0, 9)
 }
 ```
 
-字体可以从[google-web-fonts-helper](https://gwfh.mranftl.com/)获取下载，注意中文字体从日语分类里找比较多。
+字体可以从[google-web-fonts-helper](https://gwfh.mranftl.com/)获取下载。
 
 建议还是添加`head`从网络导入Google Fonts，这要不了几行代码，但如果你执意用类似以下的方法加载字体：
 
@@ -613,11 +613,9 @@ files in the public directory are served at the root path.
 Instead of /public/fonts/...woff2, use /fonts/...woff2.
 ```
 
-## Deploy
+## Deploy(GitHub Action)
 
-### GitHub Action
-
-在这一点上我真的要称赞VitePress团队，因为他们[文档](https://vitepress.dev/guide/deploy#github-pages)中的`deploy.yml`文件不需要做任何修改就能在GitHub Action上直接使用，只需要将它放在你的`.github/workflow`目录下面。
+在这一点上我真的要称赞VitePress团队，因为[文档](https://vitepress.dev/guide/deploy#github-pages)中的`deploy.yml`文件不需要做任何修改就能在GitHub Action上直接使用，只需要将它放在你的`.github/workflow`目录下面。
 
 这种方式有一个优点是可以滚动更新，你的服务不会下线，如果你还使用`github.io`子域，那么你将没有任何花费。
 
@@ -635,34 +633,3 @@ https://github.com/${USER}/${REPO}/settings/pages
 ![github-setting](https://s2.loli.net/2023/04/30/SJIm4oFneKt5hZf.webp)
 
 > 顺带一提，如果你在用Cloudflare的CDN，并且发现你的VitePress项目404页面无法正常显示，那么参考issue[#2270](https://github.com/vuejs/vitepress/issues/2270)。
-
-### VPS
-
-如果你有一台VPS，而且你不怕折腾，那么你也可以尝试在你的VPS直接部署VitePress博客，尽管这种方式无法简单的滚动更新且更加繁琐。
-
-为了让服务能在你的终端会话被关闭后保持运行而不被杀死，需要`tmux`的帮助：
-
-```bash
-sudo apt install tmux
-# Default port: 8080
-git clone https://github.com/aiktb/rea.git
-cd rea
-npm install
-tmux new-session -d 'npm run docs:build && npm run docs:preview'
-```
-
-用以下命令停止服务：
-
-```bash
-tmux kill-session -t 0
-```
-
-这种方式在我的4C8G VPS上，构建一次项目并上线服务器大约只需要25s，而用GitHub Action需要45s。但VPS每次更新VitePress版本都需要重新执行`npm i`。
-
-想要自动化VPS运维流程需要自己编写特定的shell脚本，不建议折腾。
-
-### Docker
-
-Docker不适用这个项目，因为需要频繁的更新源代码，每一次更新都需要重新构建镜像，当然也可以用GitHub Action自动构建镜像并推送到Docker Hub，然后用`docker compose`启动。
-
-这种方法比GitHub Pages还麻烦又没有什么明显的优势，那为什么不直接用GitHub Pages？总之，VitePress开发博客别尝试使用Docker，这是个坑。

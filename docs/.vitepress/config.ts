@@ -28,7 +28,7 @@ export default defineConfig({
         [
             'style',
             {},
-            `@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');;`
+            `@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');`
         ],
         [
             'style',
