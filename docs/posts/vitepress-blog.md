@@ -157,9 +157,7 @@ markdown: {
 appearance: false,
 ```
 
-我的博客完全是在明亮模式的基础上修改的，为了减少工作量我只愿意开发一套主题，如果VitePress能锁定在dark mode，那将可以大大减少我的工作量。
-
-有一个可以参考的issue[#1359](https://github.com/vuejs/vitepress/issues/1359)，这也许对你有用。
+我的博客完全是在明亮模式的基础上修改的，为了减少工作量我只愿意开发一套主题，如果VitePress能锁定在dark mode(并且移除切换按钮)，那将可以大大减少我的工作量。
 
 #### head
 
@@ -510,7 +508,7 @@ const members = [
 
 ![members](https://s2.loli.net/2023/04/30/HCjTzVPk4hlvOo3.webp)
 
-#### Main.vue & Recent.vue
+#### Hero.vue & Recent.vue
 
 这两个组件构成了我的博客主页，主要参考了[clark-cui](https://visionary-sunflower-dc7ae3.netlify.app/)的博客源码，移除了略复杂的分页功能并且调整了CSS来适应我的主题。
 
