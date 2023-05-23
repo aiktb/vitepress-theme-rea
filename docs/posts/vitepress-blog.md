@@ -7,7 +7,7 @@ date: 2023-04-30
 
 ![cover](https://s2.loli.net/2023/04/30/KQrvZSeBiFujawC.webp)
 
-> 本文使用VitePress v1.0.0-alpha.76，VitePress仍在开发中，请留意更新。
+> 本文使用VitePress v1.0.0-beta.1，VitePress仍在开发中，请留意更新。
 
 ## Before the start
 
