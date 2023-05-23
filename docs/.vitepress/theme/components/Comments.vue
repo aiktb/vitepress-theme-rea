@@ -13,15 +13,16 @@ const {title} = useData()
         data-repo="aiktb/rea"
         data-repo-id="R_kgDOJQkw9Q"
         data-category="General"
-        data-category-id="DIC_kwDOJQkw9c4CVeXb"
+        data-category-id="DIC_kwDOJQkw9c4CVeXc"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="bottom"
+        data-input-position="top"
         data-lang="en"
         data-theme="transparent_dark"
-        data-loading="eager"
+        data-loading="lazy"
+        async
     />
   </div>
 </template>

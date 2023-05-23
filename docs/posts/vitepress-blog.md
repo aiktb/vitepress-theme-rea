@@ -419,16 +419,17 @@ const {title} = useData()
         src="https://giscus.app/client.js"
         data-repo="......"
         data-repo-id="......"
-        data-category="General"
+        data-category="......"
         data-category-id="......"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="bottom"
+        data-input-position="top"
         data-lang="en"
         data-theme="transparent_dark"
-        data-loading="eager"
+        data-loading="lazy"
+        async
     />
   </div>
 </template>
