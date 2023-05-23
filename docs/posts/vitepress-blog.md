@@ -454,18 +454,20 @@ const {Layout} = DefaultTheme
 ```
 
 ```typescript [index.ts]
-import Layout from './components/Layout.vue';
+import DefaultTheme from 'vitepress/theme'
+import Layout from './components/Layout.vue'
 
 export default {
+    ...DefaultTheme,
     Layout: Layout,
 }
 ```
 
 :::
 
-可以在加入类似`comments: false`的`frontmatter`，并在VUE中根据这一特征来决定是否加载Giscus来关闭评论，这个功能很简单。
+可以在加入类似`comments: false`的`frontmatter`，并在VUE中根据这一特征来决定是否加载Giscus来关闭评论。
 
-但是关闭GitHub Discussion也可以做到禁止评论，我认为没有必要再引入更多复杂性，所以没有加入类似的`frontmatter`。
+这个功能很简单，但是锁定GitHub Discussion也可以做到，我认为没有必要再引入更多复杂性，所以没有加入。
 
 ![giscus](https://s2.loli.net/2023/04/30/bBUk9hIy8DpQaxG.webp)
 
