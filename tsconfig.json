@@ -10,8 +10,5 @@
   },
   "include": [
     "docs/.vitepress/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }

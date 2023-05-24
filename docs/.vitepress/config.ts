@@ -74,10 +74,10 @@ export default defineConfig({
             },
         ],
         footer: {
-            message: `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> | 
+            message: `Proudly hosted with <a href="https://pages.github.com/">GitHub Pages</a>.`,
+            copyright: `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> | 
                       <a href="https://github.com/aiktb/rea/blob/master/LICENSE" target="_blank">MIT License</a> | 
-                      Copyright © 2023 <a href="mailto:aiktb@outlook.com" target="_blank">aiktb</a>.`,
-            copyright: `Proudly hosted with <a href="https://pages.github.com/">GitHub Pages</a>.`
+                      Copyright © 2023 <a href="mailto:aiktb@outlook.com" target="_blank">aiktb</a>.`
         },
     },
 })
