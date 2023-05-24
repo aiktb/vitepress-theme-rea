@@ -50,7 +50,7 @@ A: 建议使用[GitHub Action](https://docs.github.com/en/actions)和`github.io`
 
 ## Develop
 
-### Start
+### Getting Started
 
 在WebStorm或VSCode新建一个空项目，执行以下命令：
 
@@ -101,9 +101,6 @@ docs/** -linguist-documentation
   "include": [
     "docs/.vitepress/**/*.ts",
     "docs/.vitepress/**/*.vue"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }
 ```
