@@ -17,25 +17,17 @@ date: 2023-04-30
 
 如果你觉得我的这篇博客和项目对你有帮助的话，不妨为我的[GitHub](https://github.com/aiktb/rea)点个Star⭐！
 
-### Why use vitepress?
-
-1. 开箱即用，可拓展程度高；
-2. 自定义主题所需技术门槛低；
-3. 社区活跃，解决方案较多；
-4. 单页应用程序加载速度快；
-5. 构建速度快，参考这篇[推文](https://twitter.com/rxliuli/status/1578895613847953409)。
-
 ### Q&A
 
-Q: 为什么会想到用VitePress构建自定义博客？
+Q: 用VitePress构建自定义主题的博客有哪些优点？
 
-A: 想着自己搞个自定义博客，看Vue3的文档时发现了这个项目，查看文档后觉得很适合，于是选用。
+A: 开箱即用、所需技术门槛低、SPA加载速度快以及构建速度快。
 
 Q: 需要掌握哪些技术才能自定义主题？
 
 A: 最基本的`CSS`、`HTML`和`JavaScript`，这里使用的所有`TypeScript`都可以很简单的更换为JavaScript，无需任何顾虑。
 
-Q: 有哪些有价值的文档和社区可以参考？
+Q: 有哪些有价值的文档可以参考？
 
 A: [GitHub Issue](https://github.com/vuejs/vitepress/issues)、[VitePress Docs](https://vitepress.dev/)、[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)。
 
@@ -47,20 +39,20 @@ A: 建议使用[GitHub Action](https://docs.github.com/en/actions)和`github.io`
 
 | Name                                              | Features                              |
 |---------------------------------------------------|---------------------------------------|
-| [WebStorm](https://www.jetbrains.com/webstorm/)   | 提供一系列代码分析和补全的重量级IDE，实测比VSCode适合用来开发博客 |
-| [Typora](https://typora.io/)                      | 所见即所得的markdown编辑器，简洁美观，功能齐全           |
-| [Canva](https://www.canva.com/)                   | 用于设计博客所用的封面图片，提供云保存、在线编辑和大量免费模板       |
-| [IconScout](https://iconscout.com/)               | 搜寻博客需要使用的各种SVG图标，如SocialLink，免费图标就够用  |
-| [SM.MS](https://sm.ms/)                           | 免费的在线图床服务，如果不想将图片保存在GitHub Repo的话很有用  |
-| [PicGo-APP](https://github.com/Molunerfinn/PicGo) | 和Typora配合实现粘贴图片自动转换为Webp并上传到多种图床      |
-| [InkScape](https://inkscape.org/)                 | 开源SVG图形编辑器，用于简单编辑SVG图形的大小和颜色          |
-| [ChatGPT](https://chat.openai.com/chat)           | 提供各种关于编码的建议，如果你没有太多前端开发经验，那么这很重要      |
+| [WebStorm](https://www.jetbrains.com/webstorm/)   | 提供一系列代码分析和补全的重量级IDE，当然VSCode也可以。      |
+| [Typora](https://typora.io/)                      | 所见即所得的markdown编辑器，简洁美观，功能齐全。          |
+| [Canva](https://www.canva.com/)                   | 用于设计博客所用的封面图片，提供云保存、在线编辑和大量免费模板。      |
+| [IconScout](https://iconscout.com/)               | 搜寻博客需要使用的各种SVG图标，免费图标就够用。             |
+| [SM.MS](https://sm.ms/)                           | 免费的在线图床服务，如果不想将图片保存在GitHub Repo的话很有用。 |
+| [PicGo-APP](https://github.com/Molunerfinn/PicGo) | 和Typora配合实现粘贴图片自动转换为Webp并上传到多种图床。     |
+| [InkScape](https://inkscape.org/)                 | 开源SVG图形编辑器，用于简单编辑SVG图形的大小和颜色。         |
+| [ChatGPT](https://chat.openai.com/chat)           | 提供各种关于编码的建议，如果你没有太多前端开发经验，那么这很重要。     |
 
-## Development
+## Develop
 
 ### Start
 
-在WebStorm新建一个空项目，执行以下命令：
+在WebStorm或VSCode新建一个空项目，执行以下命令：
 
 ```bash
 npm install -D vitepress
@@ -119,8 +111,6 @@ docs/** -linguist-documentation
 :::
 
 ### config.ts
-
-关于这个文件的普通案例在文档中已经写的比较清晰了，在这篇博客我只会写文档中没有或者可能需要的内容。
 
 #### sidebar
 
@@ -363,7 +353,7 @@ themeConfig: {
 
 需要注意的是`Local Search`并不完美，仅仅是"能用"而已，还存在许多问题有待解决，特别是中文的处理上表现很糟糕。
 
-以前有[vitepress-plugin-search](https://github.com/emersonbottero/vitepress-plugin-search)插件用于支持本地搜索，我使用过该插件，效果上似乎差距不明显，但在样式上`Local Search`完胜，这能减轻你的CSS开发工作量。
+以前有[vitepress-plugin-search](https://github.com/emersonbottero/vitepress-plugin-search)插件用于支持本地搜索，我使用过该插件，效果上似乎差距不明显，但在样式上`Local Search`完胜，这能减轻CSS开发工作量。
 
 ![search](https://s2.loli.net/2023/04/30/gibULzPQ61pEoZN.webp)
 
@@ -373,12 +363,12 @@ themeConfig: {
 
 我的博客一共使用了4个`slot`用于插入自定义的VUE组件：
 
-| Name                 | Component    | Function                                             |
-|----------------------|--------------|------------------------------------------------------|
-| doc-after            | \<Comments/> | 在文章末尾提供[Giscus](https://github.com/giscus/giscus)评论区 |
-| aside-outline-before | \<Avatar/>   | 在右侧加入\<Member/>显示头像和联系方式                             |
-| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述                                      |
-| home-hero-after      | \<Recent/>   | 按时间排序显示最近发布的文章                                       |
+| Name                 | Component    | Function                               |
+| -------------------- | ------------ | -------------------------------------- |
+| doc-after            | \<Comments/> | 在文章末尾提供评论区                   |
+| aside-outline-before | \<Avatar/>   | 在右侧加入\<Member/>显示头像和联系方式 |
+| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述         |
+| home-hero-after      | \<Recent/>   | 按时间排序显示最近发布的文章           |
 
 #### Comments.vue
 
@@ -400,7 +390,7 @@ Disqus和Gitalk存在我无法解决的Bug和样式问题，最终被放弃：
 
 最后我偶然发现在一个VitePress集成Giscus的[博客](https://sugarat.top/)中不存在该问题，并且源码在`GitHub Repo`中公开，于是我就去查看了对方的源码，并找到了解决方法: 答案是直接使用原生Giscus，它不存在上述第2点问题。
 
-以下代码可以完成构建一个美观`<Comments/>`组件的任务，具体的参数参照[Giscus文档](https://giscus.app/)，注意Giscus的主题是可选的，显示效果很棒。
+以下代码可以完成构建一个美观`<Comments/>`组件的任务，具体的参数参照[giscus.app](https://giscus.app)，注意Giscus的主题是可选的，显示效果很棒。
 
 ::: code-group
 
@@ -628,8 +618,8 @@ Instead of /public/fonts/...woff2, use /fonts/...woff2.
 https://github.com/${USER}/${REPO}/settings/pages
 ```
 
-> 自定义域设置需要一些时间，如果你用的域运行在Cloudflare的CDN上，而且以前申请过SSL证书，在这段时间你的网站会显示"526 Invalid SSL certificate"。
+自定义域设置需要一些时间，如果你用的域运行在Cloudflare的CDN上，而且以前申请过SSL证书，在这段时间你的网站会显示"526 Invalid SSL certificate"。
+
+顺带一提，如果你在用Cloudflare的CDN，并且发现你的VitePress项目404页面无法正常显示，那么参考issue[#2270](https://github.com/vuejs/vitepress/issues/2270)。
 
 ![github-setting](https://s2.loli.net/2023/04/30/SJIm4oFneKt5hZf.webp)
-
-> 顺带一提，如果你在用Cloudflare的CDN，并且发现你的VitePress项目404页面无法正常显示，那么参考issue[#2270](https://github.com/vuejs/vitepress/issues/2270)。
