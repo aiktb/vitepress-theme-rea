@@ -75,13 +75,38 @@ Powerlevel10k的主题外观有多个可调整的选项，第一次安装完Powe
 
 ## Configure Script
 
-以下脚本为当前的终端用户安装并配置Zsh插件和主题：
+Zsh配置有3件事要做：
 
-::: code-group
+1. 安装常用插件和Powerlevel10k主题；
+2. 将`.zcompdump-*`文件移动到`$ZSH/cache`目录；
+3. 通过`/etc/skel/`目录将配置添加给所有新用户。
 
-```bash [zsh.sh]
+关于第2点，zsh使用以下格式保存用于加速命令补全的文件，默认放在`$HOME`目录：
+
+```bash
+-rw-r--r--  1 aiktb aiktb  49K May 15 11:13 .zcompdump
+-rw-r--r--  1 aiktb aiktb  50K May 15 11:13 .zcompdump-shiro-5.8.1
+-r--r--r--  1 aiktb aiktb 115K May 15 11:13 .zcompdump-shiro-5.8.1.zwc
+```
+
+这无疑是丑陋的，需要修改配置目录，对应的解决方法参考了[StackOverflow](https://stackoverflow.com/questions/62931101/i-have-multiple-files-of-zcompdump-why-do-i-have-multiple-files-of-these/76332959#76332959)。
+
+关于第3点，`/etc/skel/`目录中的文件会在Linux新用户创建时自动复制到对应的`home`目录中，这样就免去了为每一个用户重新配置zsh之苦。
+
+建议使用以下命令下载我的脚本一键配置：
+
+```bash
+curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/zsh.sh | bash && zsh
+```
+
+> 注意`githubusercontent.com`已被GFW封锁。
+
+以下就是具体的代码，很好的完成了以上3点任务，使用apt包管理器的Linux用户可以直接使用，其余包管理器需要自行更改代码。
+
+```bash
 #!/bin/bash
 
+# Or yum.
 sudo apt install zsh -y
 # Install oh-my-zsh.
 0>/dev/null sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -95,34 +120,9 @@ sed -i 's/^plugins=.*/plugins=(git\n extract\n sudo\n autojump\n jsontools\n col
 # Install powerlevel10k and configure it.
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}"/themes/powerlevel10k
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
-```
-
-:::
-
-
-很多Zsh插件的安装使用了以下Zsh语法拓展，请勿在Bash Script中使用：
-
-```zsh
-${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
-```
-
-建议使用以下命令：
-
-```bash
-curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/zsh.sh | bash && zsh
-```
-
-> 注意`githubusercontent.com`已被GFW封锁。
-
-## Muti-user
-
-以下脚本将Zsh配置添加到每一个新建用户的home目录中：
-
-::: code-group
-
-```bash [skel.sh]
-#!/bin/bash
-
+# Move ".zcompdump-*" file to "$ZSH/cache" directory.
+sed -i -e '/source \$ZSH\/oh-my-zsh.sh/i export ZSH_COMPDUMP=\$ZSH\/cache\/.zcompdump-\$HOST' ~/.zshrc
+# Configure the default ZSH configuration for new users.
 sudo cp ~/.zshrc /etc/skel/
 sudo cp ~/.p10k.zsh /etc/skel/
 sudo cp -r ~/.oh-my-zsh /etc/skel/
@@ -130,12 +130,10 @@ sudo chmod -R 755 /etc/skel/
 sudo chown -R root:root /etc/skel/
 ```
 
-:::
+很多Zsh插件的安装使用了以下Zsh语法拓展，请勿在Bash中使用：
 
-建议使用以下命令：
-
-```bash
-curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/skel.sh | bash
+```zsh
+${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 ```
 
 ## Other than zsh

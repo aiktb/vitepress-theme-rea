@@ -184,6 +184,17 @@ head: [
 
 :::
 
+像这样控制Chrome for Android的主题颜色：
+
+```typescript
+head: [
+    [
+        'meta',
+        {name: 'theme-color', content: '#4df5ff'}
+    ],
+]
+```
+
 你还可以像这样加载[Google Fonts](https://fonts.google.com/)中的`JetBrains Mono`字体，以便在CSS中直接使用它，以下两种方式都是可行的：
 
 ::: code-group
@@ -360,11 +371,11 @@ themeConfig: {
 
 我的博客一共使用了4个`slot`用于插入自定义的VUE组件：
 
-| Name                 | Component    | Function                               |
-| -------------------- | ------------ | -------------------------------------- |
-| doc-after            | \<Comments/> | 在文章末尾提供评论区                   |
+| Name                 | Component    | Function                 |
+|----------------------|--------------|--------------------------|
+| doc-after            | \<Comments/> | 在文章末尾提供评论区               |
 | aside-outline-before | \<Avatar/>   | 在右侧加入\<Member/>显示头像和联系方式 |
-| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述         |
+| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述          |
 | home-hero-after      | \<Recent/>   | 按时间排序显示最近发布的文章           |
 
 #### Comments.vue
