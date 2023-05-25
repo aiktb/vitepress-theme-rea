@@ -375,19 +375,17 @@ themeConfig: {
 - [Gitalk](https://github.com/gitalk/gitalk)
 - [Giscus](https://github.com/giscus/giscus)
 
-Disqus和Gitalk存在我无法解决的Bug和样式问题，最终被放弃：
+Disqus和Gitalk存在我无法解决的Bug，Giscus官方的Vue组件也有Bug，最终被放弃，只有下面这一种方法是靠谱的。
 
-1. Disqus我使用了[vue-disqus](https://github.com/ktquez/vue-disqus)组件，显示效果很糟糕，它在我的网站上显示为明亮模式，而且我用CSS完全无法控制它的样式；
-2. Gitalk同上，但可以用CSS调整。
+Giscus有以下优点：
 
-最终实际的解决方案只剩下了Giscus，最初我使用了`<Giscus/>`这个giscus官方提供的[VUE组件](https://github.com/giscus/giscus-component)，发现存在2个显示bug：
+- 没有明显的样式或逻辑Bug；
+- 使用GitHub Discussion而不是Issue；
+- Transparent Dark主题能自适应网站配色。
 
-1. 在多个页面切换时评论区没有被刷新，仍显示上个页面的评论，该错误由VUE的组件重用导致，通过`:key`被修复，在Disqus中出现了同样的问题，但Gitalk没有该问题；
-2. 从有评论的页面切换到没有评论的页面再返回有评论的页面，评论区将被截断，只能显示一小部分，推测该bug也是由VUE组件重用导致的，但不知如何修复。
+以下代码可以完成构建一个美观`<Comments/>`组件的任务，具体的参数参照[giscus.app](https://giscus.app)。
 
-最后我偶然发现在一个VitePress集成Giscus的[博客](https://sugarat.top/)中不存在该问题，并且源码在`GitHub Repo`中公开，于是我就去查看了对方的源码，并找到了解决方法: 答案是直接使用原生Giscus，它不存在上述第2点问题。
-
-以下代码可以完成构建一个美观`<Comments/>`组件的任务，具体的参数参照[giscus.app](https://giscus.app)，注意Giscus的主题是可选的，显示效果很棒。
+> `:key`用于阻止Vue组件重用，如果没有该属性，评论区在页面路由后不能正常更新。
 
 ::: code-group
 
@@ -544,63 +542,7 @@ const posts = data.slice(0, 9)
 </script>
 ```
 
-### Custom CSS
-
-整个开发过程工作量最大的就是自定义CSS来调整博客的主题，虽然有ChatGPT帮我写点，但是因为要微调的地方太多了，整体而言工作量还是很大的。
-
-我的`custom.css`文件很难说有什么参考价值，因为我不是专业的前端开发人员，写的CSS毫无美感，只是不停的打补丁来调整样式，未来有计划重构这部分代码。
-
-这部分工作是很个性化且非常主观的，我只能简单谈谈有哪些注意事项，具体的CSS代码只能读者自己加油了！☕
-
-#### Color
-
-对我个人的博客而言主要参考了以下两个网站的配色：
-
-- [neovim.io](https://neovim.io/)
-- [miyauchi.dev](https://miyauchi.dev/)
-
-改CSS的方法就是用`F12`开发者工具直接查看类名和使用的`:root`颜色名称，然后在`custom.css`中直接覆盖掉，必要时使用`!important`强制覆盖样式。
-
-#### Font
-
-默认的`lnter`字体无需排除，用作第二字体即可：
-
-```css
-:root {
-    --vp-font-family-base: 'JetBrains Mono', lnter, 'M PLUS Rounded 1c';
-    --vp-font-family-mono: 'JetBrains Mono', lnter;
-}
-```
-
-字体可以从[google-web-fonts-helper](https://gwfh.mranftl.com/)获取下载。
-
-建议还是添加`head`从网络导入Google Fonts，这要不了几行代码，但如果你执意用类似以下的方法加载字体：
-
-```css
-/* jetbrains-mono-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/jetbrains-mono-v17-latin-regular.woff2') format('woff2'); /* Super Modern Browsers */
-}
-```
-
-那么这是行不通的，因为VitePress在这种情况下无法将其理解为`public/`路径，字体无法载入，只能使用丑陋的相对路径：
-
-```css
-src: url('../../public/fonts/jetbrains-mono-v17-latin-regular.woff2') format('woff2')
-```
-
-而如果你使用相对路径，VitePress Console会不停输出以下信息：
-
-```txt
-files in the public directory are served at the root path.
-Instead of /public/fonts/...woff2, use /fonts/...woff2.
-```
-
-## Deploy(GitHub Action)
+## Deploy
 
 在这一点上我真的要称赞VitePress团队，因为[文档](https://vitepress.dev/guide/deploy#github-pages)中的`deploy.yml`文件不需要做任何修改就能在GitHub Action上直接使用，只需要将它放在你的`.github/workflow`目录下面。
 
@@ -615,7 +557,7 @@ Instead of /public/fonts/...woff2, use /fonts/...woff2.
 https://github.com/${USER}/${REPO}/settings/pages
 ```
 
-自定义域设置需要一些时间，如果你用的域运行在Cloudflare的CDN上，而且以前申请过SSL证书，在这段时间你的网站会显示"526 Invalid SSL certificate"。
+自定义域设置需要一些时间，如果你的域运行在Cloudflare的CDN上，而且以前申请过SSL证书，在这段时间你的网站会显示"526 Invalid SSL certificate"。
 
 顺带一提，如果你在用Cloudflare的CDN，并且发现你的VitePress项目404页面无法正常显示，那么参考issue[#2270](https://github.com/vuejs/vitepress/issues/2270)。
 
