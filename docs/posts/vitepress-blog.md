@@ -517,30 +517,44 @@ const members = [
 
 `Recent.vue`使用了这个函数用来获取`posts`目录下的所有`.md`文件数据，并且用`JavaScript`处理数据并渲染页面。
 
-`createContentLoader`需要按照文档的说明新建立一个`/theme/posts.data.ts`文件来使用，因为这个函数无法在`.vue`文件中导入。
-
-UTC标准时间是精确到秒的，但写博客不可能将时间精确到秒，不做处理的话显示出来的时间后面会跟着一串0，所以必须将date处理为字符串并只取日期部分：
+`createContentLoader`需要按照文档的说明新建立一个`posts.data.ts`文件来使用，因为这个函数无法在`.vue`文件中导入。
 
 ```typescript {9}
 import {createContentLoader} from 'vitepress';
+
+export interface Post {
+    title: string
+    url: string
+    date: string
+}
+
+declare const data: Post[]
+export {data}
 
 export default createContentLoader('posts/*.md', {
     transform: (rawData) => {
         return rawData.sort((a, b) => {
             return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
         }).map(post => {
-            const { frontmatter, ...rest } = post
-            const date: string = new Date(frontmatter.date).toISOString().slice(0, 10)
             return {
-                ...rest,
-                frontmatter: {
-                    ...frontmatter,
-                    date: date
-                }
+                title: post.frontmatter.title,
+                url: post.url,
+                date: formatDate(post.frontmatter.date)
             }
         })
     }
 })
+
+function formatDate(raw: string): Post['date'] {
+    const date = new Date(raw)
+    date.setUTCHours(12)
+    return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }
+    )
+}
 ```
 
 由于这个文件在博客中要被复用，这里没有在末尾使用`.slice(0, 9)`限制返回的数量，应该在引用这部分代码的地方单独做处理，例如`Recent.vue`：
@@ -554,6 +568,8 @@ const posts = data.slice(0, 9)
 ```
 
 ## Deploy
+
+### GitHub Action
 
 在这一点上我真的要称赞VitePress团队，因为[文档](https://vitepress.dev/guide/deploy#github-pages)中的`deploy.yml`文件不需要做任何修改就能在GitHub Action上直接使用，只需要将它放在你的`.github/workflow`目录下面。
 
@@ -573,3 +589,21 @@ https://github.com/${USER}/${REPO}/settings/pages
 顺带一提，如果你在用Cloudflare的CDN，并且发现你的VitePress项目404页面无法正常显示，那么参考issue[#2270](https://github.com/vuejs/vitepress/issues/2270)。
 
 ![github-setting](https://s2.loli.net/2023/04/30/SJIm4oFneKt5hZf.webp)
+
+### Others
+
+VPS直接部署：
+
+```zsh
+git clone https://github.com/aiktb/rea.git
+cd rea
+npm install
+tmux new-session -d 'npm run docs:build && npm run docs:preview'
+```
+
+终止服务：
+
+```bash
+tmux kill-session -t 0
+```
+

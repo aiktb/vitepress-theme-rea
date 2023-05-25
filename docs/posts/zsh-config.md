@@ -96,10 +96,8 @@ Zsh配置有3件事要做：
 建议使用以下命令下载我的脚本一键配置：
 
 ```bash
-curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/zsh.sh | bash && zsh
+curl -sL https://raw.githubusercontent.com/aiktb/zsh-config/master/zsh.sh.git | bash && zsh
 ```
-
-> 注意`githubusercontent.com`已被GFW封锁。
 
 以下就是具体的代码，很好的完成了以上3点任务，使用apt包管理器的Linux用户可以直接使用，其余包管理器需要自行更改代码。
 
@@ -130,7 +128,7 @@ sudo chmod -R 755 /etc/skel/
 sudo chown -R root:root /etc/skel/
 ```
 
-很多Zsh插件的安装使用了以下Zsh语法拓展，请勿在Bash中使用：
+很多Zsh插件的安装文档使用了以下Zsh语法拓展，请勿在Bash中使用：
 
 ```zsh
 ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
