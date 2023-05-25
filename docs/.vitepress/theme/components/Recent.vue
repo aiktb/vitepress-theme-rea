@@ -1,7 +1,7 @@
 <script setup>
 import {data} from '../posts.data.ts'
 
-const posts = data.slice(0, 9)
+const posts = data.slice(0, 10)
 </script>
 
 <template>
@@ -11,8 +11,8 @@ const posts = data.slice(0, 9)
     </h1>
     <ul class="blog-list">
       <a v-for="post in posts" class="blog" :key="post.id" :href="post.url">
-        <h1 class="blog-title">{{ post.frontmatter.title }}</h1>
-        <p>{{ post.frontmatter.date }}</p>
+        <h1 class="blog-title">{{ post.title }}</h1>
+        <p>{{ post.date }}</p>
         <svg role="img" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="article-icon">
           <title>article</title>
           <use xlink:href="/article.svg#article"/>
