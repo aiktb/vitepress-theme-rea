@@ -14,6 +14,10 @@ export default defineConfig({
     buildEnd: rss,
     head: [
         [
+            'meta',
+            {name: 'theme-color', content: '#4df5ff'}
+        ],
+        [
             'script',
             {async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-MCQSMRVDJN'}
         ],
