@@ -15,7 +15,7 @@ export default defineConfig({
     head: [
         [
             'meta',
-            {name: 'theme-color', content: '#4df5ff'}
+            {name: 'theme-color', content: '#13212e'}
         ],
         [
             'script',
