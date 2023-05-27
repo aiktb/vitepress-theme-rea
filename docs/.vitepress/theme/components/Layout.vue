@@ -2,7 +2,7 @@
 import DefaultTheme from 'vitepress/theme'
 import Member from "./Avatar.vue"
 import Comments from "./Comments.vue"
-import Home from "./Hero.vue"
+import Hero from "./Hero.vue"
 import Recent from "./Recent.vue"
 
 const {Layout} = DefaultTheme
@@ -17,7 +17,7 @@ const {Layout} = DefaultTheme
       <Member/>
     </template>
     <template #home-hero-before>
-      <Home/>
+      <Hero/>
     </template>
     <template #home-hero-after>
       <Recent/>
