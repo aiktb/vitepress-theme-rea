@@ -25,6 +25,8 @@ A: Read this [blog](https://aiktb.com/posts/vitepress-blog)(Chinese).
 - Feature: Implement elegant \<Hero/> and \<Page/> components.
 - Refactor: TailwindCSS is used throughout the site.
 - Refactor: TypeScript is used throughout the site.
+- Refactor: Compress Chinese fonts to reduce dependency size.
+
 
 ## License
 
