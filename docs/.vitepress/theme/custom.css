@@ -1,194 +1,196 @@
 :root {
-    --vp-font-family-base: 'JetBrains Mono', lnter, 'Noto Sans SC';
-    --vp-font-family-mono: 'JetBrains Mono', lnter;
+  --vp-font-family-base: 'JetBrains Mono', lnter, 'Noto Sans SC';
+  --vp-font-family-mono: 'JetBrains Mono', lnter;
 }
 
 :root {
-    --my-white: #a9d5c4;
-    --my-black: #0c1222;
-    --my-black-light: #13212e;
-    --my-blue: #1174b1;
-    --my-blue-dark: #2b7b86;
-    --my-blue-light: #4df5ff;
-    --my-gray: #9fa3a5;
-    --my-gray-dark: #364149;
+  --my-white: #a9d5c4;
+  --my-black: #0c1222;
+  --my-black-light: #13212e;
+  --my-blue: #1174b1;
+  --my-blue-dark: #2b7b86;
+  --my-blue-light: #4df5ff;
+  --my-gray: #9fa3a5;
+  --my-gray-dark: #364149;
 }
 
 :root {
-    --vp-c-bg: var(--my-black);
-    --vp-c-text-1: var(--my-white);
-    --vp-c-text-2: var(--my-gray);
-    --vp-nav-bg-color: var(--my-black);
-    --vp-c-bg-soft: var(--my-black-light);
-    --vp-c-brand: var(--my-blue-light);
-    --vp-c-mute: var(--my-black);
-    --vp-c-text-code: var(--my-white);
-    --vp-code-block-bg: var(--my-black-light);
-    --vp-c-divider: var(--my-blue);
-    --vp-c-brand-dark: var(--my-blue-dark);
-    --vp-c-bg-alt: var(--my-black-light);
-    --vp-c-bg-elv: var(--my-black);
-    --vp-custom-block-details-bg: var(--my-black-light);
-    --vp-custom-block-details-text: var(--my-white);
-    --vp-c-bg-elv-mute: var(--my-gray-dark);
+  --vp-c-bg: var(--my-black);
+  --vp-c-text-1: var(--my-white);
+  --vp-c-text-2: var(--my-gray);
+  --vp-nav-bg-color: var(--my-black);
+  --vp-c-bg-soft: var(--my-black-light);
+  --vp-c-brand: var(--my-blue-light);
+  --vp-c-mute: var(--my-black);
+  --vp-c-text-code: var(--my-white);
+  --vp-code-block-bg: var(--my-black-light);
+  --vp-c-divider: var(--my-blue);
+  --vp-c-brand-dark: var(--my-blue-dark);
+  --vp-c-bg-alt: var(--my-black-light);
+  --vp-c-bg-elv: var(--my-black);
+  --vp-custom-block-details-bg: var(--my-black-light);
+  --vp-custom-block-details-text: var(--my-white);
+  --vp-c-bg-elv-mute: var(--my-gray-dark);
 }
 
 .VPLocalNav {
-    border-bottom: 1px solid var(--my-blue) !important;
+  border-bottom: 1px solid var(--my-blue) !important;
 }
 
 .vp-doc :not(pre) > code {
-    white-space: nowrap;
-    background-color: var(--my-black-light);
-    color: var(--my-blue-light);
+  white-space: nowrap;
+  background-color: var(--my-black-light);
+  color: var(--my-blue-light);
 }
 
 .content {
-    border-left: none !important;
+  border-left: none !important;
 }
 
 .translations button {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .translations a {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .vp-doc img {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
-
-
 .VPLink {
-    text-align: center;
+  text-align: center;
 }
 
 .vp-doc ul {
-    color: var(--my-white) !important;
+  color: var(--my-white) !important;
 }
 
 .vp-doc td {
-    border: 1px solid var(--my-blue-dark);
+  border: 1px solid var(--my-blue-dark);
 }
 
 .vp-doc blockquote > p {
-    color: var(--my-white) !important;
-    margin-left: 10px;
-    margin-top: 0;
-    margin-bottom: 0;
+  color: var(--my-white) !important;
+  margin-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .vp-doc blockquote {
-    border-left: none !important;
-    background-color: var(--my-gray-dark);
-    display: flex;
-    position: relative;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  border-left: none !important;
+  background-color: var(--my-gray-dark);
+  display: flex;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .vp-doc blockquote::before {
-    content: "";
-    display: block;
-    width: 3px;
-    height: 100%;
-    background-color: var(--my-blue);
-    border-radius: 3px;
-    position: absolute;
-    left: 0;
-    top: 0;
+  content: '';
+  display: block;
+  width: 3px;
+  height: 100%;
+  background-color: var(--my-blue);
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .vp-doc a {
-    color: var(--my-blue-light);
-    border-bottom: solid 2px var(--my-blue-light);
+  color: var(--my-blue-light);
+  border-bottom: solid 2px var(--my-blue-light);
 }
 
 .vp-doc a:hover {
-    color: var(--my-blue-dark);
-    text-decoration: none;
-    border-bottom: solid 2px var(--my-blue-dark);
+  color: var(--my-blue-dark);
+  text-decoration: none;
+  border-bottom: solid 2px var(--my-blue-dark);
 }
 
 .VPFooter a {
-    color: var(--my-blue-light);
+  color: var(--my-blue-light);
 }
 
 .VPFooter a:hover {
-    color: var(--my-blue-dark);
-    text-decoration: none;
+  color: var(--my-blue-dark);
+  text-decoration: none;
 }
 
-.header-anchor, .VPSocialLink {
-    border-bottom: none !important;
+.header-anchor,
+.VPSocialLink {
+  border-bottom: none !important;
 }
 
 .vp-doc img {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 .vp-doc ol {
-    padding-left: 2rem;
+  padding-left: 2rem;
 }
 
 .VPNav {
-    font-style: italic;
+  font-style: italic;
 }
 
 .VPLink {
-    font-weight: bold !important;
+  font-weight: bold !important;
 }
 
 @media only screen and (min-width: 767px) {
-    .VPNavBarSearch {
-        border-radius: 10px;
-    }
+  .VPNavBarSearch {
+    border-radius: 10px;
+  }
 }
 
 .DocSearch-Button {
-    height: 30px;
+  height: 30px;
 }
 
 .VPDocAsideOutline {
-    border: solid 2pt var(--my-blue);
-    border-radius: 15px;
-    background-color: var(--my-black-light);
+  border: solid 2pt var(--my-blue);
+  border-radius: 15px;
+  background-color: var(--my-black-light);
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
+  width: 3px;
+  height: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--my-blue);
-    border-radius: 3px;
+  background-color: var(--my-blue);
+  border-radius: 3px;
+}
+
+.VPNavBarTitle a {
+  color: var(--my-blue-light) !important;
 }
 
 .profile {
-    border: solid 2pt var(--my-blue);
-    border-radius: 15px;
+  border: solid 2pt var(--my-blue);
+  border-radius: 15px;
 }
 
-
 .VPNav {
-    background-color: var(--vp-nav-bg-color);
-    border-bottom: solid;;
-    border-bottom-width: 2pt;
-    border-bottom-color: var(--my-blue);
+  background-color: var(--vp-nav-bg-color);
+  border-bottom: solid;
+  border-bottom-width: 2pt;
+  border-bottom-color: var(--my-blue);
 }
 
 .header {
-    border: 2pt var(--my-blue);
+  border: 2pt var(--my-blue);
 }
 
 .VPFooter {
-    background-color: var(--vp-nav-bg-color) !important;
-    border-top: 2px solid var(--my-blue) !important;
+  background-color: var(--vp-nav-bg-color) !important;
+  border-top: 2px solid var(--my-blue) !important;
 }
