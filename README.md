@@ -12,10 +12,7 @@ A: Read this [blog](https://aiktb.com/posts/vitepress-blog)(Chinese).
 
 ## Preview
 
-<figure>
-  <img src="https://s2.loli.net/2023/05/29/yuaKTdHmLk9Jnpt.webp" alt="preview"/>
-  <figcaption style="text-align:center">Use https://ui.dev/amiresponsive</figcaption>
-</figure>
+![preview](https://s2.loli.net/2023/05/29/yuaKTdHmLk9Jnpt.webp)
 
 ## Feature
 
