@@ -173,7 +173,7 @@
   color: var(--my-gray);
 }
 ::-webkit-scrollbar-thumb {
-  background-color:var(--my-gray);
+  background-color: var(--my-gray);
   border-radius: 4px;
 }
 .VPNavBarTitle a {
