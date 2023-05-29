@@ -96,7 +96,7 @@ Zsh配置有3件事要做：
 建议使用以下命令下载我的脚本一键配置：
 
 ```bash
-curl -sL https://raw.githubusercontent.com/aiktb/dotzsh/master/zsh.sh.git | bash && zsh
+curl -sL https://raw.githubusercontent.com/aiktb/dotzsh/master/zsh.sh | bash && zsh
 ```
 
 以下就是具体的代码，很好地的完成了以上3点任务，使用apt包管理器的Linux用户可以直接使用，其余包管理器需要自行更改代码。
