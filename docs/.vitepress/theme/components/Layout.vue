@@ -3,7 +3,7 @@ import DefaultTheme from 'vitepress/theme'
 import Member from "./Avatar.vue"
 import Comments from "./Comments.vue"
 import Hero from "./Hero.vue"
-import Recent from "./Recent.vue"
+import Page from "./Page.vue"
 
 const {Layout} = DefaultTheme
 </script>
@@ -20,7 +20,7 @@ const {Layout} = DefaultTheme
       <Hero/>
     </template>
     <template #home-hero-after>
-      <Recent/>
+      <Page/>
     </template>
   </Layout>
 </template>

@@ -1,33 +1,34 @@
 <template>
-  <div class="home">
-    <div class="content">
-      <img src="/avatar.jpg" class="avatar" alt="avatar"/>
+  <div class="hero">
+    <div>
+      <img class="avatar" src="/avatar.jpg" alt="avatar" />
     </div>
-    <div class="share">
-      <h1 class="title">
-        <span class="txt">Hi, I'm aiktb.</span>
-      </h1>
-      <p class="description">
-        <span class="txt">Hope my blog can help you.</span>😎
+    <div>
+      <p class="introduce">
+        <i>Hi, I'm aiktb.</i>👋
       </p>
-      <a href="/about#contact-me" class="contact">
-        <span class="txt">contact me</span>❤️
-      </a>
+      <p>
+        <i>Hope my blog can help you.</i>😎
+      </p>
+      <div class="contact">
+        <a class="link" href="/about#contact-me">
+          <i>contact me</i>❤️
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.txt {
-  font-style: italic;
-  font-weight: bold;
-}
-
-.content {
+.hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 300px;
+  text-align: center;
+  padding-top: 70px;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 2em;
 }
 
 .avatar {
@@ -38,49 +39,40 @@
   background-color: var(--my-blue-light);
 }
 
-@keyframes avatar-transform {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.introduce {
+  font-size: 35px;
+  margin-top: 70px;
+  color: var(--my-blue-light);
 }
 
 .avatar:hover {
-  animation: 5s linear 0s infinite avatar-transform;
-}
-
-.share {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 15px;
-  text-align: center;
-}
-
-.title {
-  display: flex;
-  align-items: center;
-  font-size: 2.2em;
-  line-height: 1.2em;
-}
-
-.description {
-  margin: 1em 0;
-  font-size: 1.5em;
+  animation: 5s linear 0s infinite spin;
 }
 
 .contact {
-  font-size: 1.5em;
-  color: var(--my-white);
-  border: solid 3px var(--my-blue-light);
-  border-radius: 30px;
-  padding: 10px;
+  margin-top: 20px;
 }
 
-.contact:hover {
-  color: var(--my-black);
-  background-color: var(--my-blue-light);
+.link {
+  border-radius: 30px;
+  padding: 5px 10px;
+  box-shadow: 6px 6px var(--my-blue);
+  border: 4px solid var(--my-blue-light);
+}
+
+.link:hover {
+  color: var(--my-blue-light);
+  box-shadow: 8px 8px var(--my-blue);
+  border: 4px solid var(--my-blue-light);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
