@@ -42,7 +42,7 @@
   font-size: 35px;
   margin-top: 70px;
   color: var(--my-blue-light);
-  line-height: 1.5em;
+  margin-bottom: 10px;
 }
 
 .avatar:hover {

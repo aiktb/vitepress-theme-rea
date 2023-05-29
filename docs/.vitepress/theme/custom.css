@@ -164,25 +164,24 @@
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 5px;
+  height: 5px;
+  background-color: var(--my-gray-dark);
+  border-radius: 4px;
 }
-
-::-webkit-scrollbar:hover {
-  display: block;
+.search-input::placeholder {
+  color: var(--my-gray);
 }
-*:not(language-*)::-webkit-scrollbar {
-  display: block;
-}
-
 ::-webkit-scrollbar-thumb {
-  background-color: var(--my-blue);
-  border-radius: 3px;
+  background-color:var(--my-gray);
+  border-radius: 4px;
 }
-
 .VPNavBarTitle a {
   color: var(--my-blue-light) !important;
 }
-
+.VPNavBarTitle a:hover {
+  color: var(--my-blue-dark) !important;
+}
 .profile {
   border: solid 2pt var(--my-blue);
   border-radius: 15px;
