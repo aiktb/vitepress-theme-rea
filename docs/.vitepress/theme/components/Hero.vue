@@ -1,7 +1,8 @@
 <template>
   <div class="hero">
-    <div>
+    <div class="container">
       <img class="avatar" src="/avatar.jpg" alt="avatar" />
+      <span class="label">⭐</span>
     </div>
     <div>
       <p class="introduce">
@@ -30,13 +31,24 @@
   font-size: 1.5em;
 }
 
+.container {
+  position: relative;
+}
+
 .avatar {
   width: 180px;
   height: 180px;
   border-radius: 50%;
   box-shadow: 0 0 20px 20px var(--my-blue-light);
   background-color: var(--my-blue-light);
-  border: 4px solid var(--my-blue);
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .introduce {
@@ -77,6 +89,15 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes ping {
+
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
   }
 }
 </style>
