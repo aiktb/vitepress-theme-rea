@@ -54,6 +54,8 @@
 }
 
 .link {
+  display: inline-block;
+  width: auto;
   border-radius: 30px;
   padding: 5px 10px;
   box-shadow: 6px 6px var(--my-blue);
@@ -64,6 +66,7 @@
   color: var(--my-blue-light);
   box-shadow: 8px 8px var(--my-blue);
   border: 4px solid var(--my-blue-light);
+  transform: translate(-2px, -2px);
 }
 
 @keyframes spin {
