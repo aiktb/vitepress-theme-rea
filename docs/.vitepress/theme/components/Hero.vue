@@ -28,7 +28,6 @@
   padding-top: 70px;
   font-weight: bold;
   font-size: 1.5em;
-  line-height: 2em;
 }
 
 .avatar {
@@ -43,6 +42,7 @@
   font-size: 35px;
   margin-top: 70px;
   color: var(--my-blue-light);
+  line-height: 1.5em;
 }
 
 .avatar:hover {
