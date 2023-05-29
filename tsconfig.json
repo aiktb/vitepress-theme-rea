@@ -9,6 +9,7 @@
     "noUnusedLocals": true
   },
   "include": [
-    "docs/.vitepress/**/*.ts"
+    "docs/.vitepress/**/*.ts",
+    "docs/.vitepress/**/*.vue"
   ]
 }
