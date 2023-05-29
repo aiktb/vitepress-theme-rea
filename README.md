@@ -10,9 +10,15 @@ Q: How to develop?
 
 A: Read this [blog](https://aiktb.com/posts/vitepress-blog)(Chinese).
 
+## Preview
+
+<figure>
+  <img src="https://s2.loli.net/2023/05/29/yuaKTdHmLk9Jnpt.webp" alt="preview"/>
+  <figcaption style="text-align:center">Use https://ui.dev/amiresponsive</figcaption>
+</figure>
+
 ## Feature
 
-- Simple tones
 - Dark mode only
 - Recent blogs
 - Google Analytics support
@@ -24,12 +30,3 @@ A: Read this [blog](https://aiktb.com/posts/vitepress-blog)(Chinese).
 
 The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) license, and the blog post uses the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
-## Preview
-
-### Home
-
-![home](https://s2.loli.net/2023/05/23/nf8B1aYZ9cVoGRM.webp)
-
-### About
-
-![about](https://s2.loli.net/2023/05/23/HrZUqgvdh5joM7X.webp)
