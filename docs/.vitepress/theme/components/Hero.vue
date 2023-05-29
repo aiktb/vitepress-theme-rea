@@ -64,7 +64,7 @@
 
 .link:hover {
   color: var(--my-blue-light);
-  box-shadow: 8px 8px var(--my-blue);
+  box-shadow: 9px 9px var(--my-blue);
   border: 4px solid var(--my-blue-light);
   transform: translate(-2px, -2px);
 }
