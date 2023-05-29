@@ -31,11 +31,12 @@
 }
 
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   box-shadow: 0 0 20px 20px var(--my-blue-light);
   background-color: var(--my-blue-light);
+  border: 4px solid var(--my-blue);
 }
 
 .introduce {
