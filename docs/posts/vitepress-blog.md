@@ -595,8 +595,8 @@ https://github.com/${USER}/${REPO}/settings/pages
 VPS直接部署：
 
 ```zsh
-git clone https://github.com/aiktb/rea.git
-cd rea
+git clone https://github.com/aiktb/vitepress-theme-rea.git
+cd vitepress-theme-rea
 npm install
 tmux new-session -d 'npm run docs:build && npm run docs:preview'
 ```
