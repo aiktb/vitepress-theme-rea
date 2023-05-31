@@ -29,8 +29,8 @@ In order to avoid unnecessary troubles, I will not provide any contact informati
 
 You can reach me on the following platforms, email is preferred:
 
-- [Email](mailto:aiktb@outlook.com)
-- [Telegram](https://t.me/aiktb)
+- Email: aiktb@outlook.com
+- Telegram: https://t.me/aiktb
 
 ## About the blog item
 
