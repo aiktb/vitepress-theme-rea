@@ -365,6 +365,8 @@ themeConfig: {
 
 ![search](https://s2.loli.net/2023/04/30/gibULzPQ61pEoZN.webp)
 
+> 在我的博客大体开发完成后发布了3篇文章时，仅仅过了3个小时Algolia就通过了我的申请，他们的工作效率真的很高:)
+
 ### Layout
 
 `Layout`组件的`slot`是自定义VitePress博客的要点，因为有了`slot`才使VitePress在默认主题下页面仍有一定可拓展的空间，`Layout`一共有3种布局，我只使用了`home`和`doc`，没有使用`page`布局。
@@ -507,15 +509,15 @@ const members = [
 
 ![members](https://s2.loli.net/2023/04/30/HCjTzVPk4hlvOo3.webp)
 
-#### Hero.vue & Recent.vue
+#### Hero.vue & Page.vue
 
-这两个组件构成了我的博客主页，主要参考了[clark-cui](https://visionary-sunflower-dc7ae3.netlify.app/)的博客源码，移除了略复杂的分页功能并且调整了CSS来适应我的主题。
+这两个组件构成了我的博客主页，主要参考了[clark-cui](https://visionary-sunflower-dc7ae3.netlify.app/)的博客，这并不复杂，仅仅依赖了在`frontmatter`中自定义的`title`和`date`。
 
-注意使用这种方式自定义的`Home`主页应该移除`index.md`中默认的`frontmatter`。
+![Page-Testing](https://s2.loli.net/2023/06/01/fLGkPngzjTIdau5.webp)
 
 #### createContentLoader
 
-`Recent.vue`使用了这个函数用来获取`posts`目录下的所有`.md`文件数据，并且用`JavaScript`处理数据并渲染页面。
+`Page.vue`使用了这个函数用来获取`posts`目录下的所有`.md`文件数据，并且用`TypeScript`处理数据并渲染页面。
 
 `createContentLoader`需要按照文档的说明新建立一个`posts.data.ts`文件来使用，因为这个函数无法在`.vue`文件中导入。
 
@@ -555,16 +557,6 @@ function formatDate(raw: string): Post['date'] {
         }
     )
 }
-```
-
-由于这个文件在博客中要被复用，这里没有在末尾使用`.slice(0, 9)`限制返回的数量，应该在引用这部分代码的地方单独做处理，例如`Recent.vue`：
-
-```vue
-<script setup>
-import {data} from '../posts.data.ts'
-
-const posts = data.slice(0, 9)
-</script>
 ```
 
 ## Deploy
