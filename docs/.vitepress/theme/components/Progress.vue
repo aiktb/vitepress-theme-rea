@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import {onMounted, onUnmounted, ref, watch} from 'vue'
-import {useData} from "vitepress"
 
-const {title} = useData()
 const scrollPosition = ref(0)
 const pageHeight = ref(0)
 const scrollPercentage = ref(0)
