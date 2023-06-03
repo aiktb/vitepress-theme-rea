@@ -147,12 +147,6 @@
   font-weight: bold !important;
 }
 
-@media only screen and (min-width: 767px) {
-  .VPNavBarSearch {
-    border-radius: 10px;
-  }
-}
-
 .DocSearch-Button {
   height: 30px;
 }
