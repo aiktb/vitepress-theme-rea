@@ -3,7 +3,7 @@ title: About
 ---
 
 <!--suppress ALL -->
-<script>
+<script setup>
 import Framework from './.vitepress/theme/components/Framework.vue'
 </script>
 # About me and the blog
