@@ -240,7 +240,7 @@ head: [
 
 
 ```typescript {4} [config.ts]
-import {rss} from './theme/rss.ts'
+import {rss} from './theme/rss'
 
 export default defineConfig({
     buildEnd: rss,
@@ -364,20 +364,29 @@ themeConfig: {
 
 ![search](https://s2.loli.net/2023/04/30/gibULzPQ61pEoZN.webp)
 
-> 在我的博客大体开发完成后发布了3篇文章时，仅仅过了3个小时Algolia就通过了我的申请，他们的工作效率真的很高:)
+在我的博客大体开发完成后发布了3篇文章时，仅仅过了3个小时Algolia就通过了我的申请，他们的工作效率真的很高:)
+
+但是默认的Algolia Search样式并不美观，需要花一些时间调整。
+
+![algolia search](https://s2.loli.net/2023/06/03/1niXoPeCBhOb3uj.webp)
 
 ### Layout
 
-`Layout`组件的`slot`是自定义VitePress博客的要点，因为有了`slot`才使VitePress在默认主题下页面仍有一定可拓展的空间，`Layout`一共有3种布局，我只使用了`home`和`doc`，没有使用`page`布局。
+`Layout`组件的`slot`是自定义VitePress博客的要点，正是因为有了`slot`才使VitePress在默认主题下页面仍有一定可拓展的空间，`Layout`一共有3种布局，我只使用了`home`和`doc`，没有使用`page`布局。
 
-我的博客一共使用了4个`slot`用于插入自定义的VUE组件：
+我的博客一共使用了5个`slot`用于插入自定义的VUE组件：
 
-| Name                 | Component    | Function                 |
-|----------------------|--------------|--------------------------|
-| doc-after            | \<Comments/> | 在文章末尾提供评论区               |
+| Slot                 | Component    | Function                               |
+| -------------------- | ------------ | -------------------------------------- |
+| doc-top              | \<Progress/> | 在页面顶部显示阅读进度条               |
+| doc-after            | \<Comments/> | 在博客文章的末尾提供评论区             |
 | aside-outline-before | \<Avatar/>   | 在右侧加入\<Member/>显示头像和联系方式 |
-| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述          |
-| home-hero-after      | \<Recent/>   | 按时间排序显示最近发布的文章           |
+| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述         |
+| home-hero-after      | \<Page/>     | 按时间排序分页显示所有发布的博客文章   |
+
+#### Progress.vue
+
+这个组件比较特殊，虽然我使用了doc-top插槽，但实际上它可以根据需要放在任何一个插槽中，因为我使用了`<Teleport to="body"/>`来将这个组件传送到了外层的body中。
 
 #### Comments.vue
 
@@ -397,13 +406,13 @@ Giscus有以下优点：
 
 以下代码可以完成构建一个美观`<Comments/>`组件的任务，具体的参数参照[giscus.app](https://giscus.app)。
 
-> `:key`用于阻止Vue组件重用，如果没有该属性，评论区在页面路由后不能正常更新。
+`:key`用于阻止Vue组件重用，如果没有该属性，评论区在页面路由后不能正常更新。`useRoute`、`useRouter`中的数据不是响应式的，不可以用于`:key`。
 
 ::: code-group
 
 ```vue {4,10-11,23} [comments.vue]
-<script setup>
-import {useData} from 'vitepress';
+<script setup lang="ts">
+import {useData} from 'vitepress'
 
 const {title} = useData()
 </script>
@@ -433,7 +442,7 @@ const {title} = useData()
 ```
 
 ```vue {10-12} [Layout.vue]
-<script setup>
+<script setup lang="ts">
 import DefaultTheme from 'vitepress/theme'
 import Comments from "./Comments.vue"
 
@@ -476,15 +485,18 @@ export default {
 
 这种方法导入的SVG图标触摸时不会显示文字，可以在SVG文件中添加`title`标签修复。
 
+Vue+TypeScript需要一个`svg.d.ts`文件提供类型声明，否则将导致一个TS无法导入模块的报错。
+
 ::: code-group
 
 ```vue [Avatar.vue]
-<script setup>
+<script setup lang="ts">
 import {VPTeamMembers} from 'vitepress/theme'
 import email from '/email.svg?raw' // [!code ++]
 
 const members = [
   {
+    ...
     links: [
       {
         icon: {svg: email}, // [!code ++]
@@ -494,6 +506,10 @@ const members = [
   }
 ]
 </script>
+
+<template>
+  <VPTeamMembers size="small" :members="members"/>
+</template>
 ```
 
 ```xml [email.svg]
@@ -501,6 +517,14 @@ const members = [
     <title>Email</title> // [!code ++]
     <path d=" ... "/>
 </svg>
+```
+
+```typescript [svg.d.ts]
+declare module '*.svg?raw' {
+    import Vue, {VueConstructor} from 'vue'
+    const content: VueConstructor<Vue>
+    export default content
+}
 ```
 
 :::
@@ -520,7 +544,7 @@ const members = [
 `createContentLoader`需要按照文档的说明新建立一个`posts.data.ts`文件来使用，因为这个函数无法在`.vue`文件中导入。
 
 ```typescript {9}
-import {createContentLoader} from 'vitepress';
+import {createContentLoader} from 'vitepress'
 
 export interface Post {
     title: string

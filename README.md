@@ -22,8 +22,8 @@ A: Read this [blog](https://aiktb.com/posts/vitepress-blog)(Chinese).
 - RSS feed
 - Local search
 - Comments
+- Reading progress bar
 
 ## License
 
 The code uses the [MIT](https://github.com/aiktb/rea/blob/master/LICENSE) license, and the blog post uses the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
-
