@@ -1,5 +1,4 @@
-<!--suppress ALL -->
-<script setup>
+<script setup lang="ts">
 import {VPTeamMembers} from 'vitepress/theme'
 import email from '/email.svg?raw'
 import telegram from '/telegram.svg?raw'

@@ -37,16 +37,16 @@ A: 建议使用[GitHub Action](https://docs.github.com/en/actions)和`github.io`
 
 ### Tool Box
 
-| Name                                              | Features                                                     |
-| ------------------------------------------------- | ------------------------------------------------------------ |
+| Name                                              | Features                              |
+|---------------------------------------------------|---------------------------------------|
 | [WebStorm](https://www.jetbrains.com/webstorm/)   | 提供一系列代码分析和补全的重量级IDE，当然VSCode也可以。      |
-| [Typora](https://typora.io/)                      | 所见即所得的markdown编辑器，简洁美观，功能齐全。             |
-| [Canva](https://www.canva.com/)                   | 用于设计博客所用的封面图片，提供云保存、在线编辑和大量免费模板。 |
-| [IconScout](https://iconscout.com/)               | 搜寻博客需要使用的各种SVG图标，免费图标就够用。              |
+| [Typora](https://typora.io/)                      | 所见即所得的markdown编辑器，简洁美观，功能齐全。          |
+| [Canva](https://www.canva.com/)                   | 用于设计博客所用的封面图片，提供云保存、在线编辑和大量免费模板。      |
+| [IconScout](https://iconscout.com/)               | 搜寻博客需要使用的各种SVG图标，免费图标就够用。             |
 | [SM.MS](https://sm.ms/)                           | 免费的在线图床服务，如果不想将图片保存在GitHub Repo的话很有用。 |
 | [PicGo-APP](https://github.com/Molunerfinn/PicGo) | 和Typora配合实现粘贴图片自动转换为Webp并上传到多种图床。     |
 | [SVG-Edit](https://github.com/SVG-Edit/svgedit)   | 开源SVG图形编辑器，用于简单编辑SVG图形的大小和颜色。         |
-| [ChatGPT](https://chat.openai.com/chat)           | 提供各种关于编码的建议，如果你没有太多前端开发经验，那么这很重要。 |
+| [ChatGPT](https://chat.openai.com/chat)           | 提供各种关于编码的建议，如果你没有太多前端开发经验，那么这很重要。     |
 
 ## Develop
 
@@ -119,8 +119,7 @@ sidebar: [ // [!code --:10]
 		text: 'Guide',
         items: [
             { text: 'Introduction', link: '/introduction' },
-            { text: 'Getting Started', link: '/getting-started' },
-            ...
+            { text: 'Getting Started', link: '/getting-started' }
         ]
     }
 ]
@@ -132,8 +131,8 @@ sidebar: [ // [!code --:10]
 
 ```typescript
 markdown: {
-    lineNumbers: true,
-},
+    lineNumbers: true
+}
 ```
 
 #### dark mode
@@ -141,7 +140,7 @@ markdown: {
 非常可惜目前的VitePress没有`dark mode only`，只能将主题锁定在明亮模式并通过以下配置移除主题切换按钮：
 
 ```typescript
-appearance: false,
+appearance: false
 ```
 
 我的博客完全是在明亮模式的基础上修改的，为了减少工作量我只愿意开发一套主题，如果VitePress能锁定在dark mode(并且移除切换按钮)，那将可以大大减少我的工作量。
@@ -333,7 +332,7 @@ themeConfig: {
             },
             link: '/rss.xml'
         },
-    ],
+    ]
 }
 ```
 
@@ -486,7 +485,6 @@ import email from '/email.svg?raw' // [!code ++]
 
 const members = [
   {
-    ...
     links: [
       {
         icon: {svg: email}, // [!code ++]
@@ -598,4 +596,3 @@ tmux new-session -d 'npm run docs:build && npm run docs:preview'
 ```bash
 tmux kill-session -t 0
 ```
-

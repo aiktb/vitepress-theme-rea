@@ -1,8 +1,10 @@
 ---
 title: About
 ---
-<script setup>
-    import Framework from './.vitepress/theme/components/Framework.vue'
+
+<!--suppress ALL -->
+<script>
+import Framework from './.vitepress/theme/components/Framework.vue'
 </script>
 # About me and the blog
 

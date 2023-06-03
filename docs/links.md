@@ -1,7 +1,8 @@
 ---
 title: Links
 ---
-<script setup>
+<!--suppress ALL -->
+<script>
 import Friends from './.vitepress/theme/components/Friends.vue'
 </script>
 
