@@ -1,5 +1,5 @@
-import {defineConfig} from 'vitepress'
-import {rss} from './theme/rss'
+import { defineConfig } from 'vitepress'
+import { rss } from './theme/rss'
 
 export default defineConfig({
     lang: 'zh-CN',
@@ -15,11 +15,11 @@ export default defineConfig({
     head: [
         [
             'meta',
-            {name: 'theme-color', content: '#13212e'}
+            { name: 'theme-color', content: '#13212e' }
         ],
         [
             'script',
-            {async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-MCQSMRVDJN'}
+            { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-MCQSMRVDJN' }
         ],
         [
             'script',
@@ -41,11 +41,11 @@ export default defineConfig({
         ],
         [
             'link',
-            {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg',}
+            { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg', }
         ],
         [
             'link',
-            {rel: 'preconnect', href: 'https://s2.loli.net'}
+            { rel: 'preconnect', href: 'https://s2.loli.net' }
         ],
     ],
     themeConfig: {
@@ -53,20 +53,25 @@ export default defineConfig({
         siteTitle: `aiktb's blog`,
         outline: [2, 3],
         search: {
-            provider: 'local'
+            provider: 'algolia',
+            options: {
+                appId: 'FYZPLU3GD7',
+                apiKey: 'e48f88b8dc4b85ae2d53e4761f435791',
+                indexName: 'aiktb'
+            }
         },
         editLink: {
             pattern: 'https://github.com/aiktb/rea/edit/master/docs/:path',
             text: 'Edit this page on GitHub'
         },
         nav: [
-            {text: '✨Home', link: '/'},
-            {text: '✨About', link: '/about'},
-            {text: '✨Using', link: '/using'},
-            {text: '✨Links', link: '/links'},
+            { text: '✨Home', link: '/' },
+            { text: '✨About', link: '/about' },
+            { text: '✨Using', link: '/using' },
+            { text: '✨Links', link: '/links' },
         ],
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/aiktb/vitepress-theme-rea'},
+            { icon: 'github', link: 'https://github.com/aiktb/vitepress-theme-rea' },
             {
                 icon: {
                     svg: `<svg role="img" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
