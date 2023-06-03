@@ -254,3 +254,7 @@
     margin-bottom: 0;
     padding: 0;
 }
+
+.DocSearch-Hit-source{
+    color: var(--my-blue-light);
+}

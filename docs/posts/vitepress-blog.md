@@ -376,13 +376,13 @@ themeConfig: {
 
 我的博客一共使用了5个`slot`用于插入自定义的VUE组件：
 
-| Slot                 | Component    | Function                               |
-| -------------------- | ------------ | -------------------------------------- |
-| doc-top              | \<Progress/> | 在页面顶部显示阅读进度条               |
-| doc-after            | \<Comments/> | 在博客文章的末尾提供评论区             |
+| Slot                 | Component    | Function                 |
+|----------------------|--------------|--------------------------|
+| doc-top              | \<Progress/> | 在页面顶部显示阅读进度条             |
+| doc-after            | \<Comments/> | 在博客文章的末尾提供评论区            |
 | aside-outline-before | \<Avatar/>   | 在右侧加入\<Member/>显示头像和联系方式 |
-| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述         |
-| home-hero-after      | \<Page/>     | 按时间排序分页显示所有发布的博客文章   |
+| home-hero-before     | \<Hero/>     | 在主页显示头像和一些简短的描述          |
+| home-hero-after      | \<Page/>     | 按时间排序分页显示所有发布的博客文章       |
 
 #### Progress.vue
 
