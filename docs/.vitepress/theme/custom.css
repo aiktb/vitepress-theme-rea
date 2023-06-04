@@ -258,3 +258,11 @@
 .DocSearch-Hit-source{
     color: var(--my-blue-light);
 }
+
+.DocSearch-Cancel{
+    color: var(--my-white);
+}
+
+.DocSearch-Input::placeholder {
+    color: var(--my-gray);
+}
