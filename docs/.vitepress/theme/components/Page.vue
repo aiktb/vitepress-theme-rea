@@ -139,6 +139,7 @@ const pagePosts = computed(() => {
 .blog:hover {
   transform: translate(-2px, -2px);
   box-shadow: 10px 10px var(--my-blue);
+  filter: drop-shadow(0 0 2em var(--my-blue-light));
 }
 
 .blog:hover .icon,
