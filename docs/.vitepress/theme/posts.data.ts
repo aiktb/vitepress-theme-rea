@@ -1,4 +1,4 @@
-import { createContentLoader } from 'vitepress';
+import { createContentLoader } from 'vitepress'
 
 export interface Post {
     title: string
