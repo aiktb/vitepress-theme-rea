@@ -80,7 +80,6 @@
   box-shadow: 9px 9px var(--my-blue);
   border: 4px solid var(--my-blue-light);
   transform: translate(-2px, -2px);
-  filter: drop-shadow(0 0 2em var(--my-blue-light));
 }
 
 @keyframes spin {
