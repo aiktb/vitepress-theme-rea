@@ -14,7 +14,7 @@
     "docs:preview": "vitepress preview docs --port 8080"
   },
   "devDependencies": {
-    "vitepress": "^v1.0.0-beta.1",
+    "vitepress": "^v1.0.0-beta.2",
     "vue": "^3.3.4",
     "feed": "^4.2.2"
     }
