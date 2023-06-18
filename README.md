@@ -1,4 +1,4 @@
-# rea
+# vitepress-theme-rea
 
 ## Description
 
