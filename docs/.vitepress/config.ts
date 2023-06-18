@@ -61,7 +61,7 @@ export default defineConfig({
             }
         },
         editLink: {
-            pattern: 'https://github.com/aiktb/rea/edit/master/docs/:path',
+            pattern: 'https://github.com/aiktb/vitepress-theme-rea/edit/master/docs/:path',
             text: 'Edit this page on GitHub'
         },
         nav: [
