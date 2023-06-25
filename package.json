@@ -1,21 +1,23 @@
 {
-  "name": "rea",
+  "name": "vitepress-blog-rea",
   "author": {
     "name": "aiktb",
     "email": "aiktb@outlook.com",
     "url": "https://aiktb.com"
   },
-  "homepage": "https://github.com/aiktb/rea#readme",
+  "homepage": "https://github.com/aiktb/vitepress-theme-rea#readme",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs --port 8080"
+    "docs:preview": "vitepress preview docs --port 8080",
+    "format": "prettier --check --write ."
   },
   "devDependencies": {
+    "feed": "^4.2.2",
+    "prettier": "2.8.8",
     "vitepress": "^v1.0.0-beta.2",
-    "vue": "^3.3.4",
-    "feed": "^4.2.2"
-    }
+    "vue": "^3.3.4"
+  }
 }

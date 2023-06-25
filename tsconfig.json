@@ -8,8 +8,5 @@
     "skipLibCheck": true,
     "noUnusedLocals": true
   },
-  "include": [
-    "docs/.vitepress/**/*.ts",
-    "docs/.vitepress/**/*.vue"
-  ]
+  "include": ["docs/.vitepress/**/*.ts", "docs/.vitepress/**/*.vue"]
 }

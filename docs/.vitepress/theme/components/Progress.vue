@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {onMounted, onUnmounted, ref, watch} from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 
 const scrollPosition = ref(0)
 const pageHeight = ref(0)
@@ -14,7 +14,7 @@ const updatePageHeight = () => {
 }
 
 watch([scrollPosition, pageHeight], () => {
-  scrollPercentage.value = (scrollPosition.value / pageHeight.value) * 100;
+  scrollPercentage.value = (scrollPosition.value / pageHeight.value) * 100
 })
 
 onMounted(() => {
@@ -36,7 +36,7 @@ onUnmounted(() => {
 
 <template>
   <Teleport to="body">
-    <progress class="progress" :value="scrollPercentage" max="100"/>
+    <progress class="progress" :value="scrollPercentage" max="100" />
   </Teleport>
 </template>
 

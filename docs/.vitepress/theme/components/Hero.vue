@@ -1,20 +1,14 @@
 <template>
   <div class="hero">
     <div class="container">
-      <img class="avatar" src="/avatar.jpg" alt="avatar"/>
+      <img class="avatar" src="/avatar.jpg" alt="avatar" />
       <span class="label">⭐</span>
     </div>
     <div>
-      <p class="introduce">
-        <i>Hi, I'm aiktb.</i>👋
-      </p>
-      <p>
-        <i>Hope my blog can help you.</i>😎
-      </p>
+      <p class="introduce"><i>Hi, I'm aiktb.</i>👋</p>
+      <p><i>Hope my blog can help you.</i>😎</p>
       <div class="contact">
-        <a class="link" href="/about#contact-me">
-          <i>contact me</i>❤️
-        </a>
+        <a class="link" href="/about#contact-me"> <i>contact me</i>❤️ </a>
       </div>
     </div>
   </div>
@@ -93,7 +87,6 @@
 }
 
 @keyframes ping {
-
   75%,
   100% {
     transform: scale(2);
