@@ -1,36 +1,23 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, watch } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 const scrollPosition = ref(0)
 const pageHeight = ref(0)
 const scrollPercentage = ref(0)
 
-const updateScrollPosition = () => {
+function updateProgress() {
   scrollPosition.value = window.scrollY
-}
-
-const updatePageHeight = () => {
   pageHeight.value = document.documentElement.scrollHeight - document.documentElement.clientHeight
-}
-
-watch([scrollPosition, pageHeight], () => {
   scrollPercentage.value = (scrollPosition.value / pageHeight.value) * 100
-})
-
+}
 onMounted(() => {
-  updateScrollPosition()
-  updatePageHeight()
-  window.addEventListener('scroll', updateScrollPosition)
-  window.addEventListener('scroll', updatePageHeight)
-  window.addEventListener('resize', updateScrollPosition)
-  window.addEventListener('resize', updatePageHeight)
+  window.addEventListener('scroll', updateProgress)
+  window.addEventListener('scroll', updateProgress)
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', updateScrollPosition)
-  window.removeEventListener('scroll', updatePageHeight)
-  window.removeEventListener('resize', updateScrollPosition)
-  window.removeEventListener('resize', updatePageHeight)
+  window.addEventListener('scroll', updateProgress)
+  window.addEventListener('scroll', updateProgress)
 })
 </script>
 
