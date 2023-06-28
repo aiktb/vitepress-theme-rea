@@ -44,7 +44,7 @@ export default defineConfig({
       {},
       `@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');`
     ],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     ['link', { rel: 'preconnect', href: 'https://s2.loli.net' }]
   ],
   themeConfig: {

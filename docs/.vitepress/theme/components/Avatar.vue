@@ -5,7 +5,7 @@ import telegram from '/telegram.svg?raw'
 
 const members = [
   {
-    avatar: '/avatar.jpg',
+    avatar: '/avatar.webp',
     name: 'aiktb',
     title: 'Blogger',
     links: [

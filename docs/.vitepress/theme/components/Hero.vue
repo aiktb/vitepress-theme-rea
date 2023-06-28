@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <div class="container">
-      <img class="avatar" src="/avatar.jpg" alt="avatar" />
+      <img class="avatar" src="/avatar.webp" alt="avatar" />
       <span class="label">⭐</span>
     </div>
     <div>
