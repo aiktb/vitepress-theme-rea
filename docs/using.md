@@ -9,14 +9,6 @@ outline: 2
 
 ## Device
 
-| Device | Model                          | Experience                                                                                              |
-|--------|--------------------------------|---------------------------------------------------------------------------------------------------------|
-| 笔记本电脑  | Lenovo Xiaoxin Air14 Plus 2021 | 板载内存16G不可更换是最大的痛点😅，除此以外做Web开发足够了，以后换64G的本子用。键盘质量有点差，ESC键被我弄坏了。                                         |
-| 显示器    | AOC Q24P2C                     | 24寸2K60HZ屏幕，支持Type-C一线连，带4个USB接口，对我来说很完美，以后再加一块🥰。以前用的1080P屏幕真的是瞎眼。                                     |
-| 无线键盘   | Logitech Signature K855        | Logi Bolt\*1+Bluetooth\*2，可同时连接3台设备无缝切换(没啥用)，红轴的手感很好，做工也挺不错，可惜用的是2颗AAA电池，又要多准备一种电池😥。电池消耗慢，续航估计长达好几年。   |
-| 无线鼠标   | Logitech M575                  | 自从用了轨迹球鼠标，再也不想用普通鼠标，用起来非常的轻松😍。希望罗技能推出使用Logi Bolt的新型号，现在用的优联和Bolt接收器不兼容。耗电快，AA电池一年换好几颗😓不过我只用无线设备，也能接受。 |
-| 蓝牙耳机   | Sony WH-1000XM4                | 我的第一款中高档耳机，戴着除了舒服没别的形容。至于音质，我都用蓝牙了怎么可能在乎音质🤗。能同时连接两台设备，有很多小功能提升了使用体验。                                   |
-
 ![photo](https://s2.loli.net/2023/05/21/NSDwUGvj362leyM.webp)
 
 ## Visual Studio Code
@@ -88,6 +80,7 @@ Chrome有相对于Edge的绝对优势吗？我的回答是NO，Firefox/Chrome/Ed
 - [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm?hl=en-US)
 - [uBlacklist](https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?hl=en-US)
 - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en-US)
+- [Fix translation](https://chrome.google.com/webstore/detail/fix-translation/nefkkabmejdacaifhjoinegmoggdbgee?hl=en-US)
 
 ## Terminal
 
