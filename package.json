@@ -1,5 +1,6 @@
 {
   "name": "vitepress-blog-rea",
+  "private": true,
   "author": {
     "name": "aiktb",
     "email": "aiktb@outlook.com",
