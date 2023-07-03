@@ -59,6 +59,7 @@ export default defineConfig({
         indexName: 'aiktb'
       }
     },
+    externalLinkIcon: true,
     editLink: {
       pattern: 'https://github.com/aiktb/vitepress-theme-rea/edit/master/docs/:path',
       text: 'Edit this page on GitHub'
